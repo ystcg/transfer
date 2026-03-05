@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import '../services/tips_service.dart';
+import '../services/auth_service.dart';
 import '../widgets/category_card.dart';
 import '../widgets/tip_card.dart';
 import 'category_screen.dart';
 import 'tip_detail_screen.dart';
 import 'search_screen.dart';
 import 'bookmarks_screen.dart';
+import 'login_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -131,6 +133,8 @@ class _HomeBody extends StatelessWidget {
     final categories = service.categories;
     final featuredTip = service.getFeaturedTip();
     final tipOfDay = service.getTipOfTheDay();
+    final user = AuthService().currentUser;
+    final userName = user?.name.split(' ').first ?? '';
 
     return CustomScrollView(
       slivers: [
@@ -150,6 +154,28 @@ class _HomeBody extends StatelessWidget {
                   ),
             ),
           ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: GestureDetector(
+                onTap: () => _showProfileMenu(context),
+                child: CircleAvatar(
+                  radius: 18,
+                  backgroundColor: AppColors.rose,
+                  child: Text(
+                    (user?.name.isNotEmpty == true)
+                        ? user!.name[0].toUpperCase()
+                        : '?',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
 
         // Greeting
@@ -160,7 +186,9 @@ class _HomeBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  _greeting(),
+                  userName.isNotEmpty
+                      ? '${_greeting()}, $userName'
+                      : _greeting(),
                   style: Theme.of(context).textTheme.displayLarge?.copyWith(
                         fontSize: 30,
                       ),
@@ -349,6 +377,87 @@ class _HomeBody extends StatelessWidget {
     if (hour < 12) return 'Good Morning';
     if (hour < 17) return 'Good Afternoon';
     return 'Good Evening';
+  }
+
+  static void _showProfileMenu(BuildContext context) {
+    final user = AuthService().currentUser;
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 40,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: AppColors.divider,
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+              const SizedBox(height: 20),
+              CircleAvatar(
+                radius: 32,
+                backgroundColor: AppColors.rose,
+                child: Text(
+                  (user?.name.isNotEmpty == true)
+                      ? user!.name[0].toUpperCase()
+                      : '?',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 28,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                user?.name ?? 'User',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(height: 4),
+              Text(
+                user?.email ?? '',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+              const SizedBox(height: 24),
+              SizedBox(
+                width: double.infinity,
+                height: 48,
+                child: OutlinedButton.icon(
+                  onPressed: () async {
+                    Navigator.pop(ctx);
+                    await AuthService().logout();
+                    if (context.mounted) {
+                      Navigator.of(context).pushAndRemoveUntil(
+                        MaterialPageRoute(
+                            builder: (_) => const LoginScreen()),
+                        (route) => false,
+                      );
+                    }
+                  },
+                  icon: const Icon(Icons.logout_rounded, size: 20),
+                  label: const Text('Log Out'),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: AppColors.roseDeep,
+                    side: BorderSide(color: AppColors.roseDeep.withValues(alpha: 0.3)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
 

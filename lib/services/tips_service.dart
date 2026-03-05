@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../models/tip.dart';
 import '../models/tip_category.dart';
+import 'database_service.dart';
+import 'auth_service.dart';
 
 class TipsService {
   static final TipsService _instance = TipsService._internal();
@@ -13,13 +14,15 @@ class TipsService {
   List<Tip> _tips = [];
   Set<String> _bookmarkedIds = {};
 
+  final DatabaseService _db = DatabaseService();
+
   List<TipCategory> get categories => _categories;
   List<Tip> get tips => _tips;
   Set<String> get bookmarkedIds => _bookmarkedIds;
 
   Future<void> initialize() async {
     await _loadTips();
-    await _loadBookmarks();
+    await loadBookmarks();
   }
 
   Future<void> _loadTips() async {
@@ -36,19 +39,27 @@ class TipsService {
         .toList();
   }
 
-  Future<void> _loadBookmarks() async {
-    final prefs = await SharedPreferences.getInstance();
-    _bookmarkedIds = (prefs.getStringList('bookmarks') ?? []).toSet();
+  Future<void> loadBookmarks() async {
+    final user = AuthService().currentUser;
+    if (user != null) {
+      final bookmarks = await _db.getBookmarks(user.id);
+      _bookmarkedIds = bookmarks.toSet();
+    } else {
+      _bookmarkedIds = {};
+    }
   }
 
   Future<void> toggleBookmark(String tipId) async {
+    final user = AuthService().currentUser;
+    if (user == null) return;
+
     if (_bookmarkedIds.contains(tipId)) {
       _bookmarkedIds.remove(tipId);
+      await _db.removeBookmark(user.id, tipId);
     } else {
       _bookmarkedIds.add(tipId);
+      await _db.addBookmark(user.id, tipId);
     }
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList('bookmarks', _bookmarkedIds.toList());
   }
 
   bool isBookmarked(String tipId) => _bookmarkedIds.contains(tipId);

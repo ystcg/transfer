@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
-import 'home_screen.dart';
 import '../services/tips_service.dart';
+import '../services/auth_service.dart';
+import 'home_screen.dart';
+import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -44,11 +46,14 @@ class _SplashScreenState extends State<SplashScreen>
 
   Future<void> _initAndNavigate() async {
     await TipsService().initialize();
+    await AuthService().initialize();
     await Future.delayed(const Duration(milliseconds: 2500));
     if (mounted) {
+      final isLoggedIn = AuthService().isLoggedIn;
       Navigator.of(context).pushReplacement(
         PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) => const HomeScreen(),
+          pageBuilder: (context, animation, secondaryAnimation) =>
+              isLoggedIn ? const HomeScreen() : const LoginScreen(),
           transitionDuration: const Duration(milliseconds: 600),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeTransition(opacity: animation, child: child);
