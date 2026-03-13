@@ -26,8 +26,10 @@ class _CategoryCardState extends State<CategoryCard> {
 
   @override
   Widget build(BuildContext context) {
-    final bgColor = AppColors.categoryColors[widget.index % AppColors.categoryColors.length];
-    final accentColor = AppColors.categoryAccents[widget.index % AppColors.categoryAccents.length];
+    final bgColor = AppColors
+        .categoryColors[widget.index % AppColors.categoryColors.length];
+    final accentColor = AppColors
+        .categoryAccents[widget.index % AppColors.categoryAccents.length];
 
     return GestureDetector(
       onTapDown: (_) => setState(() => _isPressed = true),
@@ -85,9 +87,9 @@ class _CategoryCardState extends State<CategoryCard> {
                 Text(
                   widget.category.name,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 14,
-                      ),
+                    fontWeight: FontWeight.w700,
+                    fontSize: 14,
+                  ),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -95,9 +97,9 @@ class _CategoryCardState extends State<CategoryCard> {
                 Text(
                   '${widget.category.tipCount} tips',
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: accentColor,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    color: accentColor,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ],
             ),

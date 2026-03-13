@@ -33,7 +33,11 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.bookmark_outline_rounded, size: 48, color: AppColors.textTertiary),
+                        Icon(
+                          Icons.bookmark_outline_rounded,
+                          size: 48,
+                          color: AppColors.textTertiary,
+                        ),
                         const SizedBox(height: 12),
                         Text(
                           'No saved tips yet',

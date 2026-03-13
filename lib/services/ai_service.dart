@@ -10,7 +10,7 @@ class AiService {
   AiService._internal() {
     // We expect the API key to be passed via --dart-define=GEMINI_API_KEY
     const apiKey = String.fromEnvironment('GEMINI_API_KEY', defaultValue: '');
-    
+
     // Fallback to a placeholder if not provided, though it won't work without a real key
     final keyToUse = apiKey.isNotEmpty ? apiKey : 'YOUR_API_KEY_HERE';
 

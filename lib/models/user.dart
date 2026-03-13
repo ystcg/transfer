@@ -21,11 +21,6 @@ class AppUser {
   }
 
   Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'email': email,
-      'createdAt': createdAt,
-    };
+    return {'id': id, 'name': name, 'email': email, 'createdAt': createdAt};
   }
 }

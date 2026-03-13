@@ -10,13 +10,19 @@ class CategoryScreen extends StatelessWidget {
   final TipCategory category;
   final int index;
 
-  const CategoryScreen({super.key, required this.category, required this.index});
+  const CategoryScreen({
+    super.key,
+    required this.category,
+    required this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
     final tips = TipsService().getTipsByCategory(category.id);
-    final bgColor = AppColors.categoryColors[index % AppColors.categoryColors.length];
-    final accentColor = AppColors.categoryAccents[index % AppColors.categoryAccents.length];
+    final bgColor =
+        AppColors.categoryColors[index % AppColors.categoryColors.length];
+    final accentColor =
+        AppColors.categoryAccents[index % AppColors.categoryAccents.length];
 
     return Scaffold(
       backgroundColor: AppColors.cream,
@@ -35,9 +41,9 @@ class CategoryScreen extends StatelessWidget {
               title: Text(
                 category.name,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontSize: 18,
-                      color: AppColors.textPrimary,
-                    ),
+                  fontSize: 18,
+                  color: AppColors.textPrimary,
+                ),
               ),
               background: Container(
                 decoration: BoxDecoration(color: bgColor),
@@ -54,7 +60,10 @@ class CategoryScreen extends StatelessWidget {
                         ),
                         const Spacer(),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 6,
+                          ),
                           decoration: BoxDecoration(
                             color: accentColor.withValues(alpha: 0.2),
                             borderRadius: BorderRadius.circular(10),
@@ -80,7 +89,9 @@ class CategoryScreen extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 8),
               child: Text(
                 category.description,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: 16),
+                style: Theme.of(
+                  context,
+                ).textTheme.bodyMedium?.copyWith(fontSize: 16),
               ),
             ),
           ),
@@ -92,7 +103,9 @@ class CategoryScreen extends StatelessWidget {
                   tip: tips[i],
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => TipDetailScreen(tip: tips[i])),
+                    MaterialPageRoute(
+                      builder: (_) => TipDetailScreen(tip: tips[i]),
+                    ),
                   ),
                 ),
                 childCount: tips.length,

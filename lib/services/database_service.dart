@@ -53,7 +53,11 @@ class DatabaseService {
   }
 
   // User operations
-  Future<AppUser?> createUser(String name, String email, String password) async {
+  Future<AppUser?> createUser(
+    String name,
+    String email,
+    String password,
+  ) async {
     final db = await database;
     try {
       final id = await db.insert('users', {
@@ -99,27 +103,38 @@ class DatabaseService {
   // Bookmark operations
   Future<void> addBookmark(int userId, String tipId) async {
     final db = await database;
-    await db.insert('bookmarks', {'userId': userId, 'tipId': tipId},
-        conflictAlgorithm: ConflictAlgorithm.ignore);
+    await db.insert('bookmarks', {
+      'userId': userId,
+      'tipId': tipId,
+    }, conflictAlgorithm: ConflictAlgorithm.ignore);
   }
 
   Future<void> removeBookmark(int userId, String tipId) async {
     final db = await database;
-    await db.delete('bookmarks',
-        where: 'userId = ? AND tipId = ?', whereArgs: [userId, tipId]);
+    await db.delete(
+      'bookmarks',
+      where: 'userId = ? AND tipId = ?',
+      whereArgs: [userId, tipId],
+    );
   }
 
   Future<List<String>> getBookmarks(int userId) async {
     final db = await database;
-    final results = await db.query('bookmarks',
-        where: 'userId = ?', whereArgs: [userId]);
+    final results = await db.query(
+      'bookmarks',
+      where: 'userId = ?',
+      whereArgs: [userId],
+    );
     return results.map((r) => r['tipId'] as String).toList();
   }
 
   Future<bool> isBookmarked(int userId, String tipId) async {
     final db = await database;
-    final results = await db.query('bookmarks',
-        where: 'userId = ? AND tipId = ?', whereArgs: [userId, tipId]);
+    final results = await db.query(
+      'bookmarks',
+      where: 'userId = ? AND tipId = ?',
+      whereArgs: [userId, tipId],
+    );
     return results.isNotEmpty;
   }
 }

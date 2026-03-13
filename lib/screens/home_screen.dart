@@ -125,7 +125,9 @@ class _NavItem extends StatelessWidget {
         curve: Curves.easeOutCubic,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-          color: isSelected ? AppColors.pinkLight.withValues(alpha: 0.6) : Colors.transparent,
+          color: isSelected
+              ? AppColors.pinkLight.withValues(alpha: 0.6)
+              : Colors.transparent,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
@@ -177,9 +179,9 @@ class _HomeBody extends StatelessWidget {
             title: Text(
               'unfold',
               style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                    fontSize: 22,
-                    letterSpacing: 1,
-                  ),
+                fontSize: 22,
+                letterSpacing: 1,
+              ),
             ),
           ),
           actions: [
@@ -217,16 +219,16 @@ class _HomeBody extends StatelessWidget {
                   userName.isNotEmpty
                       ? '${_greeting()}, $userName'
                       : _greeting(),
-                  style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                        fontSize: 30,
-                      ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.displayLarge?.copyWith(fontSize: 30),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   'Your home, simplified.',
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontSize: 16,
-                      ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodyMedium?.copyWith(fontSize: 16),
                 ),
               ],
             ),
@@ -265,7 +267,9 @@ class _HomeBody extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 4),
+                              horizontal: 10,
+                              vertical: 4,
+                            ),
                             decoration: BoxDecoration(
                               color: Colors.white.withValues(alpha: 0.25),
                               borderRadius: BorderRadius.circular(8),
@@ -291,9 +295,7 @@ class _HomeBody extends StatelessWidget {
                       const SizedBox(height: 16),
                       Text(
                         featuredTip.title,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineLarge
+                        style: Theme.of(context).textTheme.headlineLarge
                             ?.copyWith(color: Colors.white),
                       ),
                       const SizedBox(height: 6),
@@ -308,13 +310,9 @@ class _HomeBody extends StatelessWidget {
                       const SizedBox(height: 12),
                       Row(
                         children: [
-                          _FeaturedBadge(
-                            label: featuredTip.difficulty,
-                          ),
+                          _FeaturedBadge(label: featuredTip.difficulty),
                           const SizedBox(width: 8),
-                          _FeaturedBadge(
-                            label: featuredTip.estimatedTime,
-                          ),
+                          _FeaturedBadge(label: featuredTip.estimatedTime),
                         ],
                       ),
                     ],
@@ -345,23 +343,19 @@ class _HomeBody extends StatelessWidget {
               crossAxisSpacing: 14,
               childAspectRatio: 1.05,
             ),
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                final cat = categories[index];
-                return CategoryCard(
-                  category: cat,
-                  index: index,
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) =>
-                          CategoryScreen(category: cat, index: index),
-                    ),
+            delegate: SliverChildBuilderDelegate((context, index) {
+              final cat = categories[index];
+              return CategoryCard(
+                category: cat,
+                index: index,
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => CategoryScreen(category: cat, index: index),
                   ),
-                );
-              },
-              childCount: categories.length,
-            ),
+                ),
+              );
+            }, childCount: categories.length),
           ),
         ),
 
@@ -392,7 +386,9 @@ class _HomeBody extends StatelessWidget {
             ),
           ),
 
-        const SliverToBoxAdapter(child: SizedBox(height: 120)), // Space for floating nav bar
+        const SliverToBoxAdapter(
+          child: SizedBox(height: 120),
+        ), // Space for floating nav bar
       ],
     );
   }
@@ -461,8 +457,7 @@ class _HomeBody extends StatelessWidget {
                     await AuthService().logout();
                     if (context.mounted) {
                       Navigator.of(context).pushAndRemoveUntil(
-                        MaterialPageRoute(
-                            builder: (_) => const LoginScreen()),
+                        MaterialPageRoute(builder: (_) => const LoginScreen()),
                         (route) => false,
                       );
                     }
@@ -471,7 +466,9 @@ class _HomeBody extends StatelessWidget {
                   label: const Text('Log Out'),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: AppColors.roseDeep,
-                    side: BorderSide(color: AppColors.roseDeep.withValues(alpha: 0.3)),
+                    side: BorderSide(
+                      color: AppColors.roseDeep.withValues(alpha: 0.3),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(14),
                     ),

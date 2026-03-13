@@ -68,27 +68,28 @@ class _TipCardState extends State<TipCard> {
             padding: const EdgeInsets.all(16),
             child: Row(
               children: [
-                        Container(
-                          width: 60,
-                          height: 60,
-                          decoration: BoxDecoration(
-                            color: AppColors.creamLight,
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          child: Icon(
-                            AppIcons.tipIcon(widget.tip.categoryId),
-                            color: AppColors.rose,
-                            size: 28,
-                          ),
-                        ),
-                        const SizedBox(width: 16),
+                Container(
+                  width: 60,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    color: AppColors.creamLight,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Icon(
+                    AppIcons.tipIcon(widget.tip.categoryId),
+                    color: AppColors.rose,
+                    size: 28,
+                  ),
+                ),
+                const SizedBox(width: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         widget.tip.title,
-                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        style: Theme.of(context).textTheme.titleMedium
+                            ?.copyWith(
                               fontSize: 15,
                               fontWeight: FontWeight.w600,
                             ),
@@ -110,7 +111,10 @@ class _TipCardState extends State<TipCard> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 3,
+                      ),
                       decoration: BoxDecoration(
                         color: _difficultyColor.withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(8),

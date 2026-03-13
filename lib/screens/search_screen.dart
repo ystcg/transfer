@@ -65,10 +65,17 @@ class _SearchScreenState extends State<SearchScreen> {
                 decoration: InputDecoration(
                   hintText: 'Search tips...',
                   hintStyle: TextStyle(color: AppColors.textTertiary),
-                  prefixIcon: Icon(Icons.search_rounded, color: AppColors.textTertiary),
+                  prefixIcon: Icon(
+                    Icons.search_rounded,
+                    color: AppColors.textTertiary,
+                  ),
                   suffixIcon: _controller.text.isNotEmpty
                       ? IconButton(
-                          icon: Icon(Icons.close_rounded, color: AppColors.textTertiary, size: 20),
+                          icon: Icon(
+                            Icons.close_rounded,
+                            color: AppColors.textTertiary,
+                            size: 20,
+                          ),
                           onPressed: () {
                             _controller.clear();
                             _onSearch('');
@@ -76,7 +83,10 @@ class _SearchScreenState extends State<SearchScreen> {
                         )
                       : null,
                   border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 14,
+                  ),
                 ),
               ),
             ),
@@ -86,44 +96,63 @@ class _SearchScreenState extends State<SearchScreen> {
           Expanded(
             child: _hasSearched
                 ? _results.isEmpty
-                    ? Center(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(Icons.search_off_rounded, size: 48, color: AppColors.textTertiary),
-                            const SizedBox(height: 12),
-                            Text(
-                              'No tips found',
-                              style: Theme.of(context).textTheme.headlineMedium,
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              'Try a different search term',
-                              style: Theme.of(context).textTheme.bodyMedium,
-                            ),
-                          ],
-                        ),
-                      )
-                    : ListView.builder(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        itemCount: _results.length,
-                        itemBuilder: (context, i) => TipCard(
-                          tip: _results[i],
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (_) => TipDetailScreen(tip: _results[i])),
+                      ? Center(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.search_off_rounded,
+                                size: 48,
+                                color: AppColors.textTertiary,
+                              ),
+                              const SizedBox(height: 12),
+                              Text(
+                                'No tips found',
+                                style: Theme.of(
+                                  context,
+                                ).textTheme.headlineMedium,
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                'Try a different search term',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                            ],
                           ),
-                        ),
-                      )
+                        )
+                      : ListView.builder(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          itemCount: _results.length,
+                          itemBuilder: (context, i) => TipCard(
+                            tip: _results[i],
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) =>
+                                    TipDetailScreen(tip: _results[i]),
+                              ),
+                            ),
+                          ),
+                        )
                 : Center(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.auto_stories_outlined, size: 48, color: AppColors.textTertiary),
+                        Icon(
+                          Icons.auto_stories_outlined,
+                          size: 48,
+                          color: AppColors.textTertiary,
+                        ),
                         const SizedBox(height: 12),
-                        Text('Search any household tip', style: Theme.of(context).textTheme.headlineMedium),
+                        Text(
+                          'Search any household tip',
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
                         const SizedBox(height: 4),
-                        Text('Try "light bulb" or "drain"', style: Theme.of(context).textTheme.bodyMedium),
+                        Text(
+                          'Try "light bulb" or "drain"',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
                       ],
                     ),
                   ),

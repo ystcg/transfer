@@ -25,7 +25,10 @@ class AuthService {
   }
 
   Future<({bool success, String message})> signup(
-      String name, String email, String password) async {
+    String name,
+    String email,
+    String password,
+  ) async {
     if (name.trim().isEmpty) {
       return (success: false, message: 'Please enter your name');
     }
@@ -33,17 +36,26 @@ class AuthService {
       return (success: false, message: 'Please enter a valid email');
     }
     if (password.length < 6) {
-      return (success: false, message: 'Password must be at least 6 characters');
+      return (
+        success: false,
+        message: 'Password must be at least 6 characters',
+      );
     }
 
     final existing = await _db.getUserByEmail(email);
     if (existing != null) {
-      return (success: false, message: 'An account with this email already exists');
+      return (
+        success: false,
+        message: 'An account with this email already exists',
+      );
     }
 
     final user = await _db.createUser(name.trim(), email, password);
     if (user == null) {
-      return (success: false, message: 'Could not create account. Please try again.');
+      return (
+        success: false,
+        message: 'Could not create account. Please try again.',
+      );
     }
 
     _currentUser = user;
@@ -53,7 +65,9 @@ class AuthService {
   }
 
   Future<({bool success, String message})> login(
-      String email, String password) async {
+    String email,
+    String password,
+  ) async {
     if (email.trim().isEmpty || !email.contains('@')) {
       return (success: false, message: 'Please enter a valid email');
     }

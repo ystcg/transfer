@@ -78,9 +78,7 @@ class _LoginScreenState extends State<LoginScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          color: AppColors.cream,
-        ),
+        decoration: const BoxDecoration(color: AppColors.cream),
         child: SafeArea(
           child: FadeTransition(
             opacity: _fadeAnimation,
@@ -115,14 +113,17 @@ class _LoginScreenState extends State<LoginScreen>
                         ),
                       ),
                       const SizedBox(height: 20),
-                      Text('unfold',
-                          style: Theme.of(context)
-                              .textTheme
-                              .displayMedium
-                              ?.copyWith(letterSpacing: 1.5)),
+                      Text(
+                        'unfold',
+                        style: Theme.of(
+                          context,
+                        ).textTheme.displayMedium?.copyWith(letterSpacing: 1.5),
+                      ),
                       const SizedBox(height: 6),
-                      Text('Welcome back',
-                          style: Theme.of(context).textTheme.bodyMedium),
+                      Text(
+                        'Welcome back',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
                       const SizedBox(height: 36),
 
                       // Error message
@@ -136,14 +137,20 @@ class _LoginScreenState extends State<LoginScreen>
                           ),
                           child: Row(
                             children: [
-                              Icon(Icons.error_outline,
-                                  color: AppColors.roseDeep, size: 20),
+                              Icon(
+                                Icons.error_outline,
+                                color: AppColors.roseDeep,
+                                size: 20,
+                              ),
                               const SizedBox(width: 8),
                               Expanded(
-                                child: Text(_errorMessage!,
-                                    style: TextStyle(
-                                        color: AppColors.roseDeep,
-                                        fontSize: 13)),
+                                child: Text(
+                                  _errorMessage!,
+                                  style: TextStyle(
+                                    color: AppColors.roseDeep,
+                                    fontSize: 13,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -175,8 +182,9 @@ class _LoginScreenState extends State<LoginScreen>
                             color: AppColors.textTertiary,
                             size: 20,
                           ),
-                          onPressed: () =>
-                              setState(() => _obscurePassword = !_obscurePassword),
+                          onPressed: () => setState(
+                            () => _obscurePassword = !_obscurePassword,
+                          ),
                         ),
                         validator: (v) => (v == null || v.isEmpty)
                             ? 'Enter your password'
@@ -194,7 +202,8 @@ class _LoginScreenState extends State<LoginScreen>
                             backgroundColor: AppColors.rose,
                             foregroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16)),
+                              borderRadius: BorderRadius.circular(16),
+                            ),
                             elevation: 0,
                           ),
                           child: _isLoading
@@ -202,10 +211,17 @@ class _LoginScreenState extends State<LoginScreen>
                                   width: 22,
                                   height: 22,
                                   child: CircularProgressIndicator(
-                                      color: Colors.white, strokeWidth: 2.5))
-                              : const Text('Log In',
+                                    color: Colors.white,
+                                    strokeWidth: 2.5,
+                                  ),
+                                )
+                              : const Text(
+                                  'Log In',
                                   style: TextStyle(
-                                      fontSize: 16, fontWeight: FontWeight.w600)),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
                         ),
                       ),
                       const SizedBox(height: 20),
@@ -214,18 +230,24 @@ class _LoginScreenState extends State<LoginScreen>
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Don't have an account? ",
-                              style: Theme.of(context).textTheme.bodySmall),
+                          Text(
+                            "Don't have an account? ",
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
                           GestureDetector(
                             onTap: () => Navigator.of(context).push(
                               MaterialPageRoute(
-                                  builder: (_) => const SignupScreen()),
+                                builder: (_) => const SignupScreen(),
+                              ),
                             ),
-                            child: Text('Sign Up',
-                                style: TextStyle(
-                                    color: AppColors.rose,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w600)),
+                            child: Text(
+                              'Sign Up',
+                              style: TextStyle(
+                                color: AppColors.rose,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
                           ),
                         ],
                       ),
@@ -274,8 +296,10 @@ class _LoginScreenState extends State<LoginScreen>
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide(color: AppColors.roseDeep, width: 1),
         ),
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 16,
+        ),
       ),
     );
   }

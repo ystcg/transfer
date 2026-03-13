@@ -50,7 +50,11 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                   color: Colors.white.withValues(alpha: 0.8),
                   shape: BoxShape.circle,
                 ),
-                child: const Icon(Icons.arrow_back_ios_new_rounded, size: 18, color: AppColors.textPrimary),
+                child: const Icon(
+                  Icons.arrow_back_ios_new_rounded,
+                  size: 18,
+                  color: AppColors.textPrimary,
+                ),
               ),
               onPressed: () => Navigator.pop(context),
             ),
@@ -63,9 +67,13 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
-                    _isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_outline_rounded,
+                    _isBookmarked
+                        ? Icons.bookmark_rounded
+                        : Icons.bookmark_outline_rounded,
                     size: 20,
-                    color: _isBookmarked ? AppColors.rose : AppColors.textPrimary,
+                    color: _isBookmarked
+                        ? AppColors.rose
+                        : AppColors.textPrimary,
                   ),
                 ),
                 onPressed: () {
@@ -106,59 +114,110 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Title
-                  Text(tip.title, style: Theme.of(context).textTheme.displayMedium),
+                  Text(
+                    tip.title,
+                    style: Theme.of(context).textTheme.displayMedium,
+                  ),
                   const SizedBox(height: 8),
-                  Text(tip.subtitle, style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: 16)),
+                  Text(
+                    tip.subtitle,
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodyMedium?.copyWith(fontSize: 16),
+                  ),
                   const SizedBox(height: 16),
 
                   // Badges
                   Row(
                     children: [
-                      _Badge(icon: Icons.speed_rounded, label: tip.difficulty, color: _diffColor(tip.difficulty)),
+                      _Badge(
+                        icon: Icons.speed_rounded,
+                        label: tip.difficulty,
+                        color: _diffColor(tip.difficulty),
+                      ),
                       const SizedBox(width: 10),
-                      _Badge(icon: Icons.timer_outlined, label: tip.estimatedTime, color: AppColors.textSecondary),
+                      _Badge(
+                        icon: Icons.timer_outlined,
+                        label: tip.estimatedTime,
+                        color: AppColors.textSecondary,
+                      ),
                       const SizedBox(width: 10),
-                      _Badge(icon: Icons.format_list_numbered_rounded, label: '${tip.steps.length} steps', color: AppColors.rose),
+                      _Badge(
+                        icon: Icons.format_list_numbered_rounded,
+                        label: '${tip.steps.length} steps',
+                        color: AppColors.rose,
+                      ),
                     ],
                   ),
                   const SizedBox(height: 28),
 
                   // What You Need
                   if (tip.whatYouNeed.isNotEmpty) ...[
-                    Text('What You Need', style: Theme.of(context).textTheme.headlineMedium),
+                    Text(
+                      'What You Need',
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    ),
                     const SizedBox(height: 12),
                     Container(
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(14),
-                        boxShadow: [BoxShadow(color: AppColors.shadow, blurRadius: 8, offset: const Offset(0, 2))],
+                        boxShadow: [
+                          BoxShadow(
+                            color: AppColors.shadow,
+                            blurRadius: 8,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
                       ),
                       child: Column(
-                        children: tip.whatYouNeed.map((item) => Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 5),
-                          child: Row(
-                            children: [
-                              Icon(Icons.check_circle_outline_rounded, size: 18, color: AppColors.rose),
-                              const SizedBox(width: 10),
-                              Expanded(child: Text(item, style: Theme.of(context).textTheme.bodyLarge)),
-                            ],
-                          ),
-                        )).toList(),
+                        children: tip.whatYouNeed
+                            .map(
+                              (item) => Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 5,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.check_circle_outline_rounded,
+                                      size: 18,
+                                      color: AppColors.rose,
+                                    ),
+                                    const SizedBox(width: 10),
+                                    Expanded(
+                                      child: Text(
+                                        item,
+                                        style: Theme.of(
+                                          context,
+                                        ).textTheme.bodyLarge,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )
+                            .toList(),
                       ),
                     ),
                     const SizedBox(height: 28),
                   ],
 
                   // Steps
-                  Text('Steps', style: Theme.of(context).textTheme.headlineMedium),
+                  Text(
+                    'Steps',
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
                   const SizedBox(height: 16),
-                  ...tip.steps.asMap().entries.map((entry) => StepCard(
-                    number: entry.value.number,
-                    title: entry.value.title,
-                    description: entry.value.description,
-                    isLast: entry.key == tip.steps.length - 1,
-                  )),
+                  ...tip.steps.asMap().entries.map(
+                    (entry) => StepCard(
+                      number: entry.value.number,
+                      title: entry.value.title,
+                      description: entry.value.description,
+                      isLast: entry.key == tip.steps.length - 1,
+                    ),
+                  ),
 
                   // Pro Tip
                   if (tip.proTip != null) ...[
@@ -173,15 +232,28 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Icon(Icons.tips_and_updates_rounded, size: 20, color: AppColors.rose),
+                          const Icon(
+                            Icons.tips_and_updates_rounded,
+                            size: 20,
+                            color: AppColors.rose,
+                          ),
                           const SizedBox(width: 12),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Pro Tip', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.rose)),
+                                Text(
+                                  'Pro Tip',
+                                  style: Theme.of(context).textTheme.titleMedium
+                                      ?.copyWith(color: AppColors.rose),
+                                ),
                                 const SizedBox(height: 4),
-                                Text(tip.proTip!, style: Theme.of(context).textTheme.bodyMedium?.copyWith(height: 1.5)),
+                                Text(
+                                  tip.proTip!,
+                                  style: Theme.of(
+                                    context,
+                                  ).textTheme.bodyMedium?.copyWith(height: 1.5),
+                                ),
                               ],
                             ),
                           ),
@@ -201,10 +273,14 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
 
   Color _diffColor(String d) {
     switch (d) {
-      case 'Easy': return const Color(0xFF66BB6A); // Softer green
-      case 'Medium': return const Color(0xFFFFA726); // Softer orange
-      case 'Hard': return AppColors.rose; // Keep theme rose
-      default: return AppColors.textTertiary;
+      case 'Easy':
+        return const Color(0xFF66BB6A); // Softer green
+      case 'Medium':
+        return const Color(0xFFFFA726); // Softer orange
+      case 'Hard':
+        return AppColors.rose; // Keep theme rose
+      default:
+        return AppColors.textTertiary;
     }
   }
 }
@@ -228,7 +304,14 @@ class _Badge extends StatelessWidget {
         children: [
           Icon(icon, size: 14, color: color),
           const SizedBox(width: 5),
-          Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: color)),
+          Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+              color: color,
+            ),
+          ),
         ],
       ),
     );

@@ -31,9 +31,10 @@ class _SplashScreenState extends State<SplashScreen>
       duration: const Duration(milliseconds: 1000),
     );
 
-    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(parent: _fadeController, curve: Curves.easeOut),
-    );
+    _fadeAnimation = Tween<double>(
+      begin: 0.0,
+      end: 1.0,
+    ).animate(CurvedAnimation(parent: _fadeController, curve: Curves.easeOut));
     _scaleAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(
       CurvedAnimation(parent: _scaleController, curve: Curves.elasticOut),
     );
@@ -74,9 +75,7 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          color: AppColors.cream,
-        ),
+        decoration: const BoxDecoration(color: AppColors.cream),
         child: Center(
           child: FadeTransition(
             opacity: _fadeAnimation,
@@ -111,18 +110,18 @@ class _SplashScreenState extends State<SplashScreen>
                   Text(
                     'unfold',
                     style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                          letterSpacing: 2,
-                          fontWeight: FontWeight.w800,
-                        ),
+                      letterSpacing: 2,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   Text(
                     'Your home, simplified.',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: AppColors.textSecondary,
-                          fontSize: 16,
-                          letterSpacing: 0.3,
-                        ),
+                      color: AppColors.textSecondary,
+                      fontSize: 16,
+                      letterSpacing: 0.3,
+                    ),
                   ),
                 ],
               ),

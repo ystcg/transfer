@@ -26,8 +26,7 @@ class TipsService {
   }
 
   Future<void> _loadTips() async {
-    final String jsonStr =
-        await rootBundle.loadString('assets/data/tips.json');
+    final String jsonStr = await rootBundle.loadString('assets/data/tips.json');
     final Map<String, dynamic> data = json.decode(jsonStr);
 
     _categories = (data['categories'] as List)
@@ -77,21 +76,26 @@ class TipsService {
     return _tips.where((t) {
       return t.title.toLowerCase().contains(q) ||
           t.subtitle.toLowerCase().contains(q) ||
-          t.steps.any((s) =>
-              s.title.toLowerCase().contains(q) ||
-              s.description.toLowerCase().contains(q));
+          t.steps.any(
+            (s) =>
+                s.title.toLowerCase().contains(q) ||
+                s.description.toLowerCase().contains(q),
+          );
     }).toList();
   }
 
   Tip? getTipOfTheDay() {
     if (_tips.isEmpty) return null;
-    final dayOfYear = DateTime.now().difference(DateTime(DateTime.now().year)).inDays;
+    final dayOfYear = DateTime.now()
+        .difference(DateTime(DateTime.now().year))
+        .inDays;
     return _tips[dayOfYear % _tips.length];
   }
 
   Tip? getFeaturedTip() {
     if (_tips.isEmpty) return null;
-    final weekOfYear = DateTime.now().difference(DateTime(DateTime.now().year)).inDays ~/ 7;
+    final weekOfYear =
+        DateTime.now().difference(DateTime(DateTime.now().year)).inDays ~/ 7;
     return _tips[weekOfYear % _tips.length];
   }
 }
