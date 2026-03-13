@@ -49,12 +49,16 @@ class _SearchScreenState extends State<SearchScreen> {
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(30), // Pill shape
+                border: Border.all(
+                  color: AppColors.pinkLight.withValues(alpha: 0.5),
+                  width: 1,
+                ),
                 boxShadow: [
                   BoxShadow(
-                    color: AppColors.shadow,
-                    blurRadius: 8,
-                    offset: const Offset(0, 2),
+                    color: AppColors.shadow.withValues(alpha: 0.2),
+                    blurRadius: 15,
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
@@ -62,36 +66,54 @@ class _SearchScreenState extends State<SearchScreen> {
                 controller: _controller,
                 onChanged: _onSearch,
                 style: Theme.of(context).textTheme.bodyLarge,
+                cursorColor: AppColors.rose,
                 decoration: InputDecoration(
-                  hintText: 'Search tips...',
-                  hintStyle: TextStyle(color: AppColors.textTertiary),
-                  prefixIcon: Icon(
-                    Icons.search_rounded,
+                  hintText: 'Search for tips, rooms, or tools...',
+                  hintStyle: TextStyle(
                     color: AppColors.textTertiary,
+                    fontSize: 15,
+                  ),
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Icon(
+                      Icons.search_rounded,
+                      color: AppColors.rose.withValues(alpha: 0.7),
+                      size: 22,
+                    ),
                   ),
                   suffixIcon: _controller.text.isNotEmpty
-                      ? IconButton(
-                          icon: Icon(
-                            Icons.close_rounded,
-                            color: AppColors.textTertiary,
-                            size: 20,
+                      ? Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: IconButton(
+                            icon: Container(
+                              padding: const EdgeInsets.all(4),
+                              decoration: BoxDecoration(
+                                color: AppColors.cream,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.close_rounded,
+                                color: AppColors.textSecondary,
+                                size: 16,
+                              ),
+                            ),
+                            onPressed: () {
+                              _controller.clear();
+                              _onSearch('');
+                            },
                           ),
-                          onPressed: () {
-                            _controller.clear();
-                            _onSearch('');
-                          },
                         )
                       : null,
                   border: InputBorder.none,
                   contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 14,
+                    horizontal: 20,
+                    vertical: 16,
                   ),
                 ),
               ),
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 16),
           // Results
           Expanded(
             child: _hasSearched
@@ -102,19 +124,19 @@ class _SearchScreenState extends State<SearchScreen> {
                             children: [
                               Icon(
                                 Icons.search_off_rounded,
-                                size: 48,
-                                color: AppColors.textTertiary,
+                                size: 60,
+                                color: AppColors.pinkLight,
                               ),
-                              const SizedBox(height: 12),
+                              const SizedBox(height: 20),
                               Text(
                                 'No tips found',
                                 style: Theme.of(
                                   context,
                                 ).textTheme.headlineMedium,
                               ),
-                              const SizedBox(height: 4),
+                              const SizedBox(height: 8),
                               Text(
-                                'Try a different search term',
+                                'Try searching for something else',
                                 style: Theme.of(context).textTheme.bodyMedium,
                               ),
                             ],
@@ -138,19 +160,33 @@ class _SearchScreenState extends State<SearchScreen> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(
-                          Icons.auto_stories_outlined,
-                          size: 48,
-                          color: AppColors.textTertiary,
+                        Container(
+                          padding: const EdgeInsets.all(24),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.shadow.withValues(alpha: 0.1),
+                                blurRadius: 20,
+                                offset: const Offset(0, 10),
+                              ),
+                            ],
+                          ),
+                          child: Icon(
+                            Icons.manage_search_rounded,
+                            size: 64,
+                            color: AppColors.rose.withValues(alpha: 0.5),
+                          ),
                         ),
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 32),
                         Text(
-                          'Search any household tip',
+                          'What do you need help with?',
                           style: Theme.of(context).textTheme.headlineMedium,
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 8),
                         Text(
-                          'Try "light bulb" or "drain"',
+                          'Try searching for "light bulb" or "drain"',
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ],

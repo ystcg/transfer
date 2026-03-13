@@ -345,13 +345,25 @@ class _HomeBody extends StatelessWidget {
             ),
             delegate: SliverChildBuilderDelegate((context, index) {
               final cat = categories[index];
-              return CategoryCard(
-                category: cat,
-                index: index,
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => CategoryScreen(category: cat, index: index),
+              return TweenAnimationBuilder<double>(
+                tween: Tween(begin: 0.0, end: 1.0),
+                duration: const Duration(milliseconds: 600),
+                curve: Curves.easeOutCubic,
+                builder: (context, value, child) {
+                  return Transform.translate(
+                    offset: Offset(0, 20 * (1 - value)),
+                    child: Opacity(opacity: value, child: child),
+                  );
+                },
+                child: CategoryCard(
+                  category: cat,
+                  index: index,
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) =>
+                          CategoryScreen(category: cat, index: index),
+                    ),
                   ),
                 ),
               );
@@ -374,12 +386,23 @@ class _HomeBody extends StatelessWidget {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: TipCard(
-                tip: tipOfDay,
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => TipDetailScreen(tip: tipOfDay),
+              child: TweenAnimationBuilder<double>(
+                tween: Tween(begin: 0.0, end: 1.0),
+                duration: const Duration(milliseconds: 800),
+                curve: Curves.easeOutCubic,
+                builder: (context, value, child) {
+                  return Transform.translate(
+                    offset: Offset(0, 30 * (1 - value)),
+                    child: Opacity(opacity: value, child: child),
+                  );
+                },
+                child: TipCard(
+                  tip: tipOfDay,
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => TipDetailScreen(tip: tipOfDay),
+                    ),
                   ),
                 ),
               ),

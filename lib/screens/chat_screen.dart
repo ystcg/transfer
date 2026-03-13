@@ -204,8 +204,8 @@ class _ChatScreenState extends State<ChatScreen> {
           Flexible(
             child: Container(
               padding: const EdgeInsets.symmetric(
-                horizontal: 18.0,
-                vertical: 14.0,
+                horizontal: 20.0,
+                vertical: 16.0,
               ),
               decoration: BoxDecoration(
                 color: message.isUser ? AppColors.rose : Colors.white,
@@ -215,10 +215,15 @@ class _ChatScreenState extends State<ChatScreen> {
                   bottomLeft: Radius.circular(message.isUser ? 24.0 : 6.0),
                   bottomRight: Radius.circular(message.isUser ? 6.0 : 24.0),
                 ),
+                border: message.isUser
+                    ? null
+                    : Border.all(
+                        color: AppColors.pinkLight.withValues(alpha: 0.3),
+                      ),
                 boxShadow: [
                   BoxShadow(
-                    color: AppColors.shadow.withValues(alpha: 0.1),
-                    blurRadius: 10,
+                    color: AppColors.shadow.withValues(alpha: 0.15),
+                    blurRadius: 12,
                     offset: const Offset(0, 4),
                   ),
                 ],
@@ -338,11 +343,12 @@ class _ChatScreenState extends State<ChatScreen> {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(32.0),
+        border: Border.all(color: AppColors.pinkLight.withValues(alpha: 0.5)),
         boxShadow: [
           BoxShadow(
-            color: AppColors.shadow.withValues(alpha: 0.15),
-            blurRadius: 20,
-            offset: const Offset(0, 4),
+            color: AppColors.shadow.withValues(alpha: 0.2),
+            blurRadius: 24,
+            offset: const Offset(0, 8),
           ),
         ],
       ),
@@ -353,6 +359,7 @@ class _ChatScreenState extends State<ChatScreen> {
               controller: _textController,
               onSubmitted: _handleSubmitted,
               style: const TextStyle(fontSize: 16),
+              cursorColor: AppColors.rose,
               decoration: const InputDecoration(
                 hintText: 'Ask for a tip...',
                 hintStyle: TextStyle(

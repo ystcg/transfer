@@ -6,11 +6,11 @@ import 'services/ai_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   // Initialize services and data
   await TipsService().initialize();
   AiService().init(TipsService().rawJsonData);
-  
+
   runApp(const UnfoldApp());
 }
 

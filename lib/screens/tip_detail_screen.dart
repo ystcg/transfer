@@ -85,11 +85,22 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
             ],
             flexibleSpace: FlexibleSpaceBar(
               background: tip.image != null
-                  ? Image.asset(
-                      tip.image!,
-                      fit: BoxFit.cover,
-                      color: AppColors.pinkLight.withValues(alpha: 0.15),
-                      colorBlendMode: BlendMode.srcOver,
+                  ? ShaderMask(
+                      shaderCallback: (rect) {
+                        return const LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [Colors.black, Colors.transparent],
+                          stops: [0.6, 1.0], // Fades out the bottom 40%
+                        ).createShader(rect);
+                      },
+                      blendMode: BlendMode.dstIn,
+                      child: Image.asset(
+                        tip.image!,
+                        fit: BoxFit.cover,
+                        color: AppColors.pinkLight.withValues(alpha: 0.15),
+                        colorBlendMode: BlendMode.srcOver,
+                      ),
                     )
                   : Container(
                       decoration: const BoxDecoration(

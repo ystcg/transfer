@@ -25,7 +25,7 @@ class AppColors {
 
   // Utility
   static const Color divider = Color(0xFFEEE6DD);
-  static const Color shadow = Color(0x12000000);
+  static const Color shadow = Color(0x0A000000); // Softer, more diffuse shadow
   static const Color shimmer = Color(0xFFF5E6D8);
 
   // Category colors
@@ -120,30 +120,31 @@ class AppTheme {
       fontSize: 24,
       fontWeight: FontWeight.w700,
       color: AppColors.textPrimary,
-      letterSpacing: -0.5,
+      letterSpacing: -0.6, // Tighter tracking
     ),
     headlineMedium: GoogleFonts.inter(
       fontSize: 20,
       fontWeight: FontWeight.w600,
       color: AppColors.textPrimary,
-      letterSpacing: -0.3,
+      letterSpacing: -0.4, // Tighter tracking
     ),
     titleLarge: GoogleFonts.inter(
       fontSize: 18,
       fontWeight: FontWeight.w600,
       color: AppColors.textPrimary,
-      letterSpacing: -0.2,
+      letterSpacing: -0.3, // Tighter tracking
     ),
     titleMedium: GoogleFonts.inter(
       fontSize: 16,
       fontWeight: FontWeight.w600,
       color: AppColors.textPrimary,
+      letterSpacing: -0.2,
     ),
     bodyLarge: GoogleFonts.inter(
       fontSize: 16,
       fontWeight: FontWeight.w400,
       color: AppColors.textPrimary,
-      height: 1.6,
+      height: 1.65, // Slightly more relaxed line height
     ),
     bodyMedium: GoogleFonts.inter(
       fontSize: 15,
