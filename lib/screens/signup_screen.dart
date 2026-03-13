@@ -91,11 +91,7 @@ class _SignupScreenState extends State<SignupScreen>
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [AppColors.cream, AppColors.pinkLight, AppColors.creamLight],
-          ),
+          color: AppColors.cream,
         ),
         child: SafeArea(
           child: FadeTransition(
@@ -113,22 +109,22 @@ class _SignupScreenState extends State<SignupScreen>
                         width: 80,
                         height: 80,
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [AppColors.rose, AppColors.pink],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ),
-                          borderRadius: BorderRadius.circular(24),
+                          borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(
-                              color: AppColors.rose.withValues(alpha: 0.3),
+                              color: AppColors.shadow.withValues(alpha: 0.15),
                               blurRadius: 20,
                               offset: const Offset(0, 8),
                             ),
                           ],
                         ),
-                        child: const Icon(Icons.auto_stories_rounded,
-                            size: 40, color: Colors.white),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/app_icon.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ),
                       const SizedBox(height: 20),
                       Text('Create Account',

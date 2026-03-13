@@ -4,6 +4,7 @@ import '../theme/app_icons.dart';
 import '../models/tip.dart';
 import '../services/tips_service.dart';
 import '../widgets/step_card.dart';
+import 'package:flutter/services.dart';
 
 class TipDetailScreen extends StatefulWidget {
   final Tip tip;
@@ -67,27 +68,33 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                     color: _isBookmarked ? AppColors.rose : AppColors.textPrimary,
                   ),
                 ),
-                onPressed: _toggleBookmark,
+                onPressed: () {
+                  HapticFeedback.lightImpact();
+                  _toggleBookmark();
+                },
               ),
               const SizedBox(width: 8),
             ],
             flexibleSpace: FlexibleSpaceBar(
-              background: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [AppColors.pinkLight, AppColors.creamCard],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  ),
-                ),
-                child: Center(
-                  child: Icon(
-                    AppIcons.tipIcon(tip.categoryId),
-                    size: 48,
-                    color: AppColors.rose.withValues(alpha: 0.6),
-                  ),
-                ),
-              ),
+              background: tip.image != null
+                  ? Image.asset(
+                      tip.image!,
+                      fit: BoxFit.cover,
+                      color: AppColors.pinkLight.withValues(alpha: 0.15),
+                      colorBlendMode: BlendMode.srcOver,
+                    )
+                  : Container(
+                      decoration: const BoxDecoration(
+                        color: AppColors.pinkLight,
+                      ),
+                      child: Center(
+                        child: Icon(
+                          AppIcons.tipIcon(tip.categoryId),
+                          size: 48,
+                          color: AppColors.rose.withValues(alpha: 0.6),
+                        ),
+                      ),
+                    ),
             ),
           ),
 
@@ -159,13 +166,9 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                     Container(
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [AppColors.pinkLight.withValues(alpha: 0.5), AppColors.creamCard],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
+                        color: AppColors.pinkLight.withValues(alpha: 0.3),
                         borderRadius: BorderRadius.circular(14),
-                        border: Border.all(color: AppColors.pink.withValues(alpha: 0.3)),
+                        border: Border.all(color: AppColors.pinkLight),
                       ),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,9 +201,9 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
 
   Color _diffColor(String d) {
     switch (d) {
-      case 'Easy': return const Color(0xFF4CAF50);
-      case 'Medium': return const Color(0xFFFF9800);
-      case 'Hard': return AppColors.rose;
+      case 'Easy': return const Color(0xFF66BB6A); // Softer green
+      case 'Medium': return const Color(0xFFFFA726); // Softer orange
+      case 'Hard': return AppColors.rose; // Keep theme rose
       default: return AppColors.textTertiary;
     }
   }

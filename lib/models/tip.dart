@@ -6,6 +6,7 @@ class Tip {
   final String difficulty; // "Easy", "Medium", "Hard"
   final String estimatedTime;
   final String icon;
+  final String? image;
   final List<String> whatYouNeed;
   final List<TipStep> steps;
   final String? proTip;
@@ -18,6 +19,7 @@ class Tip {
     required this.difficulty,
     required this.estimatedTime,
     required this.icon,
+    this.image,
     required this.whatYouNeed,
     required this.steps,
     this.proTip,
@@ -32,6 +34,7 @@ class Tip {
       difficulty: json['difficulty'] as String,
       estimatedTime: json['estimatedTime'] as String,
       icon: json['icon'] as String,
+      image: json['image'] as String?,
       whatYouNeed: List<String>.from(json['whatYouNeed'] ?? []),
       steps: (json['steps'] as List)
           .map((s) => TipStep.fromJson(s as Map<String, dynamic>))

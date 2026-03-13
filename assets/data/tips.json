@@ -1,591 +1,1872 @@
 {
   "categories": [
-    {"id": "lighting", "name": "Lighting & Electrical", "icon": "💡", "description": "Light up your world safely", "tipCount": 6},
-    {"id": "plumbing", "name": "Plumbing", "icon": "🔧", "description": "Keep the water flowing right", "tipCount": 6},
-    {"id": "cleaning", "name": "Cleaning", "icon": "🧹", "description": "A clean home is a happy home", "tipCount": 6},
-    {"id": "kitchen", "name": "Kitchen", "icon": "🍳", "description": "Master your kitchen space", "tipCount": 6},
-    {"id": "repairs", "name": "Home Repairs", "icon": "🛠️", "description": "Fix it yourself with confidence", "tipCount": 6},
-    {"id": "garden", "name": "Garden & Outdoor", "icon": "🌿", "description": "Bring your outdoors to life", "tipCount": 6},
-    {"id": "laundry", "name": "Laundry", "icon": "🧺", "description": "Fresh clothes every single day", "tipCount": 6},
-    {"id": "safety", "name": "Safety", "icon": "🔒", "description": "Keep your family safe at home", "tipCount": 6}
+    {
+      "id": "lighting",
+      "name": "Lighting & Electrical",
+      "icon": "💡",
+      "description": "Light up your world safely",
+      "tipCount": 6
+    },
+    {
+      "id": "plumbing",
+      "name": "Plumbing",
+      "icon": "🔧",
+      "description": "Keep the water flowing right",
+      "tipCount": 6
+    },
+    {
+      "id": "cleaning",
+      "name": "Cleaning",
+      "icon": "🧹",
+      "description": "A clean home is a happy home",
+      "tipCount": 6
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "icon": "🍳",
+      "description": "Master your kitchen space",
+      "tipCount": 6
+    },
+    {
+      "id": "repairs",
+      "name": "Home Repairs",
+      "icon": "🛠️",
+      "description": "Fix it yourself with confidence",
+      "tipCount": 6
+    },
+    {
+      "id": "garden",
+      "name": "Garden & Outdoor",
+      "icon": "🌿",
+      "description": "Bring your outdoors to life",
+      "tipCount": 6
+    },
+    {
+      "id": "laundry",
+      "name": "Laundry",
+      "icon": "🧺",
+      "description": "Fresh clothes every single day",
+      "tipCount": 6
+    },
+    {
+      "id": "safety",
+      "name": "Safety",
+      "icon": "🔒",
+      "description": "Keep your family safe at home",
+      "tipCount": 6
+    }
   ],
   "tips": [
     {
-      "id": "l1", "categoryId": "lighting", "title": "Change a Light Bulb", "subtitle": "Swap out old bulbs in just a few minutes.",
-      "difficulty": "Easy", "estimatedTime": "5 min", "icon": "💡",
-      "whatYouNeed": ["New light bulb", "Step stool (if needed)"],
-      "steps": [
-        {"number": 1, "title": "Turn off the switch", "description": "Always switch off the light before touching the bulb. Wait a minute if it was on — it might be hot."},
-        {"number": 2, "title": "Remove the old bulb", "description": "Gently twist the bulb to the left (counterclockwise) until it comes out. Hold it firmly but don't squeeze."},
-        {"number": 3, "title": "Put in the new bulb", "description": "Take your new bulb and twist it to the right (clockwise) until it feels snug. Don't over-tighten."},
-        {"number": 4, "title": "Turn the switch back on", "description": "Flip the switch. Your new bulb should light up right away!"}
+      "id": "l1",
+      "categoryId": "lighting",
+      "title": "Change a Light Bulb",
+      "subtitle": "Swap out old bulbs in just a few minutes.",
+      "difficulty": "Easy",
+      "estimatedTime": "5 min",
+      "icon": "💡",
+      "whatYouNeed": [
+        "New light bulb",
+        "Step stool (if needed)"
       ],
-      "proTip": "LED bulbs last much longer and use less power. They're worth the extra cost."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Turn off the switch",
+          "description": "Always switch off the light before touching the bulb. Wait a minute if it was on — it might be hot."
+        },
+        {
+          "number": 2,
+          "title": "Remove the old bulb",
+          "description": "Gently twist the bulb to the left (counterclockwise) until it comes out. Hold it firmly but don't squeeze."
+        },
+        {
+          "number": 3,
+          "title": "Put in the new bulb",
+          "description": "Take your new bulb and twist it to the right (clockwise) until it feels snug. Don't over-tighten."
+        },
+        {
+          "number": 4,
+          "title": "Turn the switch back on",
+          "description": "Flip the switch. Your new bulb should light up right away!"
+        }
+      ],
+      "proTip": "LED bulbs last much longer and use less power. They're worth the extra cost.",
+      "image": "assets/images/tip_1.jpg"
     },
     {
-      "id": "l2", "categoryId": "lighting", "title": "Understand Your Distribution Board", "subtitle": "Know what each switch in that metal box does.",
-      "difficulty": "Medium", "estimatedTime": "15 min", "icon": "⚡",
-      "whatYouNeed": ["Flashlight", "Marker and labels"],
-      "steps": [
-        {"number": 1, "title": "Find your board", "description": "The distribution board (or breaker box) is usually near your front door or in a utility area. It's a metal box on the wall."},
-        {"number": 2, "title": "Open the panel", "description": "Open the door of the box. You'll see rows of switches (called breakers). Each one controls power to a part of your home."},
-        {"number": 3, "title": "Identify each breaker", "description": "Turn off one breaker at a time and check which lights or outlets stop working. Write it down."},
-        {"number": 4, "title": "Label everything", "description": "Stick labels next to each breaker so you know which one is which. This saves time during emergencies."},
-        {"number": 5, "title": "Know the main switch", "description": "The biggest switch at the top cuts power to the whole house. Use it only in emergencies."}
+      "id": "l2",
+      "categoryId": "lighting",
+      "title": "Understand Your Distribution Board",
+      "subtitle": "Know what each switch in that metal box does.",
+      "difficulty": "Medium",
+      "estimatedTime": "15 min",
+      "icon": "⚡",
+      "whatYouNeed": [
+        "Flashlight",
+        "Marker and labels"
       ],
-      "proTip": "Take a photo of your labeled board and save it on your phone for quick reference."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Find your board",
+          "description": "The distribution board (or breaker box) is usually near your front door or in a utility area. It's a metal box on the wall."
+        },
+        {
+          "number": 2,
+          "title": "Open the panel",
+          "description": "Open the door of the box. You'll see rows of switches (called breakers). Each one controls power to a part of your home."
+        },
+        {
+          "number": 3,
+          "title": "Identify each breaker",
+          "description": "Turn off one breaker at a time and check which lights or outlets stop working. Write it down."
+        },
+        {
+          "number": 4,
+          "title": "Label everything",
+          "description": "Stick labels next to each breaker so you know which one is which. This saves time during emergencies."
+        },
+        {
+          "number": 5,
+          "title": "Know the main switch",
+          "description": "The biggest switch at the top cuts power to the whole house. Use it only in emergencies."
+        }
+      ],
+      "proTip": "Take a photo of your labeled board and save it on your phone for quick reference.",
+      "image": "assets/images/tip_2.jpg"
     },
     {
-      "id": "l3", "categoryId": "lighting", "title": "Reset a Tripped Breaker", "subtitle": "When the power goes out in one room, here's what to do.",
-      "difficulty": "Easy", "estimatedTime": "3 min", "icon": "🔌",
-      "whatYouNeed": ["Flashlight"],
-      "steps": [
-        {"number": 1, "title": "Go to your breaker box", "description": "Open the distribution board. Look for a switch that is in the middle position — not fully on or off."},
-        {"number": 2, "title": "Flip it off first", "description": "Push that switch all the way to the OFF position."},
-        {"number": 3, "title": "Then flip it on", "description": "Now push it back to the ON position. You should hear a click."},
-        {"number": 4, "title": "Check the room", "description": "Go back and see if the power is restored. If it trips again, you may have too many things plugged in."}
+      "id": "l3",
+      "categoryId": "lighting",
+      "title": "Reset a Tripped Breaker",
+      "subtitle": "When the power goes out in one room, here's what to do.",
+      "difficulty": "Easy",
+      "estimatedTime": "3 min",
+      "icon": "🔌",
+      "whatYouNeed": [
+        "Flashlight"
       ],
-      "proTip": "If a breaker keeps tripping, unplug everything from that circuit and call an electrician."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Go to your breaker box",
+          "description": "Open the distribution board. Look for a switch that is in the middle position — not fully on or off."
+        },
+        {
+          "number": 2,
+          "title": "Flip it off first",
+          "description": "Push that switch all the way to the OFF position."
+        },
+        {
+          "number": 3,
+          "title": "Then flip it on",
+          "description": "Now push it back to the ON position. You should hear a click."
+        },
+        {
+          "number": 4,
+          "title": "Check the room",
+          "description": "Go back and see if the power is restored. If it trips again, you may have too many things plugged in."
+        }
+      ],
+      "proTip": "If a breaker keeps tripping, unplug everything from that circuit and call an electrician.",
+      "image": "assets/images/tip_3.jpg"
     },
     {
-      "id": "l4", "categoryId": "lighting", "title": "Replace a Fuse", "subtitle": "Older homes use fuses. Here's how to swap one.",
-      "difficulty": "Medium", "estimatedTime": "10 min", "icon": "🔋",
-      "whatYouNeed": ["Replacement fuse (same rating)", "Flashlight", "Insulated gloves"],
-      "steps": [
-        {"number": 1, "title": "Turn off the main switch", "description": "Go to your fuse box and flip the main switch to OFF. Safety first!"},
-        {"number": 2, "title": "Find the blown fuse", "description": "Look for a fuse that looks dark or has a broken wire inside. That's the one to replace."},
-        {"number": 3, "title": "Remove the old fuse", "description": "Unscrew or pull out the old fuse. Use insulated gloves just to be safe."},
-        {"number": 4, "title": "Put in the new one", "description": "Insert the new fuse. Make sure it has the same number (amps) as the old one."},
-        {"number": 5, "title": "Turn the main back on", "description": "Flip the main switch to ON, then check if the problem is fixed."}
+      "id": "l4",
+      "categoryId": "lighting",
+      "title": "Replace a Fuse",
+      "subtitle": "Older homes use fuses. Here's how to swap one.",
+      "difficulty": "Medium",
+      "estimatedTime": "10 min",
+      "icon": "🔋",
+      "whatYouNeed": [
+        "Replacement fuse (same rating)",
+        "Flashlight",
+        "Insulated gloves"
       ],
-      "proTip": "Never use a fuse with a higher amp rating — it can cause a fire."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Turn off the main switch",
+          "description": "Go to your fuse box and flip the main switch to OFF. Safety first!"
+        },
+        {
+          "number": 2,
+          "title": "Find the blown fuse",
+          "description": "Look for a fuse that looks dark or has a broken wire inside. That's the one to replace."
+        },
+        {
+          "number": 3,
+          "title": "Remove the old fuse",
+          "description": "Unscrew or pull out the old fuse. Use insulated gloves just to be safe."
+        },
+        {
+          "number": 4,
+          "title": "Put in the new one",
+          "description": "Insert the new fuse. Make sure it has the same number (amps) as the old one."
+        },
+        {
+          "number": 5,
+          "title": "Turn the main back on",
+          "description": "Flip the main switch to ON, then check if the problem is fixed."
+        }
+      ],
+      "proTip": "Never use a fuse with a higher amp rating — it can cause a fire.",
+      "image": "assets/images/tip_4.jpg"
     },
     {
-      "id": "l5", "categoryId": "lighting", "title": "Install a Dimmer Switch", "subtitle": "Control how bright or soft your lights are.",
-      "difficulty": "Hard", "estimatedTime": "30 min", "icon": "🌗",
-      "whatYouNeed": ["Dimmer switch", "Screwdriver", "Wire tester"],
-      "steps": [
-        {"number": 1, "title": "Turn off the breaker", "description": "Switch off power to the light from your distribution board. Double-check with a wire tester."},
-        {"number": 2, "title": "Remove the old switch", "description": "Unscrew the faceplate and pull out the old switch. Note which wires go where."},
-        {"number": 3, "title": "Connect the dimmer", "description": "Attach the wires to the new dimmer following the instructions in the box. Match the wire colors."},
-        {"number": 4, "title": "Mount and test", "description": "Screw the dimmer into the wall box, attach the faceplate, and turn the breaker back on. Slide to test!"}
+      "id": "l5",
+      "categoryId": "lighting",
+      "title": "Install a Dimmer Switch",
+      "subtitle": "Control how bright or soft your lights are.",
+      "difficulty": "Hard",
+      "estimatedTime": "30 min",
+      "icon": "🌗",
+      "whatYouNeed": [
+        "Dimmer switch",
+        "Screwdriver",
+        "Wire tester"
       ],
-      "proTip": "Make sure your light bulbs are 'dimmable' — not all LEDs work with dimmers."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Turn off the breaker",
+          "description": "Switch off power to the light from your distribution board. Double-check with a wire tester."
+        },
+        {
+          "number": 2,
+          "title": "Remove the old switch",
+          "description": "Unscrew the faceplate and pull out the old switch. Note which wires go where."
+        },
+        {
+          "number": 3,
+          "title": "Connect the dimmer",
+          "description": "Attach the wires to the new dimmer following the instructions in the box. Match the wire colors."
+        },
+        {
+          "number": 4,
+          "title": "Mount and test",
+          "description": "Screw the dimmer into the wall box, attach the faceplate, and turn the breaker back on. Slide to test!"
+        }
+      ],
+      "proTip": "Make sure your light bulbs are 'dimmable' — not all LEDs work with dimmers.",
+      "image": "assets/images/tip_5.jpg"
     },
     {
-      "id": "l6", "categoryId": "lighting", "title": "Fix a Flickering Light", "subtitle": "Stop that annoying flicker in seconds.",
-      "difficulty": "Easy", "estimatedTime": "5 min", "icon": "✨",
-      "whatYouNeed": ["Step stool (if needed)"],
-      "steps": [
-        {"number": 1, "title": "Turn off the light", "description": "Switch off the light and wait for the bulb to cool down a bit."},
-        {"number": 2, "title": "Tighten the bulb", "description": "Give the bulb a gentle clockwise twist. A loose bulb is the most common cause of flickering."},
-        {"number": 3, "title": "Check the switch", "description": "Flip the switch a few times. If it feels loose or wobbly, the switch might need replacing."},
-        {"number": 4, "title": "Try a new bulb", "description": "If tightening didn't help, swap in a new bulb. The old one might be going bad."}
+      "id": "l6",
+      "categoryId": "lighting",
+      "title": "Fix a Flickering Light",
+      "subtitle": "Stop that annoying flicker in seconds.",
+      "difficulty": "Easy",
+      "estimatedTime": "5 min",
+      "icon": "✨",
+      "whatYouNeed": [
+        "Step stool (if needed)"
       ],
-      "proTip": "If the whole room flickers, it could be a wiring issue — call a professional."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Turn off the light",
+          "description": "Switch off the light and wait for the bulb to cool down a bit."
+        },
+        {
+          "number": 2,
+          "title": "Tighten the bulb",
+          "description": "Give the bulb a gentle clockwise twist. A loose bulb is the most common cause of flickering."
+        },
+        {
+          "number": 3,
+          "title": "Check the switch",
+          "description": "Flip the switch a few times. If it feels loose or wobbly, the switch might need replacing."
+        },
+        {
+          "number": 4,
+          "title": "Try a new bulb",
+          "description": "If tightening didn't help, swap in a new bulb. The old one might be going bad."
+        }
+      ],
+      "proTip": "If the whole room flickers, it could be a wiring issue — call a professional.",
+      "image": "assets/images/tip_6.jpg"
     },
     {
-      "id": "p1", "categoryId": "plumbing", "title": "Unclog a Drain", "subtitle": "Clear a slow or blocked drain without harsh chemicals.",
-      "difficulty": "Easy", "estimatedTime": "15 min", "icon": "🚿",
-      "whatYouNeed": ["Baking soda", "White vinegar", "Boiling water", "Plunger"],
-      "steps": [
-        {"number": 1, "title": "Pour boiling water", "description": "Boil a kettle and pour the hot water slowly down the drain. This loosens grease and soap buildup."},
-        {"number": 2, "title": "Add baking soda", "description": "Pour half a cup of baking soda into the drain. Let it sit for 5 minutes."},
-        {"number": 3, "title": "Add vinegar", "description": "Pour half a cup of vinegar down the drain. It will fizz — that's the cleaning action working!"},
-        {"number": 4, "title": "Wait and flush", "description": "Wait 15 minutes then flush with more boiling water. Repeat if needed."}
+      "id": "p1",
+      "categoryId": "plumbing",
+      "title": "Unclog a Drain",
+      "subtitle": "Clear a slow or blocked drain without harsh chemicals.",
+      "difficulty": "Easy",
+      "estimatedTime": "15 min",
+      "icon": "🚿",
+      "whatYouNeed": [
+        "Baking soda",
+        "White vinegar",
+        "Boiling water",
+        "Plunger"
       ],
-      "proTip": "Do this once a month to keep drains clear. Prevention is easier than fixing!"
+      "steps": [
+        {
+          "number": 1,
+          "title": "Pour boiling water",
+          "description": "Boil a kettle and pour the hot water slowly down the drain. This loosens grease and soap buildup."
+        },
+        {
+          "number": 2,
+          "title": "Add baking soda",
+          "description": "Pour half a cup of baking soda into the drain. Let it sit for 5 minutes."
+        },
+        {
+          "number": 3,
+          "title": "Add vinegar",
+          "description": "Pour half a cup of vinegar down the drain. It will fizz — that's the cleaning action working!"
+        },
+        {
+          "number": 4,
+          "title": "Wait and flush",
+          "description": "Wait 15 minutes then flush with more boiling water. Repeat if needed."
+        }
+      ],
+      "proTip": "Do this once a month to keep drains clear. Prevention is easier than fixing!",
+      "image": "assets/images/tip_7.jpg"
     },
     {
-      "id": "p2", "categoryId": "plumbing", "title": "Fix a Leaky Faucet", "subtitle": "Stop that drip-drip-drip for good.",
-      "difficulty": "Medium", "estimatedTime": "30 min", "icon": "🚰",
-      "whatYouNeed": ["Adjustable wrench", "Replacement washer", "Screwdriver", "Cloth"],
-      "steps": [
-        {"number": 1, "title": "Turn off the water", "description": "Find the shut-off valve under the sink and turn it clockwise until it stops."},
-        {"number": 2, "title": "Remove the handle", "description": "Pry off the decorative cap, unscrew the handle screw, and pull the handle off."},
-        {"number": 3, "title": "Replace the washer", "description": "Inside you'll find a small rubber washer. Take it out and put in a new one of the same size."},
-        {"number": 4, "title": "Put it back together", "description": "Reassemble everything in reverse order. Turn the water back on and check — no more dripping!"}
+      "id": "p2",
+      "categoryId": "plumbing",
+      "title": "Fix a Leaky Faucet",
+      "subtitle": "Stop that drip-drip-drip for good.",
+      "difficulty": "Medium",
+      "estimatedTime": "30 min",
+      "icon": "🚰",
+      "whatYouNeed": [
+        "Adjustable wrench",
+        "Replacement washer",
+        "Screwdriver",
+        "Cloth"
       ],
-      "proTip": "Bring the old washer to the hardware store so you get the exact right size."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Turn off the water",
+          "description": "Find the shut-off valve under the sink and turn it clockwise until it stops."
+        },
+        {
+          "number": 2,
+          "title": "Remove the handle",
+          "description": "Pry off the decorative cap, unscrew the handle screw, and pull the handle off."
+        },
+        {
+          "number": 3,
+          "title": "Replace the washer",
+          "description": "Inside you'll find a small rubber washer. Take it out and put in a new one of the same size."
+        },
+        {
+          "number": 4,
+          "title": "Put it back together",
+          "description": "Reassemble everything in reverse order. Turn the water back on and check — no more dripping!"
+        }
+      ],
+      "proTip": "Bring the old washer to the hardware store so you get the exact right size.",
+      "image": "assets/images/tip_8.jpg"
     },
     {
-      "id": "p3", "categoryId": "plumbing", "title": "Shut Off the Main Water", "subtitle": "Know this before a pipe bursts.",
-      "difficulty": "Easy", "estimatedTime": "2 min", "icon": "🔴",
-      "whatYouNeed": ["Nothing — just know where it is!"],
-      "steps": [
-        {"number": 1, "title": "Find the valve", "description": "Look near your water meter, usually in the basement, garage, or outside near the street."},
-        {"number": 2, "title": "Turn it off", "description": "Turn the valve clockwise (righty-tighty) until it stops. If it's a lever, turn it so it's across the pipe."},
-        {"number": 3, "title": "Test it", "description": "Open a faucet inside. If no water comes out after a few seconds, you did it right."}
+      "id": "p3",
+      "categoryId": "plumbing",
+      "title": "Shut Off the Main Water",
+      "subtitle": "Know this before a pipe bursts.",
+      "difficulty": "Easy",
+      "estimatedTime": "2 min",
+      "icon": "🔴",
+      "whatYouNeed": [
+        "Nothing — just know where it is!"
       ],
-      "proTip": "Show everyone in the house where this valve is. In an emergency, every second counts."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Find the valve",
+          "description": "Look near your water meter, usually in the basement, garage, or outside near the street."
+        },
+        {
+          "number": 2,
+          "title": "Turn it off",
+          "description": "Turn the valve clockwise (righty-tighty) until it stops. If it's a lever, turn it so it's across the pipe."
+        },
+        {
+          "number": 3,
+          "title": "Test it",
+          "description": "Open a faucet inside. If no water comes out after a few seconds, you did it right."
+        }
+      ],
+      "proTip": "Show everyone in the house where this valve is. In an emergency, every second counts.",
+      "image": "assets/images/tip_9.jpg"
     },
     {
-      "id": "p4", "categoryId": "plumbing", "title": "Unclog a Toilet", "subtitle": "Don't panic — this is fixable.",
-      "difficulty": "Easy", "estimatedTime": "10 min", "icon": "🚽",
-      "whatYouNeed": ["Plunger", "Rubber gloves", "Old towels"],
-      "steps": [
-        {"number": 1, "title": "Don't flush again", "description": "If the water is rising, do NOT flush again. This will make it overflow."},
-        {"number": 2, "title": "Place the plunger", "description": "Put the plunger over the drain hole at the bottom of the bowl. Make sure it forms a seal."},
-        {"number": 3, "title": "Plunge firmly", "description": "Push down and pull up firmly about 15 times. Keep the seal tight."},
-        {"number": 4, "title": "Check the flow", "description": "Remove the plunger. If water drains, flush once to clear. If not, repeat."}
+      "id": "p4",
+      "categoryId": "plumbing",
+      "title": "Unclog a Toilet",
+      "subtitle": "Don't panic — this is fixable.",
+      "difficulty": "Easy",
+      "estimatedTime": "10 min",
+      "icon": "🚽",
+      "whatYouNeed": [
+        "Plunger",
+        "Rubber gloves",
+        "Old towels"
       ],
-      "proTip": "A flanged plunger (with an extra ring) works way better for toilets than a flat one."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Don't flush again",
+          "description": "If the water is rising, do NOT flush again. This will make it overflow."
+        },
+        {
+          "number": 2,
+          "title": "Place the plunger",
+          "description": "Put the plunger over the drain hole at the bottom of the bowl. Make sure it forms a seal."
+        },
+        {
+          "number": 3,
+          "title": "Plunge firmly",
+          "description": "Push down and pull up firmly about 15 times. Keep the seal tight."
+        },
+        {
+          "number": 4,
+          "title": "Check the flow",
+          "description": "Remove the plunger. If water drains, flush once to clear. If not, repeat."
+        }
+      ],
+      "proTip": "A flanged plunger (with an extra ring) works way better for toilets than a flat one.",
+      "image": "assets/images/tip_10.jpg"
     },
     {
-      "id": "p5", "categoryId": "plumbing", "title": "Fix a Running Toilet", "subtitle": "Stop wasting water and money.",
-      "difficulty": "Medium", "estimatedTime": "20 min", "icon": "💧",
-      "whatYouNeed": ["Replacement flapper", "Adjustable wrench"],
-      "steps": [
-        {"number": 1, "title": "Remove the tank lid", "description": "Lift the lid off the back of the toilet. Set it somewhere safe — it's heavy and breakable."},
-        {"number": 2, "title": "Check the flapper", "description": "The flapper is the rubber piece at the bottom. If it's worn or doesn't sit flat, water leaks through."},
-        {"number": 3, "title": "Replace the flapper", "description": "Unhook the old flapper and snap the new one in place. They're cheap and easy to find."},
-        {"number": 4, "title": "Adjust the float", "description": "If the water level is too high, adjust the float arm or screw so water stops about an inch below the overflow tube."}
+      "id": "p5",
+      "categoryId": "plumbing",
+      "title": "Fix a Running Toilet",
+      "subtitle": "Stop wasting water and money.",
+      "difficulty": "Medium",
+      "estimatedTime": "20 min",
+      "icon": "💧",
+      "whatYouNeed": [
+        "Replacement flapper",
+        "Adjustable wrench"
       ],
-      "proTip": "A running toilet can waste 200 gallons of water a day. Fix it fast!"
+      "steps": [
+        {
+          "number": 1,
+          "title": "Remove the tank lid",
+          "description": "Lift the lid off the back of the toilet. Set it somewhere safe — it's heavy and breakable."
+        },
+        {
+          "number": 2,
+          "title": "Check the flapper",
+          "description": "The flapper is the rubber piece at the bottom. If it's worn or doesn't sit flat, water leaks through."
+        },
+        {
+          "number": 3,
+          "title": "Replace the flapper",
+          "description": "Unhook the old flapper and snap the new one in place. They're cheap and easy to find."
+        },
+        {
+          "number": 4,
+          "title": "Adjust the float",
+          "description": "If the water level is too high, adjust the float arm or screw so water stops about an inch below the overflow tube."
+        }
+      ],
+      "proTip": "A running toilet can waste 200 gallons of water a day. Fix it fast!",
+      "image": "assets/images/tip_11.jpg"
     },
     {
-      "id": "p6", "categoryId": "plumbing", "title": "Prevent Frozen Pipes", "subtitle": "Keep your pipes safe in cold weather.",
-      "difficulty": "Easy", "estimatedTime": "15 min", "icon": "❄️",
-      "whatYouNeed": ["Pipe insulation foam", "Heat tape (optional)"],
-      "steps": [
-        {"number": 1, "title": "Insulate exposed pipes", "description": "Wrap foam insulation around any pipes you can see in the basement, attic, or garage."},
-        {"number": 2, "title": "Let faucets drip", "description": "On very cold nights, let a thin stream of water run from faucets. Moving water doesn't freeze as easily."},
-        {"number": 3, "title": "Keep the heat on", "description": "Even if you're away, keep your home heated to at least 55°F (13°C). This protects your pipes."}
+      "id": "p6",
+      "categoryId": "plumbing",
+      "title": "Prevent Frozen Pipes",
+      "subtitle": "Keep your pipes safe in cold weather.",
+      "difficulty": "Easy",
+      "estimatedTime": "15 min",
+      "icon": "❄️",
+      "whatYouNeed": [
+        "Pipe insulation foam",
+        "Heat tape (optional)"
       ],
-      "proTip": "Open cabinet doors under sinks on cold nights to let warm air reach the pipes."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Insulate exposed pipes",
+          "description": "Wrap foam insulation around any pipes you can see in the basement, attic, or garage."
+        },
+        {
+          "number": 2,
+          "title": "Let faucets drip",
+          "description": "On very cold nights, let a thin stream of water run from faucets. Moving water doesn't freeze as easily."
+        },
+        {
+          "number": 3,
+          "title": "Keep the heat on",
+          "description": "Even if you're away, keep your home heated to at least 55°F (13°C). This protects your pipes."
+        }
+      ],
+      "proTip": "Open cabinet doors under sinks on cold nights to let warm air reach the pipes.",
+      "image": "assets/images/tip_12.jpg"
     },
     {
-      "id": "c1", "categoryId": "cleaning", "title": "Clean Kitchen Counters", "subtitle": "A quick daily clean keeps germs away.",
-      "difficulty": "Easy", "estimatedTime": "5 min", "icon": "✨",
-      "whatYouNeed": ["Spray bottle with soapy water or cleaner", "Clean cloth or sponge"],
-      "steps": [
-        {"number": 1, "title": "Clear the counter", "description": "Move everything off the counter — jars, appliances, fruit bowls. You want to clean every inch."},
-        {"number": 2, "title": "Spray it down", "description": "Give the whole counter a good spray with your cleaner. Let it sit for 30 seconds."},
-        {"number": 3, "title": "Wipe it clean", "description": "Wipe from back to front, pushing crumbs off the edge into your hand or a dustpan."},
-        {"number": 4, "title": "Dry it off", "description": "Use a dry cloth to buff the counter. This prevents water spots and keeps it shiny."}
+      "id": "c1",
+      "categoryId": "cleaning",
+      "title": "Clean Kitchen Counters",
+      "subtitle": "A quick daily clean keeps germs away.",
+      "difficulty": "Easy",
+      "estimatedTime": "5 min",
+      "icon": "✨",
+      "whatYouNeed": [
+        "Spray bottle with soapy water or cleaner",
+        "Clean cloth or sponge"
       ],
-      "proTip": "Mix equal parts water and white vinegar for a cheap, natural cleaner."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Clear the counter",
+          "description": "Move everything off the counter — jars, appliances, fruit bowls. You want to clean every inch."
+        },
+        {
+          "number": 2,
+          "title": "Spray it down",
+          "description": "Give the whole counter a good spray with your cleaner. Let it sit for 30 seconds."
+        },
+        {
+          "number": 3,
+          "title": "Wipe it clean",
+          "description": "Wipe from back to front, pushing crumbs off the edge into your hand or a dustpan."
+        },
+        {
+          "number": 4,
+          "title": "Dry it off",
+          "description": "Use a dry cloth to buff the counter. This prevents water spots and keeps it shiny."
+        }
+      ],
+      "proTip": "Mix equal parts water and white vinegar for a cheap, natural cleaner.",
+      "image": "assets/images/tip_13.jpg"
     },
     {
-      "id": "c2", "categoryId": "cleaning", "title": "Remove Carpet Stains", "subtitle": "Act fast and the stain won't stand a chance.",
-      "difficulty": "Easy", "estimatedTime": "15 min", "icon": "🧽",
-      "whatYouNeed": ["Clean white cloth", "Cold water", "Dish soap", "Baking soda"],
-      "steps": [
-        {"number": 1, "title": "Blot, don't rub", "description": "Press a clean cloth on the stain to soak up as much as possible. Rubbing pushes the stain deeper."},
-        {"number": 2, "title": "Apply cleaning mix", "description": "Mix a drop of dish soap with cold water. Dab it on the stain gently."},
-        {"number": 3, "title": "Blot again", "description": "Use a fresh part of the cloth to blot up the soapy water and stain. Repeat until the stain fades."},
-        {"number": 4, "title": "Sprinkle baking soda", "description": "Once dry, sprinkle baking soda on the spot. Let it sit for a few hours, then vacuum it up."}
+      "id": "c2",
+      "categoryId": "cleaning",
+      "title": "Remove Carpet Stains",
+      "subtitle": "Act fast and the stain won't stand a chance.",
+      "difficulty": "Easy",
+      "estimatedTime": "15 min",
+      "icon": "🧽",
+      "whatYouNeed": [
+        "Clean white cloth",
+        "Cold water",
+        "Dish soap",
+        "Baking soda"
       ],
-      "proTip": "Always use cold water on stains. Hot water can set many stains permanently."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Blot, don't rub",
+          "description": "Press a clean cloth on the stain to soak up as much as possible. Rubbing pushes the stain deeper."
+        },
+        {
+          "number": 2,
+          "title": "Apply cleaning mix",
+          "description": "Mix a drop of dish soap with cold water. Dab it on the stain gently."
+        },
+        {
+          "number": 3,
+          "title": "Blot again",
+          "description": "Use a fresh part of the cloth to blot up the soapy water and stain. Repeat until the stain fades."
+        },
+        {
+          "number": 4,
+          "title": "Sprinkle baking soda",
+          "description": "Once dry, sprinkle baking soda on the spot. Let it sit for a few hours, then vacuum it up."
+        }
+      ],
+      "proTip": "Always use cold water on stains. Hot water can set many stains permanently.",
+      "image": "assets/images/tip_14.jpg"
     },
     {
-      "id": "c3", "categoryId": "cleaning", "title": "Clean Windows Streak-Free", "subtitle": "Crystal clear windows in no time.",
-      "difficulty": "Easy", "estimatedTime": "20 min", "icon": "🪟",
-      "whatYouNeed": ["Glass cleaner or vinegar solution", "Squeegee or newspaper", "Microfiber cloth"],
-      "steps": [
-        {"number": 1, "title": "Pick a cloudy day", "description": "Direct sunlight dries the cleaner too fast, leaving streaks. Cloudy days are best."},
-        {"number": 2, "title": "Spray the glass", "description": "Spray the cleaner across the whole window. Cover it well."},
-        {"number": 3, "title": "Wipe with squeegee", "description": "Starting at the top, pull the squeegee down in one smooth stroke. Wipe the blade after each pass."},
-        {"number": 4, "title": "Dry the edges", "description": "Use a microfiber cloth to wipe any drips along the edges and corners."}
+      "id": "c3",
+      "categoryId": "cleaning",
+      "title": "Clean Windows Streak-Free",
+      "subtitle": "Crystal clear windows in no time.",
+      "difficulty": "Easy",
+      "estimatedTime": "20 min",
+      "icon": "🪟",
+      "whatYouNeed": [
+        "Glass cleaner or vinegar solution",
+        "Squeegee or newspaper",
+        "Microfiber cloth"
       ],
-      "proTip": "Newspaper works surprisingly well for a streak-free shine. Give it a try!"
+      "steps": [
+        {
+          "number": 1,
+          "title": "Pick a cloudy day",
+          "description": "Direct sunlight dries the cleaner too fast, leaving streaks. Cloudy days are best."
+        },
+        {
+          "number": 2,
+          "title": "Spray the glass",
+          "description": "Spray the cleaner across the whole window. Cover it well."
+        },
+        {
+          "number": 3,
+          "title": "Wipe with squeegee",
+          "description": "Starting at the top, pull the squeegee down in one smooth stroke. Wipe the blade after each pass."
+        },
+        {
+          "number": 4,
+          "title": "Dry the edges",
+          "description": "Use a microfiber cloth to wipe any drips along the edges and corners."
+        }
+      ],
+      "proTip": "Newspaper works surprisingly well for a streak-free shine. Give it a try!",
+      "image": "assets/images/tip_15.jpg"
     },
     {
-      "id": "c4", "categoryId": "cleaning", "title": "Deep Clean Your Bathroom", "subtitle": "Make your bathroom sparkle from top to bottom.",
-      "difficulty": "Medium", "estimatedTime": "45 min", "icon": "🛁",
-      "whatYouNeed": ["All-purpose cleaner", "Toilet bowl cleaner", "Scrub brush", "Microfiber cloths", "Gloves"],
-      "steps": [
-        {"number": 1, "title": "Start with the toilet", "description": "Squirt cleaner inside the bowl and let it sit while you clean other things."},
-        {"number": 2, "title": "Spray surfaces", "description": "Spray the sink, counter, and mirror with all-purpose cleaner."},
-        {"number": 3, "title": "Scrub the shower/tub", "description": "Spray and scrub the shower walls, tub, and faucets. Pay attention to corners where mold grows."},
-        {"number": 4, "title": "Wipe everything down", "description": "Wipe the mirror, sink, and counter. Scrub the toilet bowl with a brush, then wipe the outside."},
-        {"number": 5, "title": "Mop the floor", "description": "Sweep or vacuum first, then mop. Start from the far end and work toward the door."}
+      "id": "c4",
+      "categoryId": "cleaning",
+      "title": "Deep Clean Your Bathroom",
+      "subtitle": "Make your bathroom sparkle from top to bottom.",
+      "difficulty": "Medium",
+      "estimatedTime": "45 min",
+      "icon": "🛁",
+      "whatYouNeed": [
+        "All-purpose cleaner",
+        "Toilet bowl cleaner",
+        "Scrub brush",
+        "Microfiber cloths",
+        "Gloves"
       ],
-      "proTip": "Clean your bathroom weekly. It's much faster when grime doesn't have time to build up."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Start with the toilet",
+          "description": "Squirt cleaner inside the bowl and let it sit while you clean other things."
+        },
+        {
+          "number": 2,
+          "title": "Spray surfaces",
+          "description": "Spray the sink, counter, and mirror with all-purpose cleaner."
+        },
+        {
+          "number": 3,
+          "title": "Scrub the shower/tub",
+          "description": "Spray and scrub the shower walls, tub, and faucets. Pay attention to corners where mold grows."
+        },
+        {
+          "number": 4,
+          "title": "Wipe everything down",
+          "description": "Wipe the mirror, sink, and counter. Scrub the toilet bowl with a brush, then wipe the outside."
+        },
+        {
+          "number": 5,
+          "title": "Mop the floor",
+          "description": "Sweep or vacuum first, then mop. Start from the far end and work toward the door."
+        }
+      ],
+      "proTip": "Clean your bathroom weekly. It's much faster when grime doesn't have time to build up.",
+      "image": "assets/images/tip_16.jpg"
     },
     {
-      "id": "c5", "categoryId": "cleaning", "title": "Dust Your Home Properly", "subtitle": "Breathe easier with less dust around.",
-      "difficulty": "Easy", "estimatedTime": "20 min", "icon": "🪶",
-      "whatYouNeed": ["Microfiber cloth", "Duster with extendable handle"],
-      "steps": [
-        {"number": 1, "title": "Start high", "description": "Dust ceiling fans, light fixtures, and the tops of shelves first. Dust falls down!"},
-        {"number": 2, "title": "Work your way down", "description": "Wipe shelves, picture frames, TV screens, and furniture tops."},
-        {"number": 3, "title": "Don't forget hidden spots", "description": "Dust baseboards, window sills, and behind electronics."},
-        {"number": 4, "title": "Finish with the floor", "description": "Vacuum or sweep the floor last to catch all the dust that fell."}
+      "id": "c5",
+      "categoryId": "cleaning",
+      "title": "Dust Your Home Properly",
+      "subtitle": "Breathe easier with less dust around.",
+      "difficulty": "Easy",
+      "estimatedTime": "20 min",
+      "icon": "🪶",
+      "whatYouNeed": [
+        "Microfiber cloth",
+        "Duster with extendable handle"
       ],
-      "proTip": "Dampen your microfiber cloth slightly — it catches dust instead of spreading it around."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Start high",
+          "description": "Dust ceiling fans, light fixtures, and the tops of shelves first. Dust falls down!"
+        },
+        {
+          "number": 2,
+          "title": "Work your way down",
+          "description": "Wipe shelves, picture frames, TV screens, and furniture tops."
+        },
+        {
+          "number": 3,
+          "title": "Don't forget hidden spots",
+          "description": "Dust baseboards, window sills, and behind electronics."
+        },
+        {
+          "number": 4,
+          "title": "Finish with the floor",
+          "description": "Vacuum or sweep the floor last to catch all the dust that fell."
+        }
+      ],
+      "proTip": "Dampen your microfiber cloth slightly — it catches dust instead of spreading it around.",
+      "image": "assets/images/tip_17.jpg"
     },
     {
-      "id": "c6", "categoryId": "cleaning", "title": "Clean Your Washing Machine", "subtitle": "Yes, even your washer needs a bath.",
-      "difficulty": "Easy", "estimatedTime": "30 min", "icon": "🫧",
-      "whatYouNeed": ["White vinegar", "Baking soda", "Microfiber cloth"],
-      "steps": [
-        {"number": 1, "title": "Run an empty hot cycle", "description": "Add 2 cups of white vinegar to the drum. Run it on the hottest setting with no clothes."},
-        {"number": 2, "title": "Scrub the drum", "description": "After the cycle, sprinkle baking soda inside and scrub with a damp cloth."},
-        {"number": 3, "title": "Clean the door seal", "description": "Wipe around the rubber door seal with vinegar. This is where mold likes to hide."},
-        {"number": 4, "title": "Leave it open", "description": "After cleaning, leave the door open to air dry. This prevents mold and bad smells."}
+      "id": "c6",
+      "categoryId": "cleaning",
+      "title": "Clean Your Washing Machine",
+      "subtitle": "Yes, even your washer needs a bath.",
+      "difficulty": "Easy",
+      "estimatedTime": "30 min",
+      "icon": "🫧",
+      "whatYouNeed": [
+        "White vinegar",
+        "Baking soda",
+        "Microfiber cloth"
       ],
-      "proTip": "Do this once a month to keep your washer fresh and your clothes smelling great."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Run an empty hot cycle",
+          "description": "Add 2 cups of white vinegar to the drum. Run it on the hottest setting with no clothes."
+        },
+        {
+          "number": 2,
+          "title": "Scrub the drum",
+          "description": "After the cycle, sprinkle baking soda inside and scrub with a damp cloth."
+        },
+        {
+          "number": 3,
+          "title": "Clean the door seal",
+          "description": "Wipe around the rubber door seal with vinegar. This is where mold likes to hide."
+        },
+        {
+          "number": 4,
+          "title": "Leave it open",
+          "description": "After cleaning, leave the door open to air dry. This prevents mold and bad smells."
+        }
+      ],
+      "proTip": "Do this once a month to keep your washer fresh and your clothes smelling great.",
+      "image": "assets/images/tip_18.jpg"
     },
     {
-      "id": "k1", "categoryId": "kitchen", "title": "Organize Your Pantry", "subtitle": "Find what you need in seconds, not minutes.",
-      "difficulty": "Easy", "estimatedTime": "45 min", "icon": "🗄️",
-      "whatYouNeed": ["Clear containers", "Labels", "Lazy Susan (optional)"],
-      "steps": [
-        {"number": 1, "title": "Take everything out", "description": "Empty the whole pantry. Yes, everything. Check expiry dates as you go."},
-        {"number": 2, "title": "Group similar items", "description": "Put canned goods together, snacks together, baking supplies together. Like with like."},
-        {"number": 3, "title": "Use clear containers", "description": "Pour things like rice, pasta, and cereal into clear containers. You'll see when you're running low."},
-        {"number": 4, "title": "Put everyday items at eye level", "description": "Things you use daily should be easy to reach. Rarely used items go up high."}
+      "id": "k1",
+      "categoryId": "kitchen",
+      "title": "Organize Your Pantry",
+      "subtitle": "Find what you need in seconds, not minutes.",
+      "difficulty": "Easy",
+      "estimatedTime": "45 min",
+      "icon": "🗄️",
+      "whatYouNeed": [
+        "Clear containers",
+        "Labels",
+        "Lazy Susan (optional)"
       ],
-      "proTip": "A Lazy Susan in the corner makes reaching things in deep shelves much easier."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Take everything out",
+          "description": "Empty the whole pantry. Yes, everything. Check expiry dates as you go."
+        },
+        {
+          "number": 2,
+          "title": "Group similar items",
+          "description": "Put canned goods together, snacks together, baking supplies together. Like with like."
+        },
+        {
+          "number": 3,
+          "title": "Use clear containers",
+          "description": "Pour things like rice, pasta, and cereal into clear containers. You'll see when you're running low."
+        },
+        {
+          "number": 4,
+          "title": "Put everyday items at eye level",
+          "description": "Things you use daily should be easy to reach. Rarely used items go up high."
+        }
+      ],
+      "proTip": "A Lazy Susan in the corner makes reaching things in deep shelves much easier.",
+      "image": "assets/images/tip_19.jpg"
     },
     {
-      "id": "k2", "categoryId": "kitchen", "title": "Deep Clean an Oven", "subtitle": "No more smoke every time you bake.",
-      "difficulty": "Medium", "estimatedTime": "2 hours", "icon": "🔥",
-      "whatYouNeed": ["Baking soda", "White vinegar", "Spray bottle", "Cloth", "Gloves"],
-      "steps": [
-        {"number": 1, "title": "Make a paste", "description": "Mix half a cup of baking soda with a few tablespoons of water to make a thick paste."},
-        {"number": 2, "title": "Coat the inside", "description": "Spread the paste all over the inside of the oven. Avoid the heating elements. It will turn brown."},
-        {"number": 3, "title": "Wait overnight", "description": "Let the paste sit for at least 12 hours. It breaks down all the baked-on grease."},
-        {"number": 4, "title": "Spray with vinegar", "description": "Spray vinegar over the paste. It will fizz. This loosens everything up."},
-        {"number": 5, "title": "Wipe it all out", "description": "Use a damp cloth to wipe away the paste and grime. Repeat until the oven is clean."}
+      "id": "k2",
+      "categoryId": "kitchen",
+      "title": "Deep Clean an Oven",
+      "subtitle": "No more smoke every time you bake.",
+      "difficulty": "Medium",
+      "estimatedTime": "2 hours",
+      "icon": "🔥",
+      "whatYouNeed": [
+        "Baking soda",
+        "White vinegar",
+        "Spray bottle",
+        "Cloth",
+        "Gloves"
       ],
-      "proTip": "Place a sheet of foil at the bottom of your oven to catch drips and make future cleaning easier."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Make a paste",
+          "description": "Mix half a cup of baking soda with a few tablespoons of water to make a thick paste."
+        },
+        {
+          "number": 2,
+          "title": "Coat the inside",
+          "description": "Spread the paste all over the inside of the oven. Avoid the heating elements. It will turn brown."
+        },
+        {
+          "number": 3,
+          "title": "Wait overnight",
+          "description": "Let the paste sit for at least 12 hours. It breaks down all the baked-on grease."
+        },
+        {
+          "number": 4,
+          "title": "Spray with vinegar",
+          "description": "Spray vinegar over the paste. It will fizz. This loosens everything up."
+        },
+        {
+          "number": 5,
+          "title": "Wipe it all out",
+          "description": "Use a damp cloth to wipe away the paste and grime. Repeat until the oven is clean."
+        }
+      ],
+      "proTip": "Place a sheet of foil at the bottom of your oven to catch drips and make future cleaning easier.",
+      "image": "assets/images/tip_20.jpg"
     },
     {
-      "id": "k3", "categoryId": "kitchen", "title": "Maintain Your Refrigerator", "subtitle": "Keep food fresh and energy bills low.",
-      "difficulty": "Easy", "estimatedTime": "20 min", "icon": "🧊",
-      "whatYouNeed": ["Warm soapy water", "Cloth", "Baking soda"],
-      "steps": [
-        {"number": 1, "title": "Check the temperature", "description": "Your fridge should be at 37°F (3°C) and the freezer at 0°F (-18°C). Adjust if needed."},
-        {"number": 2, "title": "Clean the shelves", "description": "Remove food, take out shelves, and wash them with warm soapy water."},
-        {"number": 3, "title": "Wipe the inside", "description": "Wipe down the walls and door seals with a damp cloth."},
-        {"number": 4, "title": "Deodorize", "description": "Place an open box of baking soda inside. It absorbs bad smells for up to 3 months."}
+      "id": "k3",
+      "categoryId": "kitchen",
+      "title": "Maintain Your Refrigerator",
+      "subtitle": "Keep food fresh and energy bills low.",
+      "difficulty": "Easy",
+      "estimatedTime": "20 min",
+      "icon": "🧊",
+      "whatYouNeed": [
+        "Warm soapy water",
+        "Cloth",
+        "Baking soda"
       ],
-      "proTip": "Clean the coils behind or under your fridge twice a year — it saves energy."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Check the temperature",
+          "description": "Your fridge should be at 37°F (3°C) and the freezer at 0°F (-18°C). Adjust if needed."
+        },
+        {
+          "number": 2,
+          "title": "Clean the shelves",
+          "description": "Remove food, take out shelves, and wash them with warm soapy water."
+        },
+        {
+          "number": 3,
+          "title": "Wipe the inside",
+          "description": "Wipe down the walls and door seals with a damp cloth."
+        },
+        {
+          "number": 4,
+          "title": "Deodorize",
+          "description": "Place an open box of baking soda inside. It absorbs bad smells for up to 3 months."
+        }
+      ],
+      "proTip": "Clean the coils behind or under your fridge twice a year — it saves energy.",
+      "image": "assets/images/tip_21.jpg"
     },
     {
-      "id": "k4", "categoryId": "kitchen", "title": "Sharpen Kitchen Knives", "subtitle": "A sharp knife is safer than a dull one.",
-      "difficulty": "Medium", "estimatedTime": "10 min", "icon": "🔪",
-      "whatYouNeed": ["Sharpening stone or honing rod"],
-      "steps": [
-        {"number": 1, "title": "Hold the rod steady", "description": "Place the tip of the honing rod on a cutting board. Hold it straight up."},
-        {"number": 2, "title": "Angle the knife", "description": "Hold the knife at about a 20-degree angle against the rod."},
-        {"number": 3, "title": "Slide down and across", "description": "Pull the knife down the rod from heel to tip, as if you're slicing a thin piece off."},
-        {"number": 4, "title": "Alternate sides", "description": "Do this 5 times on each side. Test the sharpness on a tomato."}
+      "id": "k4",
+      "categoryId": "kitchen",
+      "title": "Sharpen Kitchen Knives",
+      "subtitle": "A sharp knife is safer than a dull one.",
+      "difficulty": "Medium",
+      "estimatedTime": "10 min",
+      "icon": "🔪",
+      "whatYouNeed": [
+        "Sharpening stone or honing rod"
       ],
-      "proTip": "Hone your knives every time you cook. Sharpen with a stone only a few times a year."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Hold the rod steady",
+          "description": "Place the tip of the honing rod on a cutting board. Hold it straight up."
+        },
+        {
+          "number": 2,
+          "title": "Angle the knife",
+          "description": "Hold the knife at about a 20-degree angle against the rod."
+        },
+        {
+          "number": 3,
+          "title": "Slide down and across",
+          "description": "Pull the knife down the rod from heel to tip, as if you're slicing a thin piece off."
+        },
+        {
+          "number": 4,
+          "title": "Alternate sides",
+          "description": "Do this 5 times on each side. Test the sharpness on a tomato."
+        }
+      ],
+      "proTip": "Hone your knives every time you cook. Sharpen with a stone only a few times a year.",
+      "image": "assets/images/tip_22.jpg"
     },
     {
-      "id": "k5", "categoryId": "kitchen", "title": "Prevent Kitchen Fires", "subtitle": "Simple steps to keep cooking safe.",
-      "difficulty": "Easy", "estimatedTime": "5 min", "icon": "🧯",
-      "whatYouNeed": ["Fire extinguisher", "Pot lid"],
-      "steps": [
-        {"number": 1, "title": "Never leave cooking unattended", "description": "Stay in the kitchen when frying or grilling. If you must leave, turn off the stove."},
-        {"number": 2, "title": "Keep flammables away", "description": "Move towels, paper, and curtains away from the stove."},
-        {"number": 3, "title": "Know how to smother a grease fire", "description": "Never use water on a grease fire. Slide a lid over the pan and turn off the heat."},
-        {"number": 4, "title": "Keep an extinguisher nearby", "description": "Have a fire extinguisher in the kitchen. Check it yearly."}
+      "id": "k5",
+      "categoryId": "kitchen",
+      "title": "Prevent Kitchen Fires",
+      "subtitle": "Simple steps to keep cooking safe.",
+      "difficulty": "Easy",
+      "estimatedTime": "5 min",
+      "icon": "🧯",
+      "whatYouNeed": [
+        "Fire extinguisher",
+        "Pot lid"
       ],
-      "proTip": "Baking soda can also smother a small grease fire. Keep a box near the stove."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Never leave cooking unattended",
+          "description": "Stay in the kitchen when frying or grilling. If you must leave, turn off the stove."
+        },
+        {
+          "number": 2,
+          "title": "Keep flammables away",
+          "description": "Move towels, paper, and curtains away from the stove."
+        },
+        {
+          "number": 3,
+          "title": "Know how to smother a grease fire",
+          "description": "Never use water on a grease fire. Slide a lid over the pan and turn off the heat."
+        },
+        {
+          "number": 4,
+          "title": "Keep an extinguisher nearby",
+          "description": "Have a fire extinguisher in the kitchen. Check it yearly."
+        }
+      ],
+      "proTip": "Baking soda can also smother a small grease fire. Keep a box near the stove.",
+      "image": "assets/images/tip_23.jpg"
     },
     {
-      "id": "k6", "categoryId": "kitchen", "title": "Get Rid of Kitchen Odors", "subtitle": "Your kitchen should smell like dinner, not last week's dinner.",
-      "difficulty": "Easy", "estimatedTime": "10 min", "icon": "🍋",
-      "whatYouNeed": ["Lemon", "Baking soda", "White vinegar"],
-      "steps": [
-        {"number": 1, "title": "Simmer citrus", "description": "Slice a lemon and simmer it in a pot of water on the stove. It freshens up the whole kitchen."},
-        {"number": 2, "title": "Deodorize the sink", "description": "Pour baking soda down the drain, followed by vinegar. Let it fizz, then rinse with hot water."},
-        {"number": 3, "title": "Clean the trash can", "description": "Wash the inside of your trash can with soapy water. Sprinkle baking soda at the bottom before adding a new bag."}
+      "id": "k6",
+      "categoryId": "kitchen",
+      "title": "Get Rid of Kitchen Odors",
+      "subtitle": "Your kitchen should smell like dinner, not last week's dinner.",
+      "difficulty": "Easy",
+      "estimatedTime": "10 min",
+      "icon": "🍋",
+      "whatYouNeed": [
+        "Lemon",
+        "Baking soda",
+        "White vinegar"
       ],
-      "proTip": "Grind lemon peels in the garbage disposal to keep it smelling fresh."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Simmer citrus",
+          "description": "Slice a lemon and simmer it in a pot of water on the stove. It freshens up the whole kitchen."
+        },
+        {
+          "number": 2,
+          "title": "Deodorize the sink",
+          "description": "Pour baking soda down the drain, followed by vinegar. Let it fizz, then rinse with hot water."
+        },
+        {
+          "number": 3,
+          "title": "Clean the trash can",
+          "description": "Wash the inside of your trash can with soapy water. Sprinkle baking soda at the bottom before adding a new bag."
+        }
+      ],
+      "proTip": "Grind lemon peels in the garbage disposal to keep it smelling fresh.",
+      "image": "assets/images/tip_24.jpg"
     },
     {
-      "id": "r1", "categoryId": "repairs", "title": "Patch a Hole in the Wall", "subtitle": "Fix nail holes and small dents like a pro.",
-      "difficulty": "Easy", "estimatedTime": "30 min", "icon": "🕳️",
-      "whatYouNeed": ["Spackling paste", "Putty knife", "Sandpaper", "Paint"],
-      "steps": [
-        {"number": 1, "title": "Clean the hole", "description": "Remove any loose bits around the hole. Brush away dust."},
-        {"number": 2, "title": "Apply spackling paste", "description": "Scoop a small amount of paste onto your putty knife. Press it into the hole and smooth it flat."},
-        {"number": 3, "title": "Let it dry", "description": "Wait for the paste to dry completely. This usually takes 1-2 hours."},
-        {"number": 4, "title": "Sand and paint", "description": "Sand the patch smooth with fine sandpaper. Then touch it up with matching paint."}
+      "id": "r1",
+      "categoryId": "repairs",
+      "title": "Patch a Hole in the Wall",
+      "subtitle": "Fix nail holes and small dents like a pro.",
+      "difficulty": "Easy",
+      "estimatedTime": "30 min",
+      "icon": "🕳️",
+      "whatYouNeed": [
+        "Spackling paste",
+        "Putty knife",
+        "Sandpaper",
+        "Paint"
       ],
-      "proTip": "Keep a small jar of your wall paint color handy for quick touch-ups."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Clean the hole",
+          "description": "Remove any loose bits around the hole. Brush away dust."
+        },
+        {
+          "number": 2,
+          "title": "Apply spackling paste",
+          "description": "Scoop a small amount of paste onto your putty knife. Press it into the hole and smooth it flat."
+        },
+        {
+          "number": 3,
+          "title": "Let it dry",
+          "description": "Wait for the paste to dry completely. This usually takes 1-2 hours."
+        },
+        {
+          "number": 4,
+          "title": "Sand and paint",
+          "description": "Sand the patch smooth with fine sandpaper. Then touch it up with matching paint."
+        }
+      ],
+      "proTip": "Keep a small jar of your wall paint color handy for quick touch-ups.",
+      "image": "assets/images/tip_25.jpg"
     },
     {
-      "id": "r2", "categoryId": "repairs", "title": "Tighten a Loose Door Handle", "subtitle": "No more wobbly handles.",
-      "difficulty": "Easy", "estimatedTime": "5 min", "icon": "🚪",
-      "whatYouNeed": ["Screwdriver (Phillips or flathead)"],
-      "steps": [
-        {"number": 1, "title": "Look for screws", "description": "Check the base of the handle for visible screws."},
-        {"number": 2, "title": "Find hidden screws", "description": "If you don't see screws, look for a small slot on the side. Insert a flathead screwdriver to pop off the cover."},
-        {"number": 3, "title": "Tighten them up", "description": "Use your screwdriver to tighten all the screws. Turn clockwise until snug."},
-        {"number": 4, "title": "Test the handle", "description": "Turn it a few times. It should feel firm and solid."}
+      "id": "r2",
+      "categoryId": "repairs",
+      "title": "Tighten a Loose Door Handle",
+      "subtitle": "No more wobbly handles.",
+      "difficulty": "Easy",
+      "estimatedTime": "5 min",
+      "icon": "🚪",
+      "whatYouNeed": [
+        "Screwdriver (Phillips or flathead)"
       ],
-      "proTip": "A tiny dab of thread-locking glue on the screws keeps them from loosening again."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Look for screws",
+          "description": "Check the base of the handle for visible screws."
+        },
+        {
+          "number": 2,
+          "title": "Find hidden screws",
+          "description": "If you don't see screws, look for a small slot on the side. Insert a flathead screwdriver to pop off the cover."
+        },
+        {
+          "number": 3,
+          "title": "Tighten them up",
+          "description": "Use your screwdriver to tighten all the screws. Turn clockwise until snug."
+        },
+        {
+          "number": 4,
+          "title": "Test the handle",
+          "description": "Turn it a few times. It should feel firm and solid."
+        }
+      ],
+      "proTip": "A tiny dab of thread-locking glue on the screws keeps them from loosening again.",
+      "image": "assets/images/tip_26.jpg"
     },
     {
-      "id": "r3", "categoryId": "repairs", "title": "Fix a Squeaky Door", "subtitle": "Silence that annoying squeak in seconds.",
-      "difficulty": "Easy", "estimatedTime": "3 min", "icon": "🔇",
-      "whatYouNeed": ["WD-40 or cooking oil", "Paper towel"],
-      "steps": [
-        {"number": 1, "title": "Find the noisy hinge", "description": "Open and close the door slowly to figure out which hinge is squeaking."},
-        {"number": 2, "title": "Apply lubricant", "description": "Spray a little WD-40 on the hinge pin, or drip a few drops of cooking oil on it."},
-        {"number": 3, "title": "Move the door", "description": "Open and close the door several times to work the oil into the hinge."},
-        {"number": 4, "title": "Wipe excess", "description": "Clean up any drips with a paper towel so it doesn't stain the floor."}
+      "id": "r3",
+      "categoryId": "repairs",
+      "title": "Fix a Squeaky Door",
+      "subtitle": "Silence that annoying squeak in seconds.",
+      "difficulty": "Easy",
+      "estimatedTime": "3 min",
+      "icon": "🔇",
+      "whatYouNeed": [
+        "WD-40 or cooking oil",
+        "Paper towel"
       ],
-      "proTip": "Petroleum jelly works great too and lasts longer than oil."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Find the noisy hinge",
+          "description": "Open and close the door slowly to figure out which hinge is squeaking."
+        },
+        {
+          "number": 2,
+          "title": "Apply lubricant",
+          "description": "Spray a little WD-40 on the hinge pin, or drip a few drops of cooking oil on it."
+        },
+        {
+          "number": 3,
+          "title": "Move the door",
+          "description": "Open and close the door several times to work the oil into the hinge."
+        },
+        {
+          "number": 4,
+          "title": "Wipe excess",
+          "description": "Clean up any drips with a paper towel so it doesn't stain the floor."
+        }
+      ],
+      "proTip": "Petroleum jelly works great too and lasts longer than oil.",
+      "image": "assets/images/tip_27.jpg"
     },
     {
-      "id": "r4", "categoryId": "repairs", "title": "Fix a Squeaky Floor", "subtitle": "Walk without waking up the whole house.",
-      "difficulty": "Medium", "estimatedTime": "20 min", "icon": "🏠",
-      "whatYouNeed": ["Talcum powder or powdered graphite", "Screws (if needed)"],
-      "steps": [
-        {"number": 1, "title": "Find the squeak", "description": "Walk around slowly and mark the squeaky spots with tape."},
-        {"number": 2, "title": "Try powder first", "description": "Sprinkle talcum powder or powdered graphite between the boards. Work it in with your foot."},
-        {"number": 3, "title": "Screw from below", "description": "If you can get under the floor, drive a short screw up through the subfloor into the squeaky board."},
-        {"number": 4, "title": "Test it out", "description": "Walk over the area again. The squeak should be gone or much quieter."}
+      "id": "r4",
+      "categoryId": "repairs",
+      "title": "Fix a Squeaky Floor",
+      "subtitle": "Walk without waking up the whole house.",
+      "difficulty": "Medium",
+      "estimatedTime": "20 min",
+      "icon": "🏠",
+      "whatYouNeed": [
+        "Talcum powder or powdered graphite",
+        "Screws (if needed)"
       ],
-      "proTip": "Baby powder works just as well as talcum powder for a quick fix."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Find the squeak",
+          "description": "Walk around slowly and mark the squeaky spots with tape."
+        },
+        {
+          "number": 2,
+          "title": "Try powder first",
+          "description": "Sprinkle talcum powder or powdered graphite between the boards. Work it in with your foot."
+        },
+        {
+          "number": 3,
+          "title": "Screw from below",
+          "description": "If you can get under the floor, drive a short screw up through the subfloor into the squeaky board."
+        },
+        {
+          "number": 4,
+          "title": "Test it out",
+          "description": "Walk over the area again. The squeak should be gone or much quieter."
+        }
+      ],
+      "proTip": "Baby powder works just as well as talcum powder for a quick fix.",
+      "image": "assets/images/tip_28.jpg"
     },
     {
-      "id": "r5", "categoryId": "repairs", "title": "Seal a Drafty Window", "subtitle": "Stop cold air from sneaking in.",
-      "difficulty": "Easy", "estimatedTime": "15 min", "icon": "🪟",
-      "whatYouNeed": ["Weatherstripping tape", "Caulk and caulk gun"],
-      "steps": [
-        {"number": 1, "title": "Find the drafts", "description": "Hold a lit candle near window edges on a windy day. If the flame flickers, there's a draft."},
-        {"number": 2, "title": "Apply weatherstripping", "description": "Stick self-adhesive weatherstripping along the window frame where it opens and closes."},
-        {"number": 3, "title": "Caulk the gaps", "description": "For cracks between the window frame and wall, apply a thin bead of caulk. Smooth with a wet finger."},
-        {"number": 4, "title": "Check your work", "description": "Do the candle test again. The flame should stay steady this time."}
+      "id": "r5",
+      "categoryId": "repairs",
+      "title": "Seal a Drafty Window",
+      "subtitle": "Stop cold air from sneaking in.",
+      "difficulty": "Easy",
+      "estimatedTime": "15 min",
+      "icon": "🪟",
+      "whatYouNeed": [
+        "Weatherstripping tape",
+        "Caulk and caulk gun"
       ],
-      "proTip": "Draft-proofing your windows can cut heating bills by up to 25%."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Find the drafts",
+          "description": "Hold a lit candle near window edges on a windy day. If the flame flickers, there's a draft."
+        },
+        {
+          "number": 2,
+          "title": "Apply weatherstripping",
+          "description": "Stick self-adhesive weatherstripping along the window frame where it opens and closes."
+        },
+        {
+          "number": 3,
+          "title": "Caulk the gaps",
+          "description": "For cracks between the window frame and wall, apply a thin bead of caulk. Smooth with a wet finger."
+        },
+        {
+          "number": 4,
+          "title": "Check your work",
+          "description": "Do the candle test again. The flame should stay steady this time."
+        }
+      ],
+      "proTip": "Draft-proofing your windows can cut heating bills by up to 25%.",
+      "image": "assets/images/tip_29.jpg"
     },
     {
-      "id": "r6", "categoryId": "repairs", "title": "Hang a Picture Straight", "subtitle": "No more crooked frames on your walls.",
-      "difficulty": "Easy", "estimatedTime": "5 min", "icon": "🖼️",
-      "whatYouNeed": ["Hammer", "Nail or picture hook", "Level or phone app", "Tape measure"],
-      "steps": [
-        {"number": 1, "title": "Choose the spot", "description": "The center of the picture should be at eye level — about 57 inches from the floor."},
-        {"number": 2, "title": "Mark and nail", "description": "Make a small pencil mark. Hammer in a nail or picture hook at a slight upward angle."},
-        {"number": 3, "title": "Hang and level", "description": "Hang the picture and use a level (or the level app on your phone) to make sure it's straight."},
-        {"number": 4, "title": "Add bumpers", "description": "Stick small felt or rubber bumpers to the bottom corners. This keeps it from sliding and protects the wall."}
+      "id": "r6",
+      "categoryId": "repairs",
+      "title": "Hang a Picture Straight",
+      "subtitle": "No more crooked frames on your walls.",
+      "difficulty": "Easy",
+      "estimatedTime": "5 min",
+      "icon": "🖼️",
+      "whatYouNeed": [
+        "Hammer",
+        "Nail or picture hook",
+        "Level or phone app",
+        "Tape measure"
       ],
-      "proTip": "Use painters tape to mark the spot first — you can reposition without making extra holes."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Choose the spot",
+          "description": "The center of the picture should be at eye level — about 57 inches from the floor."
+        },
+        {
+          "number": 2,
+          "title": "Mark and nail",
+          "description": "Make a small pencil mark. Hammer in a nail or picture hook at a slight upward angle."
+        },
+        {
+          "number": 3,
+          "title": "Hang and level",
+          "description": "Hang the picture and use a level (or the level app on your phone) to make sure it's straight."
+        },
+        {
+          "number": 4,
+          "title": "Add bumpers",
+          "description": "Stick small felt or rubber bumpers to the bottom corners. This keeps it from sliding and protects the wall."
+        }
+      ],
+      "proTip": "Use painters tape to mark the spot first — you can reposition without making extra holes.",
+      "image": "assets/images/tip_30.jpg"
     },
     {
-      "id": "g1", "categoryId": "garden", "title": "Water Plants Properly", "subtitle": "Not too much, not too little — just right.",
-      "difficulty": "Easy", "estimatedTime": "10 min", "icon": "💦",
-      "whatYouNeed": ["Watering can or hose"],
-      "steps": [
-        {"number": 1, "title": "Check the soil", "description": "Stick your finger about an inch into the soil. If it's dry, it's time to water."},
-        {"number": 2, "title": "Water at the base", "description": "Pour water at the base of the plant, not on the leaves. Wet leaves can get moldy."},
-        {"number": 3, "title": "Water deeply", "description": "Give it a good, slow soak rather than a light sprinkle. This encourages deeper roots."},
-        {"number": 4, "title": "Water in the morning", "description": "Morning is the best time to water. The plant has all day to absorb it before the evening cool."}
+      "id": "g1",
+      "categoryId": "garden",
+      "title": "Water Plants Properly",
+      "subtitle": "Not too much, not too little — just right.",
+      "difficulty": "Easy",
+      "estimatedTime": "10 min",
+      "icon": "💦",
+      "whatYouNeed": [
+        "Watering can or hose"
       ],
-      "proTip": "Most houseplants die from overwatering, not under-watering. When in doubt, wait a day."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Check the soil",
+          "description": "Stick your finger about an inch into the soil. If it's dry, it's time to water."
+        },
+        {
+          "number": 2,
+          "title": "Water at the base",
+          "description": "Pour water at the base of the plant, not on the leaves. Wet leaves can get moldy."
+        },
+        {
+          "number": 3,
+          "title": "Water deeply",
+          "description": "Give it a good, slow soak rather than a light sprinkle. This encourages deeper roots."
+        },
+        {
+          "number": 4,
+          "title": "Water in the morning",
+          "description": "Morning is the best time to water. The plant has all day to absorb it before the evening cool."
+        }
+      ],
+      "proTip": "Most houseplants die from overwatering, not under-watering. When in doubt, wait a day.",
+      "image": "assets/images/tip_31.jpg"
     },
     {
-      "id": "g2", "categoryId": "garden", "title": "Mow a Lawn Evenly", "subtitle": "Get that carpet-smooth look.",
-      "difficulty": "Easy", "estimatedTime": "30 min", "icon": "🌱",
-      "whatYouNeed": ["Lawn mower", "Safety shoes"],
-      "steps": [
-        {"number": 1, "title": "Set the right height", "description": "Never cut more than one-third of the grass height at once. Set your mower blade higher."},
-        {"number": 2, "title": "Mow in straight lines", "description": "Pick one direction and mow in straight rows. Slightly overlap each pass."},
-        {"number": 3, "title": "Alternate your pattern", "description": "Next time you mow, go in a different direction. This keeps the grass standing up straight."},
-        {"number": 4, "title": "Leave the clippings", "description": "Short clippings break down and feed the lawn. Only bag them if they're clumpy."}
+      "id": "g2",
+      "categoryId": "garden",
+      "title": "Mow a Lawn Evenly",
+      "subtitle": "Get that carpet-smooth look.",
+      "difficulty": "Easy",
+      "estimatedTime": "30 min",
+      "icon": "🌱",
+      "whatYouNeed": [
+        "Lawn mower",
+        "Safety shoes"
       ],
-      "proTip": "Mow when the grass is dry. Wet grass clumps and gives an uneven cut."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Set the right height",
+          "description": "Never cut more than one-third of the grass height at once. Set your mower blade higher."
+        },
+        {
+          "number": 2,
+          "title": "Mow in straight lines",
+          "description": "Pick one direction and mow in straight rows. Slightly overlap each pass."
+        },
+        {
+          "number": 3,
+          "title": "Alternate your pattern",
+          "description": "Next time you mow, go in a different direction. This keeps the grass standing up straight."
+        },
+        {
+          "number": 4,
+          "title": "Leave the clippings",
+          "description": "Short clippings break down and feed the lawn. Only bag them if they're clumpy."
+        }
+      ],
+      "proTip": "Mow when the grass is dry. Wet grass clumps and gives an uneven cut.",
+      "image": "assets/images/tip_32.jpg"
     },
     {
-      "id": "g3", "categoryId": "garden", "title": "Clean Gutters Safely", "subtitle": "Prevent water damage with a quick cleanup.",
-      "difficulty": "Medium", "estimatedTime": "1 hour", "icon": "🍂",
-      "whatYouNeed": ["Sturdy ladder", "Gloves", "Garden trowel", "Bucket", "Garden hose"],
-      "steps": [
-        {"number": 1, "title": "Set up your ladder safely", "description": "Place the ladder on firm, level ground. Have someone hold it if possible. Never lean too far."},
-        {"number": 2, "title": "Scoop out debris", "description": "Using gloves and a trowel, scoop out leaves, twigs, and muck. Drop it into your bucket."},
-        {"number": 3, "title": "Flush with water", "description": "Use a hose to flush out remaining dirt. Check that water flows freely through the downspout."},
-        {"number": 4, "title": "Check for damage", "description": "Look for cracks, sagging, or loose screws. Fix any small issues now before they get worse."}
+      "id": "g3",
+      "categoryId": "garden",
+      "title": "Clean Gutters Safely",
+      "subtitle": "Prevent water damage with a quick cleanup.",
+      "difficulty": "Medium",
+      "estimatedTime": "1 hour",
+      "icon": "🍂",
+      "whatYouNeed": [
+        "Sturdy ladder",
+        "Gloves",
+        "Garden trowel",
+        "Bucket",
+        "Garden hose"
       ],
-      "proTip": "Clean gutters twice a year — spring and fall. Install gutter guards to reduce buildup."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Set up your ladder safely",
+          "description": "Place the ladder on firm, level ground. Have someone hold it if possible. Never lean too far."
+        },
+        {
+          "number": 2,
+          "title": "Scoop out debris",
+          "description": "Using gloves and a trowel, scoop out leaves, twigs, and muck. Drop it into your bucket."
+        },
+        {
+          "number": 3,
+          "title": "Flush with water",
+          "description": "Use a hose to flush out remaining dirt. Check that water flows freely through the downspout."
+        },
+        {
+          "number": 4,
+          "title": "Check for damage",
+          "description": "Look for cracks, sagging, or loose screws. Fix any small issues now before they get worse."
+        }
+      ],
+      "proTip": "Clean gutters twice a year — spring and fall. Install gutter guards to reduce buildup.",
+      "image": "assets/images/tip_33.jpg"
     },
     {
-      "id": "g4", "categoryId": "garden", "title": "Start a Small Garden", "subtitle": "Grow your own herbs and veggies, even in small spaces.",
-      "difficulty": "Easy", "estimatedTime": "1 hour", "icon": "🌻",
-      "whatYouNeed": ["Pots or garden bed", "Potting soil", "Seeds or seedlings", "Watering can"],
-      "steps": [
-        {"number": 1, "title": "Choose easy plants", "description": "Start with herbs like basil and mint, or veggies like tomatoes and lettuce. They're hard to mess up."},
-        {"number": 2, "title": "Pick a sunny spot", "description": "Most food plants need 6 hours of sunlight a day. A windowsill or balcony works."},
-        {"number": 3, "title": "Fill pots with soil", "description": "Use good potting soil. Fill your containers leaving about an inch from the top."},
-        {"number": 4, "title": "Plant and water", "description": "Plant seeds at the depth shown on the packet, or transplant seedlings. Water gently."}
+      "id": "g4",
+      "categoryId": "garden",
+      "title": "Start a Small Garden",
+      "subtitle": "Grow your own herbs and veggies, even in small spaces.",
+      "difficulty": "Easy",
+      "estimatedTime": "1 hour",
+      "icon": "🌻",
+      "whatYouNeed": [
+        "Pots or garden bed",
+        "Potting soil",
+        "Seeds or seedlings",
+        "Watering can"
       ],
-      "proTip": "Herbs like basil and cilantro grow fast and taste way better fresh from your own garden."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Choose easy plants",
+          "description": "Start with herbs like basil and mint, or veggies like tomatoes and lettuce. They're hard to mess up."
+        },
+        {
+          "number": 2,
+          "title": "Pick a sunny spot",
+          "description": "Most food plants need 6 hours of sunlight a day. A windowsill or balcony works."
+        },
+        {
+          "number": 3,
+          "title": "Fill pots with soil",
+          "description": "Use good potting soil. Fill your containers leaving about an inch from the top."
+        },
+        {
+          "number": 4,
+          "title": "Plant and water",
+          "description": "Plant seeds at the depth shown on the packet, or transplant seedlings. Water gently."
+        }
+      ],
+      "proTip": "Herbs like basil and cilantro grow fast and taste way better fresh from your own garden.",
+      "image": "assets/images/tip_34.jpg"
     },
     {
-      "id": "g5", "categoryId": "garden", "title": "Maintain Outdoor Furniture", "subtitle": "Keep your patio set looking like new.",
-      "difficulty": "Easy", "estimatedTime": "30 min", "icon": "🪑",
-      "whatYouNeed": ["Warm soapy water", "Scrub brush", "Cloth", "Furniture protector spray"],
-      "steps": [
-        {"number": 1, "title": "Wipe down weekly", "description": "A quick wipe with a damp cloth each week prevents dirt buildup."},
-        {"number": 2, "title": "Deep clean monthly", "description": "Scrub with warm soapy water and a brush. Rinse well and let dry completely."},
-        {"number": 3, "title": "Apply protector", "description": "Spray a UV-protective coat on wood or plastic furniture to prevent fading."},
-        {"number": 4, "title": "Cover or store", "description": "When not in use for long periods, cover furniture or move it to a sheltered area."}
+      "id": "g5",
+      "categoryId": "garden",
+      "title": "Maintain Outdoor Furniture",
+      "subtitle": "Keep your patio set looking like new.",
+      "difficulty": "Easy",
+      "estimatedTime": "30 min",
+      "icon": "🪑",
+      "whatYouNeed": [
+        "Warm soapy water",
+        "Scrub brush",
+        "Cloth",
+        "Furniture protector spray"
       ],
-      "proTip": "Bring cushions inside during rain. They take forever to dry and can get moldy."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Wipe down weekly",
+          "description": "A quick wipe with a damp cloth each week prevents dirt buildup."
+        },
+        {
+          "number": 2,
+          "title": "Deep clean monthly",
+          "description": "Scrub with warm soapy water and a brush. Rinse well and let dry completely."
+        },
+        {
+          "number": 3,
+          "title": "Apply protector",
+          "description": "Spray a UV-protective coat on wood or plastic furniture to prevent fading."
+        },
+        {
+          "number": 4,
+          "title": "Cover or store",
+          "description": "When not in use for long periods, cover furniture or move it to a sheltered area."
+        }
+      ],
+      "proTip": "Bring cushions inside during rain. They take forever to dry and can get moldy.",
+      "image": "assets/images/tip_35.jpg"
     },
     {
-      "id": "g6", "categoryId": "garden", "title": "Remove Weeds Effectively", "subtitle": "Kick weeds out before they take over.",
-      "difficulty": "Easy", "estimatedTime": "20 min", "icon": "🌾",
-      "whatYouNeed": ["Garden gloves", "Weeding tool or fork", "Mulch"],
-      "steps": [
-        {"number": 1, "title": "Pull after rain", "description": "Weeds come out much easier when the soil is moist. Wait until after a rain."},
-        {"number": 2, "title": "Grab low and pull straight", "description": "Grip the weed as close to the ground as you can. Pull straight up to get the root out."},
-        {"number": 3, "title": "Use a tool for tough ones", "description": "For weeds with deep roots, slide a weeding fork under the root and pry it up."},
-        {"number": 4, "title": "Mulch to prevent regrowth", "description": "Spread 2-3 inches of mulch over bare soil. It blocks sunlight and stops new weeds from growing."}
+      "id": "g6",
+      "categoryId": "garden",
+      "title": "Remove Weeds Effectively",
+      "subtitle": "Kick weeds out before they take over.",
+      "difficulty": "Easy",
+      "estimatedTime": "20 min",
+      "icon": "🌾",
+      "whatYouNeed": [
+        "Garden gloves",
+        "Weeding tool or fork",
+        "Mulch"
       ],
-      "proTip": "Regular weeding is easier than a big cleanup. Spend 5 minutes every few days."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Pull after rain",
+          "description": "Weeds come out much easier when the soil is moist. Wait until after a rain."
+        },
+        {
+          "number": 2,
+          "title": "Grab low and pull straight",
+          "description": "Grip the weed as close to the ground as you can. Pull straight up to get the root out."
+        },
+        {
+          "number": 3,
+          "title": "Use a tool for tough ones",
+          "description": "For weeds with deep roots, slide a weeding fork under the root and pry it up."
+        },
+        {
+          "number": 4,
+          "title": "Mulch to prevent regrowth",
+          "description": "Spread 2-3 inches of mulch over bare soil. It blocks sunlight and stops new weeds from growing."
+        }
+      ],
+      "proTip": "Regular weeding is easier than a big cleanup. Spend 5 minutes every few days.",
+      "image": "assets/images/tip_36.jpg"
     },
     {
-      "id": "la1", "categoryId": "laundry", "title": "Sort Clothes for Washing", "subtitle": "The first step to laundry done right.",
-      "difficulty": "Easy", "estimatedTime": "5 min", "icon": "👕",
-      "whatYouNeed": ["Laundry baskets or bags"],
-      "steps": [
-        {"number": 1, "title": "Separate by color", "description": "Put whites in one pile, darks in another, and bright colors in a third. This prevents colors from bleeding."},
-        {"number": 2, "title": "Check labels", "description": "Look at the care labels inside clothes. Some items need cold water or gentle cycles."},
-        {"number": 3, "title": "Separate heavy and light", "description": "Wash heavy items like jeans and towelsparts from delicate items like blouses and underwear."},
-        {"number": 4, "title": "Empty pockets", "description": "Check every single pocket. Tissues, coins, and pens can ruin a whole load."}
+      "id": "la1",
+      "categoryId": "laundry",
+      "title": "Sort Clothes for Washing",
+      "subtitle": "The first step to laundry done right.",
+      "difficulty": "Easy",
+      "estimatedTime": "5 min",
+      "icon": "👕",
+      "whatYouNeed": [
+        "Laundry baskets or bags"
       ],
-      "proTip": "Get three laundry bags — whites, darks, colors. Sort as you go and laundry day is half done."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Separate by color",
+          "description": "Put whites in one pile, darks in another, and bright colors in a third. This prevents colors from bleeding."
+        },
+        {
+          "number": 2,
+          "title": "Check labels",
+          "description": "Look at the care labels inside clothes. Some items need cold water or gentle cycles."
+        },
+        {
+          "number": 3,
+          "title": "Separate heavy and light",
+          "description": "Wash heavy items like jeans and towelsparts from delicate items like blouses and underwear."
+        },
+        {
+          "number": 4,
+          "title": "Empty pockets",
+          "description": "Check every single pocket. Tissues, coins, and pens can ruin a whole load."
+        }
+      ],
+      "proTip": "Get three laundry bags — whites, darks, colors. Sort as you go and laundry day is half done.",
+      "image": "assets/images/tip_37.jpg"
     },
     {
-      "id": "la2", "categoryId": "laundry", "title": "Remove Tough Stains", "subtitle": "Don't throw it away — try this first.",
-      "difficulty": "Easy", "estimatedTime": "15 min", "icon": "💪",
-      "whatYouNeed": ["Stain remover or dish soap", "Cold water", "White vinegar", "Old toothbrush"],
-      "steps": [
-        {"number": 1, "title": "Act fast", "description": "The sooner you treat a stain, the easier it is to remove. Don't let it dry."},
-        {"number": 2, "title": "Rinse with cold water", "description": "Run cold water through the back of the stain to push it out of the fabric."},
-        {"number": 3, "title": "Apply stain remover", "description": "Dab stain remover or a drop of dish soap on the spot. Gently work it in with a toothbrush."},
-        {"number": 4, "title": "Soak and wash", "description": "Let it soak for 15 minutes, then wash as normal. Check the stain before drying — heat sets stains."}
+      "id": "la2",
+      "categoryId": "laundry",
+      "title": "Remove Tough Stains",
+      "subtitle": "Don't throw it away — try this first.",
+      "difficulty": "Easy",
+      "estimatedTime": "15 min",
+      "icon": "💪",
+      "whatYouNeed": [
+        "Stain remover or dish soap",
+        "Cold water",
+        "White vinegar",
+        "Old toothbrush"
       ],
-      "proTip": "For blood stains, always use cold water. Hot water cooks the proteins and makes it permanent."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Act fast",
+          "description": "The sooner you treat a stain, the easier it is to remove. Don't let it dry."
+        },
+        {
+          "number": 2,
+          "title": "Rinse with cold water",
+          "description": "Run cold water through the back of the stain to push it out of the fabric."
+        },
+        {
+          "number": 3,
+          "title": "Apply stain remover",
+          "description": "Dab stain remover or a drop of dish soap on the spot. Gently work it in with a toothbrush."
+        },
+        {
+          "number": 4,
+          "title": "Soak and wash",
+          "description": "Let it soak for 15 minutes, then wash as normal. Check the stain before drying — heat sets stains."
+        }
+      ],
+      "proTip": "For blood stains, always use cold water. Hot water cooks the proteins and makes it permanent.",
+      "image": "assets/images/tip_38.jpg"
     },
     {
-      "id": "la3", "categoryId": "laundry", "title": "Iron Clothes Properly", "subtitle": "Look crisp and polished in minutes.",
-      "difficulty": "Easy", "estimatedTime": "15 min", "icon": "👔",
-      "whatYouNeed": ["Iron", "Ironing board", "Spray bottle with water"],
-      "steps": [
-        {"number": 1, "title": "Set the right temperature", "description": "Check the label. Low heat for synthetics, medium for wool, high for cotton and linen."},
-        {"number": 2, "title": "Iron inside out", "description": "Turn dark clothes inside out to prevent shiny marks."},
-        {"number": 3, "title": "Use smooth strokes", "description": "Press and slide the iron in long, smooth strokes. Don't push too hard or leave it in one spot."},
-        {"number": 4, "title": "Hang immediately", "description": "Put the ironed item on a hanger right away. If you fold it, wrinkles come right back."}
+      "id": "la3",
+      "categoryId": "laundry",
+      "title": "Iron Clothes Properly",
+      "subtitle": "Look crisp and polished in minutes.",
+      "difficulty": "Easy",
+      "estimatedTime": "15 min",
+      "icon": "👔",
+      "whatYouNeed": [
+        "Iron",
+        "Ironing board",
+        "Spray bottle with water"
       ],
-      "proTip": "Iron slightly damp clothes — it's easier and gives better results."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Set the right temperature",
+          "description": "Check the label. Low heat for synthetics, medium for wool, high for cotton and linen."
+        },
+        {
+          "number": 2,
+          "title": "Iron inside out",
+          "description": "Turn dark clothes inside out to prevent shiny marks."
+        },
+        {
+          "number": 3,
+          "title": "Use smooth strokes",
+          "description": "Press and slide the iron in long, smooth strokes. Don't push too hard or leave it in one spot."
+        },
+        {
+          "number": 4,
+          "title": "Hang immediately",
+          "description": "Put the ironed item on a hanger right away. If you fold it, wrinkles come right back."
+        }
+      ],
+      "proTip": "Iron slightly damp clothes — it's easier and gives better results.",
+      "image": "assets/images/tip_39.jpg"
     },
     {
-      "id": "la4", "categoryId": "laundry", "title": "Wash Delicates Safely", "subtitle": "Keep your favorite clothes lasting longer.",
-      "difficulty": "Easy", "estimatedTime": "10 min", "icon": "🧤",
-      "whatYouNeed": ["Mesh laundry bag", "Mild detergent", "Basin (for handwash)"],
-      "steps": [
-        {"number": 1, "title": "Use a mesh bag", "description": "Put delicates in a mesh bag before tossing them in the machine. It protects them from stretching."},
-        {"number": 2, "title": "Use cold water", "description": "Always wash delicates in cold water on a gentle cycle. Hot water can shrink or damage them."},
-        {"number": 3, "title": "Skip the dryer", "description": "Lay delicates flat on a towel to dry, or hang them. The dryer's heat is too harsh."}
+      "id": "la4",
+      "categoryId": "laundry",
+      "title": "Wash Delicates Safely",
+      "subtitle": "Keep your favorite clothes lasting longer.",
+      "difficulty": "Easy",
+      "estimatedTime": "10 min",
+      "icon": "🧤",
+      "whatYouNeed": [
+        "Mesh laundry bag",
+        "Mild detergent",
+        "Basin (for handwash)"
       ],
-      "proTip": "For items labeled 'hand wash only,' fill a basin with cool water and mild soap. Soak, gently swirl, and rinse."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Use a mesh bag",
+          "description": "Put delicates in a mesh bag before tossing them in the machine. It protects them from stretching."
+        },
+        {
+          "number": 2,
+          "title": "Use cold water",
+          "description": "Always wash delicates in cold water on a gentle cycle. Hot water can shrink or damage them."
+        },
+        {
+          "number": 3,
+          "title": "Skip the dryer",
+          "description": "Lay delicates flat on a towel to dry, or hang them. The dryer's heat is too harsh."
+        }
+      ],
+      "proTip": "For items labeled 'hand wash only,' fill a basin with cool water and mild soap. Soak, gently swirl, and rinse.",
+      "image": "assets/images/tip_40.jpg"
     },
     {
-      "id": "la5", "categoryId": "laundry", "title": "Dry Clothes Faster", "subtitle": "Speed up drying when you're in a rush.",
-      "difficulty": "Easy", "estimatedTime": "5 min", "icon": "⏱️",
-      "whatYouNeed": ["Dry towel", "Dryer (optional)"],
-      "steps": [
-        {"number": 1, "title": "Use a dry towel trick", "description": "Throw a clean, dry towel into the dryer with wet clothes. It absorbs moisture and speeds things up."},
-        {"number": 2, "title": "Don't overload", "description": "Clothes need room to tumble. A half-full dryer dries faster than a stuffed one."},
-        {"number": 3, "title": "Clean the lint trap", "description": "A clogged lint trap slows drying. Clean it before every load."},
-        {"number": 4, "title": "Spin twice if air drying", "description": "If hanging to dry, run an extra spin cycle to wring out more water first."}
+      "id": "la5",
+      "categoryId": "laundry",
+      "title": "Dry Clothes Faster",
+      "subtitle": "Speed up drying when you're in a rush.",
+      "difficulty": "Easy",
+      "estimatedTime": "5 min",
+      "icon": "⏱️",
+      "whatYouNeed": [
+        "Dry towel",
+        "Dryer (optional)"
       ],
-      "proTip": "Hanging clothes in a breezy spot with good airflow dries them faster than a still room."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Use a dry towel trick",
+          "description": "Throw a clean, dry towel into the dryer with wet clothes. It absorbs moisture and speeds things up."
+        },
+        {
+          "number": 2,
+          "title": "Don't overload",
+          "description": "Clothes need room to tumble. A half-full dryer dries faster than a stuffed one."
+        },
+        {
+          "number": 3,
+          "title": "Clean the lint trap",
+          "description": "A clogged lint trap slows drying. Clean it before every load."
+        },
+        {
+          "number": 4,
+          "title": "Spin twice if air drying",
+          "description": "If hanging to dry, run an extra spin cycle to wring out more water first."
+        }
+      ],
+      "proTip": "Hanging clothes in a breezy spot with good airflow dries them faster than a still room.",
+      "image": "assets/images/tip_41.jpg"
     },
     {
-      "id": "la6", "categoryId": "laundry", "title": "Fold Clothes Neatly", "subtitle": "Save space and find things faster.",
-      "difficulty": "Easy", "estimatedTime": "10 min", "icon": "📦",
-      "whatYouNeed": ["Flat surface"],
-      "steps": [
-        {"number": 1, "title": "Fold on a flat surface", "description": "Use a table or bed. Smooth out the item before you start."},
-        {"number": 2, "title": "T-shirts: thirds then half", "description": "Fold sleeves in toward the center, then fold the bottom up to the collar."},
-        {"number": 3, "title": "Pants: halves", "description": "Fold one leg on top of the other, then fold in half or thirds depending on drawer size."},
-        {"number": 4, "title": "Stand items vertically", "description": "Store folded items standing up in drawers like files. You'll see everything at a glance."}
+      "id": "la6",
+      "categoryId": "laundry",
+      "title": "Fold Clothes Neatly",
+      "subtitle": "Save space and find things faster.",
+      "difficulty": "Easy",
+      "estimatedTime": "10 min",
+      "icon": "📦",
+      "whatYouNeed": [
+        "Flat surface"
       ],
-      "proTip": "The KonMari method of vertical folding saves up to 50% more drawer space."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Fold on a flat surface",
+          "description": "Use a table or bed. Smooth out the item before you start."
+        },
+        {
+          "number": 2,
+          "title": "T-shirts: thirds then half",
+          "description": "Fold sleeves in toward the center, then fold the bottom up to the collar."
+        },
+        {
+          "number": 3,
+          "title": "Pants: halves",
+          "description": "Fold one leg on top of the other, then fold in half or thirds depending on drawer size."
+        },
+        {
+          "number": 4,
+          "title": "Stand items vertically",
+          "description": "Store folded items standing up in drawers like files. You'll see everything at a glance."
+        }
+      ],
+      "proTip": "The KonMari method of vertical folding saves up to 50% more drawer space.",
+      "image": "assets/images/tip_42.jpg"
     },
     {
-      "id": "s1", "categoryId": "safety", "title": "Test Smoke Detectors", "subtitle": "A working alarm can save your life.",
-      "difficulty": "Easy", "estimatedTime": "5 min", "icon": "🔔",
-      "whatYouNeed": ["Step stool (if needed)", "9V battery (if needed)"],
-      "steps": [
-        {"number": 1, "title": "Find all detectors", "description": "Walk through every room. You should have one in each bedroom, hallway, and the kitchen."},
-        {"number": 2, "title": "Press the test button", "description": "Hold the test button for 3-5 seconds. You should hear a loud beep."},
-        {"number": 3, "title": "Replace batteries", "description": "If the beep is weak or doesn't happen, replace the battery. This is usually a 9V battery."},
-        {"number": 4, "title": "Replace old units", "description": "Smoke detectors expire after 10 years. Check the date on the back and replace if needed."}
+      "id": "s1",
+      "categoryId": "safety",
+      "title": "Test Smoke Detectors",
+      "subtitle": "A working alarm can save your life.",
+      "difficulty": "Easy",
+      "estimatedTime": "5 min",
+      "icon": "🔔",
+      "whatYouNeed": [
+        "Step stool (if needed)",
+        "9V battery (if needed)"
       ],
-      "proTip": "Test your smoke detectors every month. Change batteries every 6 months."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Find all detectors",
+          "description": "Walk through every room. You should have one in each bedroom, hallway, and the kitchen."
+        },
+        {
+          "number": 2,
+          "title": "Press the test button",
+          "description": "Hold the test button for 3-5 seconds. You should hear a loud beep."
+        },
+        {
+          "number": 3,
+          "title": "Replace batteries",
+          "description": "If the beep is weak or doesn't happen, replace the battery. This is usually a 9V battery."
+        },
+        {
+          "number": 4,
+          "title": "Replace old units",
+          "description": "Smoke detectors expire after 10 years. Check the date on the back and replace if needed."
+        }
+      ],
+      "proTip": "Test your smoke detectors every month. Change batteries every 6 months.",
+      "image": "assets/images/tip_43.jpg"
     },
     {
-      "id": "s2", "categoryId": "safety", "title": "Use a Fire Extinguisher", "subtitle": "Remember: PASS — Pull, Aim, Squeeze, Sweep.",
-      "difficulty": "Easy", "estimatedTime": "2 min", "icon": "🧯",
-      "whatYouNeed": ["Fire extinguisher"],
-      "steps": [
-        {"number": 1, "title": "Pull the pin", "description": "Pull out the small metal pin at the top. This unlocks the extinguisher."},
-        {"number": 2, "title": "Aim at the base", "description": "Point the nozzle at the BASE of the fire — not the flames at the top."},
-        {"number": 3, "title": "Squeeze the handle", "description": "Squeeze the handle firmly to release the spray."},
-        {"number": 4, "title": "Sweep side to side", "description": "Move the nozzle slowly from side to side across the base of the fire until it's out."}
+      "id": "s2",
+      "categoryId": "safety",
+      "title": "Use a Fire Extinguisher",
+      "subtitle": "Remember: PASS — Pull, Aim, Squeeze, Sweep.",
+      "difficulty": "Easy",
+      "estimatedTime": "2 min",
+      "icon": "🧯",
+      "whatYouNeed": [
+        "Fire extinguisher"
       ],
-      "proTip": "Stand 6 to 8 feet away from the fire. If it doesn't go out quickly, get out and call 911."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Pull the pin",
+          "description": "Pull out the small metal pin at the top. This unlocks the extinguisher."
+        },
+        {
+          "number": 2,
+          "title": "Aim at the base",
+          "description": "Point the nozzle at the BASE of the fire — not the flames at the top."
+        },
+        {
+          "number": 3,
+          "title": "Squeeze the handle",
+          "description": "Squeeze the handle firmly to release the spray."
+        },
+        {
+          "number": 4,
+          "title": "Sweep side to side",
+          "description": "Move the nozzle slowly from side to side across the base of the fire until it's out."
+        }
+      ],
+      "proTip": "Stand 6 to 8 feet away from the fire. If it doesn't go out quickly, get out and call 911.",
+      "image": "assets/images/tip_44.jpg"
     },
     {
-      "id": "s3", "categoryId": "safety", "title": "Childproof Your Home", "subtitle": "Little hands can get into big trouble.",
-      "difficulty": "Medium", "estimatedTime": "1 hour", "icon": "👶",
-      "whatYouNeed": ["Cabinet locks", "Outlet covers", "Corner protectors", "Safety gates"],
-      "steps": [
-        {"number": 1, "title": "Cover electrical outlets", "description": "Plug outlet covers into every open outlet, especially low ones that kids can reach."},
-        {"number": 2, "title": "Lock cabinets", "description": "Install child locks on cabinets with cleaning supplies, medicines, or sharp objects."},
-        {"number": 3, "title": "Pad sharp corners", "description": "Put soft corner protectors on coffee tables, counter edges, and furniture corners."},
-        {"number": 4, "title": "Install safety gates", "description": "Place gates at the top and bottom of stairs and at doorways to rooms with hazards."},
-        {"number": 5, "title": "Secure heavy furniture", "description": "Anchor bookshelves, dressers, and TVs to the wall so they can't tip over."}
+      "id": "s3",
+      "categoryId": "safety",
+      "title": "Childproof Your Home",
+      "subtitle": "Little hands can get into big trouble.",
+      "difficulty": "Medium",
+      "estimatedTime": "1 hour",
+      "icon": "👶",
+      "whatYouNeed": [
+        "Cabinet locks",
+        "Outlet covers",
+        "Corner protectors",
+        "Safety gates"
       ],
-      "proTip": "Get down on your hands and knees and look around from a child's eye level. You'll spot dangers you never noticed."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Cover electrical outlets",
+          "description": "Plug outlet covers into every open outlet, especially low ones that kids can reach."
+        },
+        {
+          "number": 2,
+          "title": "Lock cabinets",
+          "description": "Install child locks on cabinets with cleaning supplies, medicines, or sharp objects."
+        },
+        {
+          "number": 3,
+          "title": "Pad sharp corners",
+          "description": "Put soft corner protectors on coffee tables, counter edges, and furniture corners."
+        },
+        {
+          "number": 4,
+          "title": "Install safety gates",
+          "description": "Place gates at the top and bottom of stairs and at doorways to rooms with hazards."
+        },
+        {
+          "number": 5,
+          "title": "Secure heavy furniture",
+          "description": "Anchor bookshelves, dressers, and TVs to the wall so they can't tip over."
+        }
+      ],
+      "proTip": "Get down on your hands and knees and look around from a child's eye level. You'll spot dangers you never noticed.",
+      "image": "assets/images/tip_45.jpg"
     },
     {
-      "id": "s4", "categoryId": "safety", "title": "Create a Home Emergency Kit", "subtitle": "Be ready for the unexpected.",
-      "difficulty": "Easy", "estimatedTime": "30 min", "icon": "🎒",
-      "whatYouNeed": ["Sturdy bag or box", "See checklist in steps"],
-      "steps": [
-        {"number": 1, "title": "Gather water & food", "description": "Store 1 gallon of water per person per day for 3 days. Add canned foods and a can opener."},
-        {"number": 2, "title": "Add first aid supplies", "description": "Include bandages, antiseptic, pain relievers, prescription medications, and any allergy meds."},
-        {"number": 3, "title": "Include tools & light", "description": "Add a flashlight, extra batteries, a whistle, and a basic multi-tool."},
-        {"number": 4, "title": "Add personal documents", "description": "Keep copies of IDs, insurance papers, and emergency contacts in a waterproof bag."}
+      "id": "s4",
+      "categoryId": "safety",
+      "title": "Create a Home Emergency Kit",
+      "subtitle": "Be ready for the unexpected.",
+      "difficulty": "Easy",
+      "estimatedTime": "30 min",
+      "icon": "🎒",
+      "whatYouNeed": [
+        "Sturdy bag or box",
+        "See checklist in steps"
       ],
-      "proTip": "Check and refresh your emergency kit every 6 months. Rotate food and water."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Gather water & food",
+          "description": "Store 1 gallon of water per person per day for 3 days. Add canned foods and a can opener."
+        },
+        {
+          "number": 2,
+          "title": "Add first aid supplies",
+          "description": "Include bandages, antiseptic, pain relievers, prescription medications, and any allergy meds."
+        },
+        {
+          "number": 3,
+          "title": "Include tools & light",
+          "description": "Add a flashlight, extra batteries, a whistle, and a basic multi-tool."
+        },
+        {
+          "number": 4,
+          "title": "Add personal documents",
+          "description": "Keep copies of IDs, insurance papers, and emergency contacts in a waterproof bag."
+        }
+      ],
+      "proTip": "Check and refresh your emergency kit every 6 months. Rotate food and water.",
+      "image": "assets/images/tip_46.jpg"
     },
     {
-      "id": "s5", "categoryId": "safety", "title": "Prevent Carbon Monoxide Poisoning", "subtitle": "The silent danger you can't see or smell.",
-      "difficulty": "Easy", "estimatedTime": "15 min", "icon": "⚠️",
-      "whatYouNeed": ["CO detector", "Batteries"],
-      "steps": [
-        {"number": 1, "title": "Install CO detectors", "description": "Place a carbon monoxide detector on every floor and near bedrooms. They look like smoke detectors."},
-        {"number": 2, "title": "Test regularly", "description": "Press the test button monthly, just like smoke detectors."},
-        {"number": 3, "title": "Never run engines indoors", "description": "Never run a car, generator, or grill inside the house or garage — even with the door open."},
-        {"number": 4, "title": "Service heating systems", "description": "Have your furnace, water heater, and chimney inspected every year."}
+      "id": "s5",
+      "categoryId": "safety",
+      "title": "Prevent Carbon Monoxide Poisoning",
+      "subtitle": "The silent danger you can't see or smell.",
+      "difficulty": "Easy",
+      "estimatedTime": "15 min",
+      "icon": "⚠️",
+      "whatYouNeed": [
+        "CO detector",
+        "Batteries"
       ],
-      "proTip": "If your CO alarm goes off, get everyone outside immediately and call 911."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Install CO detectors",
+          "description": "Place a carbon monoxide detector on every floor and near bedrooms. They look like smoke detectors."
+        },
+        {
+          "number": 2,
+          "title": "Test regularly",
+          "description": "Press the test button monthly, just like smoke detectors."
+        },
+        {
+          "number": 3,
+          "title": "Never run engines indoors",
+          "description": "Never run a car, generator, or grill inside the house or garage — even with the door open."
+        },
+        {
+          "number": 4,
+          "title": "Service heating systems",
+          "description": "Have your furnace, water heater, and chimney inspected every year."
+        }
+      ],
+      "proTip": "If your CO alarm goes off, get everyone outside immediately and call 911.",
+      "image": "assets/images/tip_47.jpg"
     },
     {
-      "id": "s6", "categoryId": "safety", "title": "Make a Family Safety Plan", "subtitle": "When everyone knows the plan, everyone stays safe.",
-      "difficulty": "Easy", "estimatedTime": "20 min", "icon": "📋",
-      "whatYouNeed": ["Paper and pen", "Family meeting"],
-      "steps": [
-        {"number": 1, "title": "Choose a meeting point", "description": "Pick a spot outside your home where everyone meets if you have to leave in an emergency."},
-        {"number": 2, "title": "Plan two escape routes", "description": "From every room, plan two ways to get out. Practice walking them with the whole family."},
-        {"number": 3, "title": "Share emergency contacts", "description": "Make sure every family member knows important phone numbers — or has them saved on their phone."},
-        {"number": 4, "title": "Practice regularly", "description": "Do a fire drill every few months. Talk about what to do during storms, earthquakes, or power outages."}
+      "id": "s6",
+      "categoryId": "safety",
+      "title": "Make a Family Safety Plan",
+      "subtitle": "When everyone knows the plan, everyone stays safe.",
+      "difficulty": "Easy",
+      "estimatedTime": "20 min",
+      "icon": "📋",
+      "whatYouNeed": [
+        "Paper and pen",
+        "Family meeting"
       ],
-      "proTip": "Teach young kids their full name, address, and how to call for help."
+      "steps": [
+        {
+          "number": 1,
+          "title": "Choose a meeting point",
+          "description": "Pick a spot outside your home where everyone meets if you have to leave in an emergency."
+        },
+        {
+          "number": 2,
+          "title": "Plan two escape routes",
+          "description": "From every room, plan two ways to get out. Practice walking them with the whole family."
+        },
+        {
+          "number": 3,
+          "title": "Share emergency contacts",
+          "description": "Make sure every family member knows important phone numbers — or has them saved on their phone."
+        },
+        {
+          "number": 4,
+          "title": "Practice regularly",
+          "description": "Do a fire drill every few months. Talk about what to do during storms, earthquakes, or power outages."
+        }
+      ],
+      "proTip": "Teach young kids their full name, address, and how to call for help.",
+      "image": "assets/images/tip_48.jpg"
     }
   ]
 }

@@ -29,12 +29,8 @@ class StepCard extends StatelessWidget {
                 Container(
                   width: 32,
                   height: 32,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [AppColors.rose, AppColors.pink],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
+                  decoration: const BoxDecoration(
+                    color: AppColors.rose,
                     shape: BoxShape.circle,
                   ),
                   child: Center(
