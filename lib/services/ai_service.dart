@@ -15,7 +15,8 @@ class AiService {
     const apiKey = String.fromEnvironment('GEMINI_API_KEY', defaultValue: '');
 
     // Check if the user passed a real key
-    if (apiKey.isEmpty || apiKey == 'YOUR_API_KEY_HERE') {
+    final lowerKey = apiKey.toLowerCase();
+    if (apiKey.isEmpty || lowerKey.contains('your_api_key')) {
       _isApiKeyValid = false;
     } else {
       _isApiKeyValid = true;
@@ -48,11 +49,11 @@ class AiService {
   Future<String?> sendMessage(String message) async {
     if (!_isApiKeyValid) {
       await Future.delayed(const Duration(milliseconds: 500));
-      return '### ⚠️ API Key Needed\n\n'
-          'To use the AI Chatbot, you need to provide a Gemini API Key when running the app.\n\n'
-          '**Stop the app and run it with:**\n'
-          '```bash\nflutter run --dart-define=GEMINI_API_KEY="your_actual_api_key"\n```\n\n'
-          'You can get a free API key from [Google AI Studio](https://aistudio.google.com/).';
+      return '### ⚠️ Real API Key Needed\n\n'
+          'It looks like you passed the placeholder text instead of a real API key!\n\n'
+          'To use the AI Chatbot, you must get your own free API key from [Google AI Studio](https://aistudio.google.com/).\n\n'
+          '**Once you have it, run the app like this:**\n'
+          '```bash\nflutter run --dart-define=GEMINI_API_KEY="AIzaSyYourRealKeyHere..."\n```';
     }
 
     try {
