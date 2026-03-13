@@ -45,15 +45,19 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
             backgroundColor: AppColors.pinkLight,
             leading: IconButton(
               icon: Container(
-                padding: const EdgeInsets.all(6),
+                width: 36,
+                height: 36,
                 decoration: BoxDecoration(
                   color: Colors.white.withValues(alpha: 0.8),
                   shape: BoxShape.circle,
                 ),
-                child: const Icon(
-                  Icons.arrow_back_ios_new_rounded,
-                  size: 18,
-                  color: AppColors.textPrimary,
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 6),
+                  child: Icon(
+                    Icons.arrow_back_ios_new_rounded,
+                    size: 18,
+                    color: AppColors.textPrimary,
+                  ),
                 ),
               ),
               onPressed: () => Navigator.pop(context),
@@ -61,7 +65,8 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
             actions: [
               IconButton(
                 icon: Container(
-                  padding: const EdgeInsets.all(6),
+                  width: 36,
+                  height: 36,
                   decoration: BoxDecoration(
                     color: Colors.white.withValues(alpha: 0.8),
                     shape: BoxShape.circle,
