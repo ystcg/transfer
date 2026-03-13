@@ -13,12 +13,14 @@ class TipsService {
   List<TipCategory> _categories = [];
   List<Tip> _tips = [];
   Set<String> _bookmarkedIds = {};
+  String _rawJsonData = '';
 
   final DatabaseService _db = DatabaseService();
 
   List<TipCategory> get categories => _categories;
   List<Tip> get tips => _tips;
   Set<String> get bookmarkedIds => _bookmarkedIds;
+  String get rawJsonData => _rawJsonData;
 
   Future<void> initialize() async {
     await _loadTips();
@@ -27,6 +29,7 @@ class TipsService {
 
   Future<void> _loadTips() async {
     final String jsonStr = await rootBundle.loadString('assets/data/tips.json');
+    _rawJsonData = jsonStr;
     final Map<String, dynamic> data = json.decode(jsonStr);
 
     _categories = (data['categories'] as List)
