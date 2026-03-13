@@ -90,7 +90,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            const Text('🔍', style: TextStyle(fontSize: 48)),
+                            Icon(Icons.search_off_rounded, size: 48, color: AppColors.textTertiary),
                             const SizedBox(height: 12),
                             Text(
                               'No tips found',
@@ -119,7 +119,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Text('📖', style: TextStyle(fontSize: 48)),
+                        Icon(Icons.auto_stories_outlined, size: 48, color: AppColors.textTertiary),
                         const SizedBox(height: 12),
                         Text('Search any household tip', style: Theme.of(context).textTheme.headlineMedium),
                         const SizedBox(height: 4),

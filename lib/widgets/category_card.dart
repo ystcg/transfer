@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import '../theme/app_icons.dart';
 import '../models/tip_category.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -48,9 +49,10 @@ class CategoryCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Center(
-                  child: Text(
-                    category.icon,
-                    style: const TextStyle(fontSize: 22),
+                  child: Icon(
+                    AppIcons.categoryIcon(category.id),
+                    size: 22,
+                    color: accentColor,
                   ),
                 ),
               ),

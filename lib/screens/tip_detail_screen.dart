@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import '../theme/app_icons.dart';
 import '../models/tip.dart';
 import '../services/tips_service.dart';
 import '../widgets/step_card.dart';
@@ -80,7 +81,11 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                   ),
                 ),
                 child: Center(
-                  child: Text(tip.icon, style: const TextStyle(fontSize: 72)),
+                  child: Icon(
+                    AppIcons.tipIcon(tip.categoryId),
+                    size: 48,
+                    color: AppColors.rose.withValues(alpha: 0.6),
+                  ),
                 ),
               ),
             ),
@@ -165,7 +170,7 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('💡', style: TextStyle(fontSize: 20)),
+                          const Icon(Icons.tips_and_updates_rounded, size: 20, color: AppColors.rose),
                           const SizedBox(width: 12),
                           Expanded(
                             child: Column(

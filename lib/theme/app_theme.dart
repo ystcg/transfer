@@ -110,29 +110,31 @@ class AppTheme {
           fontSize: 34,
           fontWeight: FontWeight.w800,
           color: AppColors.textPrimary,
-          letterSpacing: -1.0,
+          letterSpacing: -1.2,
         ),
         displayMedium: GoogleFonts.inter(
           fontSize: 28,
           fontWeight: FontWeight.w700,
           color: AppColors.textPrimary,
-          letterSpacing: -0.5,
+          letterSpacing: -0.8,
         ),
         headlineLarge: GoogleFonts.inter(
           fontSize: 24,
           fontWeight: FontWeight.w700,
           color: AppColors.textPrimary,
-          letterSpacing: -0.3,
+          letterSpacing: -0.5,
         ),
         headlineMedium: GoogleFonts.inter(
           fontSize: 20,
           fontWeight: FontWeight.w600,
           color: AppColors.textPrimary,
+          letterSpacing: -0.3,
         ),
         titleLarge: GoogleFonts.inter(
           fontSize: 18,
           fontWeight: FontWeight.w600,
           color: AppColors.textPrimary,
+          letterSpacing: -0.2,
         ),
         titleMedium: GoogleFonts.inter(
           fontSize: 16,
@@ -143,7 +145,7 @@ class AppTheme {
           fontSize: 16,
           fontWeight: FontWeight.w400,
           color: AppColors.textPrimary,
-          height: 1.5,
+          height: 1.6,
         ),
         bodyMedium: GoogleFonts.inter(
           fontSize: 15,
@@ -165,6 +167,7 @@ class AppTheme {
           fontSize: 12,
           fontWeight: FontWeight.w500,
           color: AppColors.textTertiary,
+          letterSpacing: 0.2,
         ),
       );
 }

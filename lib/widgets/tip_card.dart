@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import '../theme/app_icons.dart';
 import '../models/tip.dart';
 
 class TipCard extends StatelessWidget {
@@ -56,9 +57,10 @@ class TipCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(14),
                 ),
                 child: Center(
-                  child: Text(
-                    tip.icon,
-                    style: const TextStyle(fontSize: 24),
+                  child: Icon(
+                    AppIcons.tipIcon(tip.categoryId),
+                    size: 22,
+                    color: AppColors.rose,
                   ),
                 ),
               ),

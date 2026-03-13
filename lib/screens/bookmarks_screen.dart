@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/app_theme.dart';
 import '../services/tips_service.dart';
 import '../widgets/tip_card.dart';
 import 'tip_detail_screen.dart';
@@ -32,7 +33,7 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Text('🔖', style: TextStyle(fontSize: 48)),
+                        Icon(Icons.bookmark_outline_rounded, size: 48, color: AppColors.textTertiary),
                         const SizedBox(height: 12),
                         Text(
                           'No saved tips yet',

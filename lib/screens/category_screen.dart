@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import '../theme/app_icons.dart';
 import '../models/tip_category.dart';
 import '../services/tips_service.dart';
 import '../widgets/tip_card.dart';
@@ -46,7 +47,11 @@ class CategoryScreen extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(category.icon, style: const TextStyle(fontSize: 48)),
+                        Icon(
+                          AppIcons.categoryIcon(category.id),
+                          size: 40,
+                          color: accentColor,
+                        ),
                         const Spacer(),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),

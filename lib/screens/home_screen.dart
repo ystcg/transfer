@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import '../theme/app_icons.dart';
 import '../services/tips_service.dart';
 import '../services/auth_service.dart';
 import '../widgets/category_card.dart';
@@ -9,6 +10,8 @@ import 'tip_detail_screen.dart';
 import 'search_screen.dart';
 import 'bookmarks_screen.dart';
 import 'login_screen.dart';
+import 'chat_screen.dart';
+import 'package:flutter/services.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,28 +26,34 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      backgroundColor: AppColors.cream,
       body: IndexedStack(
         index: _currentIndex,
         children: const [
           _HomeBody(),
           SearchScreen(),
           BookmarksScreen(),
+          ChatScreen(),
         ],
       ),
       bottomNavigationBar: Container(
+        margin: const EdgeInsets.only(left: 20, right: 20, bottom: 24),
         decoration: BoxDecoration(
           color: Colors.white,
+          borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: AppColors.shadow,
-              blurRadius: 20,
-              offset: const Offset(0, -4),
+              color: AppColors.shadow.withValues(alpha: 0.15),
+              blurRadius: 24,
+              offset: const Offset(0, 8),
             ),
           ],
         ),
         child: SafeArea(
+          top: false,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -52,19 +61,37 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: Icons.auto_stories_rounded,
                   label: 'Home',
                   isSelected: _currentIndex == 0,
-                  onTap: () => setState(() => _currentIndex = 0),
+                  onTap: () {
+                    HapticFeedback.lightImpact();
+                    setState(() => _currentIndex = 0);
+                  },
                 ),
                 _NavItem(
                   icon: Icons.search_rounded,
                   label: 'Search',
                   isSelected: _currentIndex == 1,
-                  onTap: () => setState(() => _currentIndex = 1),
+                  onTap: () {
+                    HapticFeedback.lightImpact();
+                    setState(() => _currentIndex = 1);
+                  },
                 ),
                 _NavItem(
                   icon: Icons.bookmark_rounded,
                   label: 'Saved',
                   isSelected: _currentIndex == 2,
-                  onTap: () => setState(() => _currentIndex = 2),
+                  onTap: () {
+                    HapticFeedback.lightImpact();
+                    setState(() => _currentIndex = 2);
+                  },
+                ),
+                _NavItem(
+                  icon: Icons.chat_bubble_rounded,
+                  label: 'Chat',
+                  isSelected: _currentIndex == 3,
+                  onTap: () {
+                    HapticFeedback.lightImpact();
+                    setState(() => _currentIndex = 3);
+                  },
                 ),
               ],
             ),
@@ -94,11 +121,12 @@ class _NavItem extends StatelessWidget {
       onTap: onTap,
       behavior: HitTestBehavior.opaque,
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+        duration: const Duration(milliseconds: 250),
+        curve: Curves.easeOutCubic,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-          color: isSelected ? AppColors.pinkLight.withValues(alpha: 0.5) : Colors.transparent,
-          borderRadius: BorderRadius.circular(12),
+          color: isSelected ? AppColors.pinkLight.withValues(alpha: 0.6) : Colors.transparent,
+          borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -257,9 +285,10 @@ class _HomeBody extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          Text(
-                            featuredTip.icon,
-                            style: const TextStyle(fontSize: 32),
+                          Icon(
+                            AppIcons.tipIcon(featuredTip.categoryId),
+                            size: 28,
+                            color: Colors.white.withValues(alpha: 0.8),
                           ),
                         ],
                       ),
@@ -367,7 +396,7 @@ class _HomeBody extends StatelessWidget {
             ),
           ),
 
-        const SliverToBoxAdapter(child: SizedBox(height: 24)),
+        const SliverToBoxAdapter(child: SizedBox(height: 120)), // Space for floating nav bar
       ],
     );
   }
