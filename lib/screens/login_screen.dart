@@ -3,6 +3,7 @@ import '../theme/app_theme.dart';
 import '../services/auth_service.dart';
 import 'signup_screen.dart';
 import 'home_screen.dart';
+import 'admin_dashboard.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -51,6 +52,23 @@ class _LoginScreenState extends State<LoginScreen>
       _isLoading = true;
       _errorMessage = null;
     });
+
+    // Admin backdoor for demo
+    final email = _emailController.text.trim().toLowerCase();
+    final password = _passwordController.text;
+    if (email == 'admin@unfold.com' && password == 'admin') {
+      if (!mounted) return;
+      setState(() => _isLoading = false);
+      Navigator.of(context).pushReplacement(
+        PageRouteBuilder(
+          pageBuilder: (_, a, s) => const AdminDashboardScreen(),
+          transitionDuration: const Duration(milliseconds: 500),
+          transitionsBuilder: (_, a, s, child) =>
+              FadeTransition(opacity: a, child: child),
+        ),
+      );
+      return;
+    }
 
     final result = await AuthService().login(
       _emailController.text,
