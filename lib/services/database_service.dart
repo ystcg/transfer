@@ -137,4 +137,33 @@ class DatabaseService {
     );
     return results.isNotEmpty;
   }
+
+  // Admin operations
+  Future<int> getTotalBookmarkCount() async {
+    final db = await database;
+    final results = await db.rawQuery('SELECT COUNT(*) as count FROM bookmarks');
+    if (results.isEmpty) return 0;
+    return (results.first['count'] as int?) ?? 0;
+  }
+
+  Future<void> deleteUser(int userId) async {
+    final db = await database;
+    await db.delete('users', where: 'id = ?', whereArgs: [userId]);
+  }
+
+  Future<void> clearAllBookmarks() async {
+    final db = await database;
+    await db.delete('bookmarks');
+  }
+
+  Future<void> clearAllUsers() async {
+    final db = await database;
+    await db.delete('users');
+  }
+
+  Future<List<AppUser>> getAllUsers() async {
+    final db = await database;
+    final results = await db.query('users', orderBy: 'createdAt DESC');
+    return results.map((r) => AppUser.fromMap(r)).toList();
+  }
 }

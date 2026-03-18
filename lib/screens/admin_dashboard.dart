@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import '../services/database_service.dart';
 import 'login_screen.dart';
+import '../services/tips_service.dart';
+import 'admin_analytics_screen.dart';
+import 'admin_manage_users_screen.dart';
+import 'admin_manage_tips_screen.dart';
+import 'admin_settings_screen.dart';
+import '../models/user.dart';
 
 class AdminDashboardScreen extends StatefulWidget {
   const AdminDashboardScreen({super.key});
@@ -16,7 +22,10 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen>
   late Animation<double> _fadeAnimation;
 
   int _totalUsers = 0;
-  List<Map<String, dynamic>> _recentUsers = [];
+  int _totalTips = 0;
+  int _totalBookmarks = 0;
+  int _totalCategories = 0;
+  List<AppUser> _recentUsers = [];
 
   @override
   void initState() {
@@ -34,12 +43,19 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen>
   }
 
   Future<void> _loadData() async {
-    final db = await DatabaseService().database;
-    final users = await db.query('users');
+    final db = DatabaseService();
+    final tipsService = TipsService();
+    
+    final users = await db.getAllUsers();
+    final bookmarksCount = await db.getTotalBookmarkCount();
+    
     if (!mounted) return;
     setState(() {
       _totalUsers = users.length;
-      _recentUsers = users;
+      _recentUsers = users.take(5).toList(); // Show top 5 recent
+      _totalBookmarks = bookmarksCount;
+      _totalTips = tipsService.tips.length;
+      _totalCategories = tipsService.categories.length;
     });
   }
 
@@ -140,22 +156,28 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen>
                     child: Row(
                       children: [
                         Expanded(
-                          child: _StatCard(
-                            icon: Icons.people_alt_rounded,
-                            label: 'Total Users',
-                            value: '$_totalUsers',
-                            color: AppColors.rose,
-                            bgColor: AppColors.pinkLight,
+                          child: GestureDetector(
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminManageUsersScreen())),
+                            child: _StatCard(
+                              icon: Icons.people_alt_rounded,
+                              label: 'Total Users',
+                              value: '$_totalUsers',
+                              color: AppColors.rose,
+                              bgColor: AppColors.pinkLight,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 14),
                         Expanded(
-                          child: _StatCard(
-                            icon: Icons.lightbulb_rounded,
-                            label: 'Total Tips',
-                            value: '48',
-                            color: const Color(0xFFFF9F5F),
-                            bgColor: AppColors.creamCard,
+                          child: GestureDetector(
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminManageTipsScreen())),
+                            child: _StatCard(
+                              icon: Icons.lightbulb_rounded,
+                              label: 'Total Tips',
+                              value: '$_totalTips',
+                              color: const Color(0xFFFF9F5F),
+                              bgColor: AppColors.creamCard,
+                            ),
                           ),
                         ),
                       ],
@@ -171,22 +193,28 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen>
                     child: Row(
                       children: [
                         Expanded(
-                          child: _StatCard(
-                            icon: Icons.bookmark_rounded,
-                            label: 'Bookmarks',
-                            value: '12',
-                            color: const Color(0xFF5FC8A8),
-                            bgColor: AppColors.mintSoft,
+                          child: GestureDetector(
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminAnalyticsScreen())),
+                            child: _StatCard(
+                              icon: Icons.bookmark_rounded,
+                              label: 'Bookmarks',
+                              value: '$_totalBookmarks',
+                              color: const Color(0xFF5FC8A8),
+                              bgColor: AppColors.mintSoft,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 14),
                         Expanded(
-                          child: _StatCard(
-                            icon: Icons.category_rounded,
-                            label: 'Categories',
-                            value: '8',
-                            color: const Color(0xFFA85FC8),
-                            bgColor: AppColors.lavender,
+                          child: GestureDetector(
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminManageTipsScreen())),
+                            child: _StatCard(
+                              icon: Icons.category_rounded,
+                              label: 'Categories',
+                              value: '$_totalCategories',
+                              color: const Color(0xFFA85FC8),
+                              bgColor: AppColors.lavender,
+                            ),
                           ),
                         ),
                       ],
@@ -301,7 +329,7 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen>
                                   ),
                                   child: Center(
                                     child: Text(
-                                      (user['name'] as String? ?? 'U')
+                                      (user.name.isNotEmpty ? user.name : 'U')
                                           .substring(0, 1)
                                           .toUpperCase(),
                                       style: const TextStyle(
@@ -319,14 +347,14 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        user['name'] as String? ?? 'Unknown',
+                                        user.name.isNotEmpty ? user.name : 'Unknown',
                                         style: Theme.of(context)
                                             .textTheme
                                             .titleMedium,
                                       ),
                                       const SizedBox(height: 3),
                                       Text(
-                                        user['email'] as String? ?? '',
+                                        user.email,
                                         style: Theme.of(context)
                                             .textTheme
                                             .bodySmall,
@@ -379,36 +407,48 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen>
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Column(
                       children: [
-                        _ActionTile(
-                          icon: Icons.analytics_rounded,
-                          label: 'View Analytics',
-                          subtitle: 'Usage statistics & trends',
-                          color: AppColors.skySoft,
-                          accentColor: const Color(0xFF5FA8C8),
+                        GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminAnalyticsScreen())),
+                          child: _ActionTile(
+                            icon: Icons.analytics_rounded,
+                            label: 'View Analytics',
+                            subtitle: 'Usage statistics & trends',
+                            color: AppColors.skySoft,
+                            accentColor: const Color(0xFF5FA8C8),
+                          ),
                         ),
                         const SizedBox(height: 10),
-                        _ActionTile(
-                          icon: Icons.manage_accounts_rounded,
-                          label: 'Manage Users',
-                          subtitle: 'Edit roles & permissions',
-                          color: AppColors.pinkLight,
-                          accentColor: AppColors.rose,
+                        GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminManageUsersScreen())),
+                          child: _ActionTile(
+                            icon: Icons.manage_accounts_rounded,
+                            label: 'Manage Users',
+                            subtitle: 'Edit roles & permissions',
+                            color: AppColors.pinkLight,
+                            accentColor: AppColors.rose,
+                          ),
                         ),
                         const SizedBox(height: 10),
-                        _ActionTile(
-                          icon: Icons.tips_and_updates_rounded,
-                          label: 'Manage Tips',
-                          subtitle: 'Add, edit, or remove tips',
-                          color: AppColors.lemonSoft,
-                          accentColor: const Color(0xFFC8B85F),
+                        GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminManageTipsScreen())),
+                          child: _ActionTile(
+                            icon: Icons.tips_and_updates_rounded,
+                            label: 'Manage Tips',
+                            subtitle: 'View tips by category',
+                            color: AppColors.lemonSoft,
+                            accentColor: const Color(0xFFC8B85F),
+                          ),
                         ),
                         const SizedBox(height: 10),
-                        _ActionTile(
-                          icon: Icons.settings_rounded,
-                          label: 'App Settings',
-                          subtitle: 'Configuration & preferences',
-                          color: AppColors.lavender,
-                          accentColor: const Color(0xFFA85FC8),
+                        GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminSettingsScreen())),
+                          child: _ActionTile(
+                            icon: Icons.settings_rounded,
+                            label: 'App Settings',
+                            subtitle: 'Configuration & preferences',
+                            color: AppColors.lavender,
+                            accentColor: const Color(0xFFA85FC8),
+                          ),
                         ),
                       ],
                     ),
