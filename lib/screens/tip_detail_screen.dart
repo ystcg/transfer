@@ -38,17 +38,17 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
       backgroundColor: AppColors.cream,
       body: CustomScrollView(
         slivers: [
-          // Hero header
+          // Header
           SliverAppBar(
-            expandedHeight: 200,
             pinned: true,
-            backgroundColor: AppColors.pinkLight,
+            backgroundColor: AppColors.cream,
+            surfaceTintColor: Colors.transparent, // Prevents scroll overlap discoloration
             leading: IconButton(
               icon: Container(
                 width: 36,
                 height: 36,
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.8),
+                  color: AppColors.pinkLight.withValues(alpha: 0.5),
                   shape: BoxShape.circle,
                 ),
                 child: const Padding(
@@ -68,7 +68,7 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                   width: 36,
                   height: 36,
                   decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.8),
+                    color: AppColors.pinkLight.withValues(alpha: 0.5),
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
@@ -88,63 +88,69 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
               ),
               const SizedBox(width: 8),
             ],
-            flexibleSpace: FlexibleSpaceBar(
-              background: tip.image != null
-                  ? ShaderMask(
-                      shaderCallback: (rect) {
-                        return const LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [Colors.black, Colors.transparent],
-                          stops: [0.6, 1.0], // Fades out the bottom 40%
-                        ).createShader(rect);
-                      },
-                      blendMode: BlendMode.dstIn,
-                      child: Image.asset(
-                        tip.image!,
-                        fit: BoxFit.cover,
-                        color: AppColors.pinkLight.withValues(alpha: 0.15),
-                        colorBlendMode: BlendMode.srcOver,
-                      ),
-                    )
-                  : Container(
-                      decoration: const BoxDecoration(
-                        color: AppColors.pinkLight,
-                      ),
-                      child: Center(
-                        child: Icon(
-                          AppIcons.tipIcon(tip.categoryId),
-                          size: 48,
-                          color: AppColors.rose.withValues(alpha: 0.6),
-                        ),
-                      ),
-                    ),
-            ),
           ),
 
           // Content
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  // Centered Category Icon
+                  Container(
+                    padding: const EdgeInsets.all(28),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          AppColors.pinkLight,
+                          AppColors.creamLight,
+                        ],
+                      ),
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.rose.withValues(alpha: 0.15),
+                          blurRadius: 20,
+                          offset: const Offset(0, 10),
+                        ),
+                      ],
+                    ),
+                    child: Icon(
+                      AppIcons.tipIcon(tip.categoryId),
+                      size: 56,
+                      color: AppColors.rose,
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  
                   // Title
                   Text(
                     tip.title,
-                    style: Theme.of(context).textTheme.displayMedium,
+                    style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                      fontSize: 26,
+                      height: 1.2,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 12),
+                  
+                  // Subtitle
                   Text(
                     tip.subtitle,
-                    style: Theme.of(
-                      context,
-                    ).textTheme.bodyMedium?.copyWith(fontSize: 16),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      fontSize: 16,
+                      height: 1.4,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 24),
 
                   // Badges
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       _Badge(
                         icon: Icons.speed_rounded,
@@ -165,7 +171,14 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 28),
+                  const SizedBox(height: 36),
+                  
+                  // Reset alignment for rest of content
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
 
                   // What You Need
                   if (tip.whatYouNeed.isNotEmpty) ...[
@@ -278,6 +291,9 @@ class _TipDetailScreenState extends State<TipDetailScreen> {
                     ),
                   ],
                   const SizedBox(height: 40),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -88,6 +88,64 @@ class AppTheme {
         type: BottomNavigationBarType.fixed,
         elevation: 0,
       ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.rose,
+          foregroundColor: Colors.white,
+          elevation: 0,
+          minimumSize: const Size(0, 52),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          textStyle: GoogleFonts.inter(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.roseDeep,
+          minimumSize: const Size(0, 48),
+          side: BorderSide(
+            color: AppColors.roseDeep.withValues(alpha: 0.3),
+            width: 1,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
+          textStyle: GoogleFonts.inter(
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: Colors.white,
+        hintStyle: GoogleFonts.inter(color: AppColors.textTertiary, fontSize: 15),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: BorderSide.none,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: BorderSide.none,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: const BorderSide(color: AppColors.rose, width: 1.5),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: const BorderSide(color: AppColors.roseDeep, width: 1.0),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: const BorderSide(color: AppColors.roseDeep, width: 1.5),
+        ),
+      ),
       textTheme: _textTheme,
       fontFamily: GoogleFonts.inter().fontFamily,
       dividerColor: AppColors.divider,
@@ -100,7 +158,6 @@ class AppTheme {
     fontSize: 28,
     fontWeight: FontWeight.w700,
     color: AppColors.textPrimary,
-    letterSpacing: -0.5,
   );
 
   static TextTheme get _textTheme => TextTheme(
@@ -108,49 +165,41 @@ class AppTheme {
       fontSize: 34,
       fontWeight: FontWeight.w800,
       color: AppColors.textPrimary,
-      letterSpacing: -1.2,
     ),
     displayMedium: GoogleFonts.inter(
       fontSize: 28,
       fontWeight: FontWeight.w700,
       color: AppColors.textPrimary,
-      letterSpacing: -0.8,
     ),
     headlineLarge: GoogleFonts.inter(
       fontSize: 24,
       fontWeight: FontWeight.w700,
       color: AppColors.textPrimary,
-      letterSpacing: -0.6, // Tighter tracking
     ),
     headlineMedium: GoogleFonts.inter(
       fontSize: 20,
       fontWeight: FontWeight.w600,
       color: AppColors.textPrimary,
-      letterSpacing: -0.4, // Tighter tracking
     ),
     titleLarge: GoogleFonts.inter(
       fontSize: 18,
       fontWeight: FontWeight.w600,
       color: AppColors.textPrimary,
-      letterSpacing: -0.3, // Tighter tracking
     ),
     titleMedium: GoogleFonts.inter(
       fontSize: 16,
       fontWeight: FontWeight.w600,
       color: AppColors.textPrimary,
-      letterSpacing: -0.2,
     ),
     bodyLarge: GoogleFonts.inter(
       fontSize: 16,
       fontWeight: FontWeight.w400,
       color: AppColors.textPrimary,
-      height: 1.65, // Slightly more relaxed line height
     ),
     bodyMedium: GoogleFonts.inter(
       fontSize: 15,
       fontWeight: FontWeight.w400,
       color: AppColors.textSecondary,
-      height: 1.5,
     ),
     bodySmall: GoogleFonts.inter(
       fontSize: 13,

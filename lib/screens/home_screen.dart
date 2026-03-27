@@ -485,7 +485,6 @@ class _HomeBody extends StatelessWidget {
               const SizedBox(height: 24),
               SizedBox(
                 width: double.infinity,
-                height: 48,
                 child: OutlinedButton.icon(
                   onPressed: () async {
                     Navigator.pop(ctx);
@@ -499,15 +498,6 @@ class _HomeBody extends StatelessWidget {
                   },
                   icon: const Icon(Icons.logout_rounded, size: 20),
                   label: const Text('Log Out'),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: AppColors.roseDeep,
-                    side: BorderSide(
-                      color: AppColors.roseDeep.withValues(alpha: 0.3),
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                  ),
                 ),
               ),
             ],

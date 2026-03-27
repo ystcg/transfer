@@ -92,9 +92,7 @@
           "description": "Flip the switch. Your new bulb should light up right away!"
         }
       ],
-      "proTip": "LED bulbs last much longer and use less power. They're worth the extra cost.",
-      "image": "assets/images/tip_1.jpg"
-    },
+      "proTip": "LED bulbs last much longer and use less power. They're worth the extra cost."},
     {
       "id": "l2",
       "categoryId": "lighting",
@@ -134,9 +132,7 @@
           "description": "The biggest switch at the top cuts power to the whole house. Use it only in emergencies."
         }
       ],
-      "proTip": "Take a photo of your labeled board and save it on your phone for quick reference.",
-      "image": "assets/images/tip_2.jpg"
-    },
+      "proTip": "Take a photo of your labeled board and save it on your phone for quick reference."},
     {
       "id": "l3",
       "categoryId": "lighting",
@@ -170,9 +166,7 @@
           "description": "Go back and see if the power is restored. If it trips again, you may have too many things plugged in."
         }
       ],
-      "proTip": "If a breaker keeps tripping, unplug everything from that circuit and call an electrician.",
-      "image": "assets/images/tip_3.jpg"
-    },
+      "proTip": "If a breaker keeps tripping, unplug everything from that circuit and call an electrician."},
     {
       "id": "l4",
       "categoryId": "lighting",
@@ -213,9 +207,7 @@
           "description": "Flip the main switch to ON, then check if the problem is fixed."
         }
       ],
-      "proTip": "Never use a fuse with a higher amp rating — it can cause a fire.",
-      "image": "assets/images/tip_4.jpg"
-    },
+      "proTip": "Never use a fuse with a higher amp rating — it can cause a fire."},
     {
       "id": "l5",
       "categoryId": "lighting",
@@ -251,9 +243,7 @@
           "description": "Screw the dimmer into the wall box, attach the faceplate, and turn the breaker back on. Slide to test!"
         }
       ],
-      "proTip": "Make sure your light bulbs are 'dimmable' — not all LEDs work with dimmers.",
-      "image": "assets/images/tip_5.jpg"
-    },
+      "proTip": "Make sure your light bulbs are 'dimmable' — not all LEDs work with dimmers."},
     {
       "id": "l6",
       "categoryId": "lighting",
@@ -287,9 +277,7 @@
           "description": "If tightening didn't help, swap in a new bulb. The old one might be going bad."
         }
       ],
-      "proTip": "If the whole room flickers, it could be a wiring issue — call a professional.",
-      "image": "assets/images/tip_6.jpg"
-    },
+      "proTip": "If the whole room flickers, it could be a wiring issue — call a professional."},
     {
       "id": "p1",
       "categoryId": "plumbing",
@@ -326,9 +314,7 @@
           "description": "Wait 15 minutes then flush with more boiling water. Repeat if needed."
         }
       ],
-      "proTip": "Do this once a month to keep drains clear. Prevention is easier than fixing!",
-      "image": "assets/images/tip_7.jpg"
-    },
+      "proTip": "Do this once a month to keep drains clear. Prevention is easier than fixing!"},
     {
       "id": "p2",
       "categoryId": "plumbing",
@@ -365,9 +351,7 @@
           "description": "Reassemble everything in reverse order. Turn the water back on and check — no more dripping!"
         }
       ],
-      "proTip": "Bring the old washer to the hardware store so you get the exact right size.",
-      "image": "assets/images/tip_8.jpg"
-    },
+      "proTip": "Bring the old washer to the hardware store so you get the exact right size."},
     {
       "id": "p3",
       "categoryId": "plumbing",
@@ -396,9 +380,7 @@
           "description": "Open a faucet inside. If no water comes out after a few seconds, you did it right."
         }
       ],
-      "proTip": "Show everyone in the house where this valve is. In an emergency, every second counts.",
-      "image": "assets/images/tip_9.jpg"
-    },
+      "proTip": "Show everyone in the house where this valve is. In an emergency, every second counts."},
     {
       "id": "p4",
       "categoryId": "plumbing",
@@ -434,9 +416,7 @@
           "description": "Remove the plunger. If water drains, flush once to clear. If not, repeat."
         }
       ],
-      "proTip": "A flanged plunger (with an extra ring) works way better for toilets than a flat one.",
-      "image": "assets/images/tip_10.jpg"
-    },
+      "proTip": "A flanged plunger (with an extra ring) works way better for toilets than a flat one."},
     {
       "id": "p5",
       "categoryId": "plumbing",
@@ -471,9 +451,7 @@
           "description": "If the water level is too high, adjust the float arm or screw so water stops about an inch below the overflow tube."
         }
       ],
-      "proTip": "A running toilet can waste 200 gallons of water a day. Fix it fast!",
-      "image": "assets/images/tip_11.jpg"
-    },
+      "proTip": "A running toilet can waste 200 gallons of water a day. Fix it fast!"},
     {
       "id": "p6",
       "categoryId": "plumbing",
@@ -503,9 +481,7 @@
           "description": "Even if you're away, keep your home heated to at least 55°F (13°C). This protects your pipes."
         }
       ],
-      "proTip": "Open cabinet doors under sinks on cold nights to let warm air reach the pipes.",
-      "image": "assets/images/tip_12.jpg"
-    },
+      "proTip": "Open cabinet doors under sinks on cold nights to let warm air reach the pipes."},
     {
       "id": "c1",
       "categoryId": "cleaning",
@@ -540,9 +516,7 @@
           "description": "Use a dry cloth to buff the counter. This prevents water spots and keeps it shiny."
         }
       ],
-      "proTip": "Mix equal parts water and white vinegar for a cheap, natural cleaner.",
-      "image": "assets/images/tip_13.jpg"
-    },
+      "proTip": "Mix equal parts water and white vinegar for a cheap, natural cleaner."},
     {
       "id": "c2",
       "categoryId": "cleaning",
@@ -579,9 +553,7 @@
           "description": "Once dry, sprinkle baking soda on the spot. Let it sit for a few hours, then vacuum it up."
         }
       ],
-      "proTip": "Always use cold water on stains. Hot water can set many stains permanently.",
-      "image": "assets/images/tip_14.jpg"
-    },
+      "proTip": "Always use cold water on stains. Hot water can set many stains permanently."},
     {
       "id": "c3",
       "categoryId": "cleaning",
@@ -617,9 +589,7 @@
           "description": "Use a microfiber cloth to wipe any drips along the edges and corners."
         }
       ],
-      "proTip": "Newspaper works surprisingly well for a streak-free shine. Give it a try!",
-      "image": "assets/images/tip_15.jpg"
-    },
+      "proTip": "Newspaper works surprisingly well for a streak-free shine. Give it a try!"},
     {
       "id": "c4",
       "categoryId": "cleaning",
@@ -662,9 +632,7 @@
           "description": "Sweep or vacuum first, then mop. Start from the far end and work toward the door."
         }
       ],
-      "proTip": "Clean your bathroom weekly. It's much faster when grime doesn't have time to build up.",
-      "image": "assets/images/tip_16.jpg"
-    },
+      "proTip": "Clean your bathroom weekly. It's much faster when grime doesn't have time to build up."},
     {
       "id": "c5",
       "categoryId": "cleaning",
@@ -699,9 +667,7 @@
           "description": "Vacuum or sweep the floor last to catch all the dust that fell."
         }
       ],
-      "proTip": "Dampen your microfiber cloth slightly — it catches dust instead of spreading it around.",
-      "image": "assets/images/tip_17.jpg"
-    },
+      "proTip": "Dampen your microfiber cloth slightly — it catches dust instead of spreading it around."},
     {
       "id": "c6",
       "categoryId": "cleaning",
@@ -737,9 +703,7 @@
           "description": "After cleaning, leave the door open to air dry. This prevents mold and bad smells."
         }
       ],
-      "proTip": "Do this once a month to keep your washer fresh and your clothes smelling great.",
-      "image": "assets/images/tip_18.jpg"
-    },
+      "proTip": "Do this once a month to keep your washer fresh and your clothes smelling great."},
     {
       "id": "k1",
       "categoryId": "kitchen",
@@ -775,9 +739,7 @@
           "description": "Things you use daily should be easy to reach. Rarely used items go up high."
         }
       ],
-      "proTip": "A Lazy Susan in the corner makes reaching things in deep shelves much easier.",
-      "image": "assets/images/tip_19.jpg"
-    },
+      "proTip": "A Lazy Susan in the corner makes reaching things in deep shelves much easier."},
     {
       "id": "k2",
       "categoryId": "kitchen",
@@ -820,9 +782,7 @@
           "description": "Use a damp cloth to wipe away the paste and grime. Repeat until the oven is clean."
         }
       ],
-      "proTip": "Place a sheet of foil at the bottom of your oven to catch drips and make future cleaning easier.",
-      "image": "assets/images/tip_20.jpg"
-    },
+      "proTip": "Place a sheet of foil at the bottom of your oven to catch drips and make future cleaning easier."},
     {
       "id": "k3",
       "categoryId": "kitchen",
@@ -858,9 +818,7 @@
           "description": "Place an open box of baking soda inside. It absorbs bad smells for up to 3 months."
         }
       ],
-      "proTip": "Clean the coils behind or under your fridge twice a year — it saves energy.",
-      "image": "assets/images/tip_21.jpg"
-    },
+      "proTip": "Clean the coils behind or under your fridge twice a year — it saves energy."},
     {
       "id": "k4",
       "categoryId": "kitchen",
@@ -894,9 +852,7 @@
           "description": "Do this 5 times on each side. Test the sharpness on a tomato."
         }
       ],
-      "proTip": "Hone your knives every time you cook. Sharpen with a stone only a few times a year.",
-      "image": "assets/images/tip_22.jpg"
-    },
+      "proTip": "Hone your knives every time you cook. Sharpen with a stone only a few times a year."},
     {
       "id": "k5",
       "categoryId": "kitchen",
@@ -931,9 +887,7 @@
           "description": "Have a fire extinguisher in the kitchen. Check it yearly."
         }
       ],
-      "proTip": "Baking soda can also smother a small grease fire. Keep a box near the stove.",
-      "image": "assets/images/tip_23.jpg"
-    },
+      "proTip": "Baking soda can also smother a small grease fire. Keep a box near the stove."},
     {
       "id": "k6",
       "categoryId": "kitchen",
@@ -964,9 +918,7 @@
           "description": "Wash the inside of your trash can with soapy water. Sprinkle baking soda at the bottom before adding a new bag."
         }
       ],
-      "proTip": "Grind lemon peels in the garbage disposal to keep it smelling fresh.",
-      "image": "assets/images/tip_24.jpg"
-    },
+      "proTip": "Grind lemon peels in the garbage disposal to keep it smelling fresh."},
     {
       "id": "r1",
       "categoryId": "repairs",
@@ -1003,9 +955,7 @@
           "description": "Sand the patch smooth with fine sandpaper. Then touch it up with matching paint."
         }
       ],
-      "proTip": "Keep a small jar of your wall paint color handy for quick touch-ups.",
-      "image": "assets/images/tip_25.jpg"
-    },
+      "proTip": "Keep a small jar of your wall paint color handy for quick touch-ups."},
     {
       "id": "r2",
       "categoryId": "repairs",
@@ -1039,9 +989,7 @@
           "description": "Turn it a few times. It should feel firm and solid."
         }
       ],
-      "proTip": "A tiny dab of thread-locking glue on the screws keeps them from loosening again.",
-      "image": "assets/images/tip_26.jpg"
-    },
+      "proTip": "A tiny dab of thread-locking glue on the screws keeps them from loosening again."},
     {
       "id": "r3",
       "categoryId": "repairs",
@@ -1076,9 +1024,7 @@
           "description": "Clean up any drips with a paper towel so it doesn't stain the floor."
         }
       ],
-      "proTip": "Petroleum jelly works great too and lasts longer than oil.",
-      "image": "assets/images/tip_27.jpg"
-    },
+      "proTip": "Petroleum jelly works great too and lasts longer than oil."},
     {
       "id": "r4",
       "categoryId": "repairs",
@@ -1113,9 +1059,7 @@
           "description": "Walk over the area again. The squeak should be gone or much quieter."
         }
       ],
-      "proTip": "Baby powder works just as well as talcum powder for a quick fix.",
-      "image": "assets/images/tip_28.jpg"
-    },
+      "proTip": "Baby powder works just as well as talcum powder for a quick fix."},
     {
       "id": "r5",
       "categoryId": "repairs",
@@ -1150,9 +1094,7 @@
           "description": "Do the candle test again. The flame should stay steady this time."
         }
       ],
-      "proTip": "Draft-proofing your windows can cut heating bills by up to 25%.",
-      "image": "assets/images/tip_29.jpg"
-    },
+      "proTip": "Draft-proofing your windows can cut heating bills by up to 25%."},
     {
       "id": "r6",
       "categoryId": "repairs",
@@ -1189,9 +1131,7 @@
           "description": "Stick small felt or rubber bumpers to the bottom corners. This keeps it from sliding and protects the wall."
         }
       ],
-      "proTip": "Use painters tape to mark the spot first — you can reposition without making extra holes.",
-      "image": "assets/images/tip_30.jpg"
-    },
+      "proTip": "Use painters tape to mark the spot first — you can reposition without making extra holes."},
     {
       "id": "g1",
       "categoryId": "garden",
@@ -1225,9 +1165,7 @@
           "description": "Morning is the best time to water. The plant has all day to absorb it before the evening cool."
         }
       ],
-      "proTip": "Most houseplants die from overwatering, not under-watering. When in doubt, wait a day.",
-      "image": "assets/images/tip_31.jpg"
-    },
+      "proTip": "Most houseplants die from overwatering, not under-watering. When in doubt, wait a day."},
     {
       "id": "g2",
       "categoryId": "garden",
@@ -1262,9 +1200,7 @@
           "description": "Short clippings break down and feed the lawn. Only bag them if they're clumpy."
         }
       ],
-      "proTip": "Mow when the grass is dry. Wet grass clumps and gives an uneven cut.",
-      "image": "assets/images/tip_32.jpg"
-    },
+      "proTip": "Mow when the grass is dry. Wet grass clumps and gives an uneven cut."},
     {
       "id": "g3",
       "categoryId": "garden",
@@ -1302,9 +1238,7 @@
           "description": "Look for cracks, sagging, or loose screws. Fix any small issues now before they get worse."
         }
       ],
-      "proTip": "Clean gutters twice a year — spring and fall. Install gutter guards to reduce buildup.",
-      "image": "assets/images/tip_33.jpg"
-    },
+      "proTip": "Clean gutters twice a year — spring and fall. Install gutter guards to reduce buildup."},
     {
       "id": "g4",
       "categoryId": "garden",
@@ -1341,9 +1275,7 @@
           "description": "Plant seeds at the depth shown on the packet, or transplant seedlings. Water gently."
         }
       ],
-      "proTip": "Herbs like basil and cilantro grow fast and taste way better fresh from your own garden.",
-      "image": "assets/images/tip_34.jpg"
-    },
+      "proTip": "Herbs like basil and cilantro grow fast and taste way better fresh from your own garden."},
     {
       "id": "g5",
       "categoryId": "garden",
@@ -1380,9 +1312,7 @@
           "description": "When not in use for long periods, cover furniture or move it to a sheltered area."
         }
       ],
-      "proTip": "Bring cushions inside during rain. They take forever to dry and can get moldy.",
-      "image": "assets/images/tip_35.jpg"
-    },
+      "proTip": "Bring cushions inside during rain. They take forever to dry and can get moldy."},
     {
       "id": "g6",
       "categoryId": "garden",
@@ -1418,9 +1348,7 @@
           "description": "Spread 2-3 inches of mulch over bare soil. It blocks sunlight and stops new weeds from growing."
         }
       ],
-      "proTip": "Regular weeding is easier than a big cleanup. Spend 5 minutes every few days.",
-      "image": "assets/images/tip_36.jpg"
-    },
+      "proTip": "Regular weeding is easier than a big cleanup. Spend 5 minutes every few days."},
     {
       "id": "la1",
       "categoryId": "laundry",
@@ -1454,9 +1382,7 @@
           "description": "Check every single pocket. Tissues, coins, and pens can ruin a whole load."
         }
       ],
-      "proTip": "Get three laundry bags — whites, darks, colors. Sort as you go and laundry day is half done.",
-      "image": "assets/images/tip_37.jpg"
-    },
+      "proTip": "Get three laundry bags — whites, darks, colors. Sort as you go and laundry day is half done."},
     {
       "id": "la2",
       "categoryId": "laundry",
@@ -1493,9 +1419,7 @@
           "description": "Let it soak for 15 minutes, then wash as normal. Check the stain before drying — heat sets stains."
         }
       ],
-      "proTip": "For blood stains, always use cold water. Hot water cooks the proteins and makes it permanent.",
-      "image": "assets/images/tip_38.jpg"
-    },
+      "proTip": "For blood stains, always use cold water. Hot water cooks the proteins and makes it permanent."},
     {
       "id": "la3",
       "categoryId": "laundry",
@@ -1531,9 +1455,7 @@
           "description": "Put the ironed item on a hanger right away. If you fold it, wrinkles come right back."
         }
       ],
-      "proTip": "Iron slightly damp clothes — it's easier and gives better results.",
-      "image": "assets/images/tip_39.jpg"
-    },
+      "proTip": "Iron slightly damp clothes — it's easier and gives better results."},
     {
       "id": "la4",
       "categoryId": "laundry",
@@ -1564,9 +1486,7 @@
           "description": "Lay delicates flat on a towel to dry, or hang them. The dryer's heat is too harsh."
         }
       ],
-      "proTip": "For items labeled 'hand wash only,' fill a basin with cool water and mild soap. Soak, gently swirl, and rinse.",
-      "image": "assets/images/tip_40.jpg"
-    },
+      "proTip": "For items labeled 'hand wash only,' fill a basin with cool water and mild soap. Soak, gently swirl, and rinse."},
     {
       "id": "la5",
       "categoryId": "laundry",
@@ -1601,9 +1521,7 @@
           "description": "If hanging to dry, run an extra spin cycle to wring out more water first."
         }
       ],
-      "proTip": "Hanging clothes in a breezy spot with good airflow dries them faster than a still room.",
-      "image": "assets/images/tip_41.jpg"
-    },
+      "proTip": "Hanging clothes in a breezy spot with good airflow dries them faster than a still room."},
     {
       "id": "la6",
       "categoryId": "laundry",
@@ -1637,9 +1555,7 @@
           "description": "Store folded items standing up in drawers like files. You'll see everything at a glance."
         }
       ],
-      "proTip": "The KonMari method of vertical folding saves up to 50% more drawer space.",
-      "image": "assets/images/tip_42.jpg"
-    },
+      "proTip": "The KonMari method of vertical folding saves up to 50% more drawer space."},
     {
       "id": "s1",
       "categoryId": "safety",
@@ -1674,9 +1590,7 @@
           "description": "Smoke detectors expire after 10 years. Check the date on the back and replace if needed."
         }
       ],
-      "proTip": "Test your smoke detectors every month. Change batteries every 6 months.",
-      "image": "assets/images/tip_43.jpg"
-    },
+      "proTip": "Test your smoke detectors every month. Change batteries every 6 months."},
     {
       "id": "s2",
       "categoryId": "safety",
@@ -1710,9 +1624,7 @@
           "description": "Move the nozzle slowly from side to side across the base of the fire until it's out."
         }
       ],
-      "proTip": "Stand 6 to 8 feet away from the fire. If it doesn't go out quickly, get out and call 911.",
-      "image": "assets/images/tip_44.jpg"
-    },
+      "proTip": "Stand 6 to 8 feet away from the fire. If it doesn't go out quickly, get out and call 911."},
     {
       "id": "s3",
       "categoryId": "safety",
@@ -1754,9 +1666,7 @@
           "description": "Anchor bookshelves, dressers, and TVs to the wall so they can't tip over."
         }
       ],
-      "proTip": "Get down on your hands and knees and look around from a child's eye level. You'll spot dangers you never noticed.",
-      "image": "assets/images/tip_45.jpg"
-    },
+      "proTip": "Get down on your hands and knees and look around from a child's eye level. You'll spot dangers you never noticed."},
     {
       "id": "s4",
       "categoryId": "safety",
@@ -1791,9 +1701,7 @@
           "description": "Keep copies of IDs, insurance papers, and emergency contacts in a waterproof bag."
         }
       ],
-      "proTip": "Check and refresh your emergency kit every 6 months. Rotate food and water.",
-      "image": "assets/images/tip_46.jpg"
-    },
+      "proTip": "Check and refresh your emergency kit every 6 months. Rotate food and water."},
     {
       "id": "s5",
       "categoryId": "safety",
@@ -1828,9 +1736,7 @@
           "description": "Have your furnace, water heater, and chimney inspected every year."
         }
       ],
-      "proTip": "If your CO alarm goes off, get everyone outside immediately and call 911.",
-      "image": "assets/images/tip_47.jpg"
-    },
+      "proTip": "If your CO alarm goes off, get everyone outside immediately and call 911."},
     {
       "id": "s6",
       "categoryId": "safety",
@@ -1865,8 +1771,6 @@
           "description": "Do a fire drill every few months. Talk about what to do during storms, earthquakes, or power outages."
         }
       ],
-      "proTip": "Teach young kids their full name, address, and how to call for help.",
-      "image": "assets/images/tip_48.jpg"
-    }
+      "proTip": "Teach young kids their full name, address, and how to call for help."}
   ]
 }

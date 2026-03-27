@@ -238,20 +238,10 @@ class _SignupScreenState extends State<SignupScreen>
                       ),
                       const SizedBox(height: 28),
 
-                      // Signup button
                       SizedBox(
                         width: double.infinity,
-                        height: 52,
                         child: ElevatedButton(
                           onPressed: _isLoading ? null : _handleSignup,
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.rose,
-                            foregroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                            elevation: 0,
-                          ),
                           child: _isLoading
                               ? const SizedBox(
                                   width: 22,
@@ -261,13 +251,7 @@ class _SignupScreenState extends State<SignupScreen>
                                     strokeWidth: 2.5,
                                   ),
                                 )
-                              : const Text(
-                                  'Create Account',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
+                              : const Text('Create Account'),
                         ),
                       ),
                       const SizedBox(height: 20),
@@ -322,27 +306,8 @@ class _SignupScreenState extends State<SignupScreen>
       style: const TextStyle(fontSize: 15, color: AppColors.textPrimary),
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: TextStyle(color: AppColors.textTertiary, fontSize: 15),
         prefixIcon: Icon(icon, color: AppColors.textTertiary, size: 20),
         suffixIcon: suffix,
-        filled: true,
-        fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14),
-          borderSide: BorderSide.none,
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14),
-          borderSide: BorderSide(color: AppColors.rose, width: 1.5),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14),
-          borderSide: BorderSide(color: AppColors.roseDeep, width: 1),
-        ),
-        contentPadding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 16,
-        ),
       ),
     );
   }
